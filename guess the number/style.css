@@ -1,0 +1,11 @@
+.user-num{
+    border: 1px solid gray;
+    box-shadow: 0 0 3px black;
+}
+.footer{
+    width: 200px;
+    height: 300px;
+    background-color: red;
+    display: none;
+
+}
