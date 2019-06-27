@@ -5,3 +5,10 @@
     height: 399px;
     display: none; 
 }
+.modal--new{
+    display: block;
+    background-color: aqua;
+    border: 1px solid red;
+    width: 200px;
+    height: 399px;
+}
