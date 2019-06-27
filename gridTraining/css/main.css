@@ -226,7 +226,7 @@ button:hover{
 	content: url(../img/leftH2.png);
 }
 .services__headline::after{
-	content: url(../img/RightH2.png);
+	content: url(../img/rightH2.png);
 }
 .services__headline strong{
 	color: white;
