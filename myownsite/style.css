@@ -177,7 +177,7 @@ h2{
 }
 .picture1__pic,
 .picture2__pic{
-    max-width: 100%;
+    width: 100%;
     display: block;
 }
 
