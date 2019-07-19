@@ -1534,7 +1534,7 @@ body {
   .form__box-inner {
     display: block;
   }
-  .form__box-left, .form__box-right {
+  .form__box-left, .form__box-right, .jq-selectbox__dropdown {
     max-width: 100%;
   }
   .advantages__inner {
