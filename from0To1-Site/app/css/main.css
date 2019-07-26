@@ -1195,10 +1195,6 @@ body {
   border-bottom: 1px solid #e6e6e6;
 }
 
-.jq-selectbox li:last-child {
-  border-bottom: none;
-}
-
 .jq-selectbox li:hover {
   background-color: #e6e6e6d3;
 }
@@ -1534,7 +1530,7 @@ body {
   .form__box-inner {
     display: block;
   }
-  .form__box-left, .form__box-right {
+  .form__box-left, .form__box-right, .jq-selectbox__dropdown {
     max-width: 100%;
   }
   .advantages__inner {
