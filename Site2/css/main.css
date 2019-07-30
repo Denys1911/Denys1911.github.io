@@ -1,0 +1,411 @@
+*,
+::before,
+::after{
+	box-sizing: border-box;
+}
+body {
+	min-width: 320px;
+	margin: 0;
+	font-family: "BebasRegular";
+	font-weight: 400;
+	position: relative;
+}
+a{
+	display: inline-block;
+	text-decoration: none;
+}
+h1,h2,h3{
+	padding: 0;
+	margin: 0;
+}
+header{
+	min-height: 6rem;
+	background-image: url(../img/342421_foto_oboi-avto_tachki_garazh_podemnik_BMW_1680x1050_\(www.GdeFon.ru\).jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 90vh;
+	position: relative;
+	color: white;
+}
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding:  0 1rem;
+	text-align: center;
+}
+.header__top{
+	box-shadow: rgba(255,255,255,.3) 0 0 0 2px;
+	width: 100%;
+	background-color:rgba(0,0,0,.65);
+}
+.grid{
+	display: grid;
+}
+.header_top{
+	font-size: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 5rem
+}
+.header__map{
+	justify-self: center;
+	align-content: center;
+	grid-template-columns: 1fr 2fr;
+
+}
+.adress__link{
+	color: aliceblue;
+	font-size: 1.1rem;
+	padding: 4px;
+	text-decoration: underline;
+}
+.adress__link:hover{
+	background-color: rgb(223, 72, 72);
+	border-radius: 0.7rem;
+	text-decoration: none;
+	transition: .25s;
+}
+.adress{
+	align-content: center;
+}
+.map{
+	text-align: center;
+}
+.map img{
+	width: 70%;
+}
+.header__logo{
+	justify-self: center;
+}
+.header__contacts{
+	justify-self: center;
+	font-size: 1rem;
+	text-align: center;
+	align-content: center;
+}
+.header__map,
+h1,
+.services__headline span,
+.header__contacts span{
+	color: #d12f22;
+}
+.tel{
+	font-size: 2rem;
+	font-weight:400; 
+}
+.logo{
+	width: 65%;
+	min-width: 100px;
+	position: relative;
+	top: 5%;
+}
+h1{
+	background-color: rgba(110, 108, 108,.4);
+	box-shadow: rgba(110, 108, 108, 0.8)  0 0 7px 2px;
+	text-shadow: rgba(0,0,0,.5) 0 2px;
+	display: inline-block;
+	margin-top: 5%;
+	font-size: 2rem;
+	letter-spacing: 2px;
+	font-family: "BebasBold";
+	margin-bottom: 100px;
+}
+.header__buttons{
+	position: absolute;
+	bottom: 3%;
+	left: 10%;
+	grid-template-columns: 1fr 1fr;
+}
+/* Задание стилей для всех кнопок */
+button{
+	all: unset;
+	background-color: #d12f22;
+	display: inline-block;
+	height: 3rem;
+	padding: 0 1.8rem;
+	font-size: 1rem;
+	font-weight: 700;
+	color: white;
+	letter-spacing: 2px;
+	box-shadow: 3px -3px 0 0 transparent;
+	border-bottom: 3px solid #ac160a;
+}
+button:hover{
+	box-shadow: #ac160a  3px -3px 2px 0;
+	border-bottom: 0;
+	transition: 0.4s;
+}
+.specialbutton1{
+	background-image: url(../img/camera.png);
+	background-repeat: no-repeat;
+	background-position: 0.44rem 0.44rem;
+	padding-left: 4rem;
+}
+.navbar{
+	min-height: 10vh;
+	background-color: #242424;
+	width: 100%;
+	display: inline-block;
+}
+.nav{
+	grid-template-columns: 5fr 1fr;
+}
+.navmenu{
+	display: grid;
+	background-color: #242424;
+	grid-template-columns: repeat(6,1fr);
+	justify-items: stretch;
+	align-items: stretch;
+}
+.navmenu__link{
+	color: white;
+	text-decoration: none;
+	border-right:  rgba(110, 108, 108, 0.8)  1px solid;
+}
+.navmenu__link:last-child{
+	border-right: none;
+}
+.navmenu__link:hover,
+.specialbutton2 div:hover{
+	background-color: #050505;
+}
+.navmenu__items{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%)
+}
+/*  Кнопка "Гарантия 1год" */
+.specialbutton2{
+	all: unset;
+	color: white;
+	min-height: 10vh;
+	cursor: pointer;
+}
+.specialbutton2 div{
+	border: 2px solid white;
+	border-radius: 1rem;
+	padding: 0.3rem;
+}
+.specialbutton2:hover,
+.buttonformenu:hover{
+	box-shadow: none;
+}
+ /* Кпопка для выпадающего меню */
+.buttonformenu{
+	all: unset;
+    display: none;
+	padding: 2px 10px;
+	cursor: pointer;
+}
+.buttonformenu__border{
+	border: 1px solid transparent;
+}
+.buttonformenu__part{
+    width: 22px;
+    height: 2.3px;
+    background-color: #000;
+	margin: 4px;
+}
+.buttonformenu__border:hover{
+    border-color:  white;
+	border-radius: 0.5rem;
+}
+.services{
+	background-color: #191919;
+	color: white;
+}
+.container-services{
+	padding: 2rem 0;
+}
+.services__headline,
+.section1__headline{
+	color: #c9c9c9;
+	font-size: 2.5rem;
+}
+.services__headline::before{
+	content: url(../img/leftH2.png);
+}
+.services__headline::after{
+	content: url(../img/rightH2.png);
+}
+.services__headline strong{
+	color: white;
+}
+ /*  "Услуги автомастерской" меню и выпадающее меню */
+ .services__list{
+	padding: 0 1rem;
+	list-style: none;
+	grid-template-columns: repeat(auto-fit, minmax(113px, 1fr));
+	justify-items: stretch;
+	align-items: stretch;
+	grid-gap: 1.5rem;
+}
+.services__item{
+	position: relative;
+	height: 9rem;
+	border: 2px solid  rgba(110, 108, 108, 0.8);
+}
+.services__link{
+	width: 100%;
+	color: white;
+	text-decoration: none;
+	height: 100%;	
+}
+.services__img{
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 5px;
+	padding-top: 1rem;
+}
+.services__item:nth-of-type(2) .services__img{
+	padding-top: 0;
+}
+.services__button{
+	padding: 0.5rem 0;
+	background-color: #353535;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.services__link:hover{
+	text-decoration: underline;
+}
+.services__item:hover .services__button{
+	transition: .5s;
+	transform: scale(0.9);
+	background-color:rgba(255, 254, 254, 0.473);
+	color: #ac160a;
+	cursor: pointer;
+}
+.services__item1,
+.services__item:hover .services__link{
+	transition: .25s;
+	background-color:#353535;
+}
+.services__list--second{
+	margin-top: 2rem;
+}
+.services__item1{
+    display: block;
+	padding: 1.2rem 0;
+	position: relative;
+	transition-duration: 2s;
+}
+.services__item1::before{
+	content: url(../img/add.png);
+	position: absolute;
+	left: 6.4%;
+	bottom: 96%;
+}
+.services__item1 a{
+	text-decoration: underline;
+	margin-right: 0.5rem;
+	line-height: 2;
+}
+.services__item1 a:hover{
+	cursor: pointer;
+	text-decoration: none;
+}
+.services__button2,
+.section3__btn{
+	border: 0;
+	box-shadow: 0;
+	cursor: pointer;
+	margin-top: 5%;
+}
+.section1{
+	margin: 2rem;
+}
+.section1__headline{
+	color: #000;
+}
+.section1__p,
+.section2__p,
+.content__p{
+	font-family: Arial, Helvetica, sans-serif;
+}
+.section1__headline::before{
+	content: url(../img/left_H2.png);
+}
+.section1__headline::after{
+	content: url(../img/right_H2.png);
+}
+.section2{
+	background-color: #d6d6d6;
+	padding: 1rem;
+}
+.container-section2{
+	grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));	
+	grid-gap: 1.5rem;
+}
+.section2__img{
+	display: block;
+	width: 85%;
+	height: 15rem;
+	margin: 0 auto;
+	border-top: 7px solid #ac160a;
+}
+.section2__p{
+	margin-top: 0;
+}
+.section3{
+	padding: 2rem;
+}
+.section3__headline{
+	grid-template-columns: 5fr 1fr;
+}
+h3{
+	text-align: start;
+	font-weight: bold;
+	font-size: 2.1rem;
+}
+.section3__btn{
+	margin: 0;
+}
+.content{
+	padding-top: 1.5rem;
+	display: flex;
+	flex-direction: row;
+}
+.content__img{
+	width: 20rem;
+	height: 100%;
+}
+.content__p{
+	text-align: left;
+}
+footer{
+	background-color: #2a2a2a;
+	padding: 1.5rem;
+	grid-template-columns: 1fr 4fr;
+}
+.footer__site{
+	color: white;
+}
+.footer__list{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	grid-gap: 0.5rem;
+	justify-items: center;
+
+}
+.footer__link{
+	color: white;
+	text-decoration: underline;
+}
+.footer__link:hover{
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
