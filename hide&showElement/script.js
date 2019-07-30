@@ -12,7 +12,7 @@ console.log(a.clientHeight); */
 
 //Пример решения через скрытие/открытие дива через js
 
- function hide(){
+function hide(){
     let er=document.querySelector(".modal");
     er.hidden = true;
 }
