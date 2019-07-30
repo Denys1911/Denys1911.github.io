@@ -12,7 +12,7 @@ console.log(a.clientHeight); */
 
 //Пример решения через скрытие/открытие дива через js
 
-/* function hide(){
+ function hide(){
     let er=document.querySelector(".modal");
     er.hidden = true;
 }
@@ -24,7 +24,7 @@ function show(){
 let arrive = document.querySelector(".push");
 arrive.onclick=show;
 let hid = document. querySelector(".btn");
-hid.onclick = hide;   */
+hid.onclick = hide;   
 
 //Пример решения через скрытие дива в свойствах css и открытия его с помощью возможностей js
 
@@ -87,8 +87,8 @@ b.addEventListener("contextmenu",hide,false);  */
 свойства объекта навсегда, поэтому нужно в таком случае добавлять класс модификатор, который работает только
  при определенном расширении экрана */
 
- let button = document.querySelector(".push").addEventListener("click",function open(){
+/* let button = document.querySelector(".push").addEventListener("click",function open(){
     let div=document.querySelector(".modal");
     div.classList.toggle("modal--new");
-}) 
+}) */
 
