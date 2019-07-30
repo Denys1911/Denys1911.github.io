@@ -1,0 +1,86 @@
+@media screen and (max-width: 992px){
+   html{
+       font-size: 95%;
+   }
+}
+@media screen and (max-width: 768px){
+    html{
+        font-size: 90%;
+    }
+    .header__about{
+        margin: 7rem auto;
+        
+    }
+    .nav-button{
+        display: block;
+    }
+    .nav{
+        display: none;
+    }
+    .nav--open{
+        display: block;
+        margin-right: 2rem;
+    }
+}
+@media screen and (max-width: 690px){
+    .section5{
+        display: inline-block;
+    }
+    .section5__icons,
+    .section5__inform{
+        display: inline-block;
+    }
+    .section5__inform{
+        width: 70%;
+        text-align: center;
+        vertical-align: top
+    }
+    .section5__skill{
+        display: inline-block;
+        margin-left: 14%;
+        margin-bottom: 0.5rem;
+    }
+}
+@media screen and (max-width: 630px){
+    .section__tel{
+        max-height: 250px;
+    }
+}
+@media screen and (max-width: 600px){
+    .page__row{
+        margin-bottom: 0.6rem;
+    }
+    html{
+        font-size: 85%;
+    }
+    .header__about{
+        margin: 5rem auto 5rem auto;
+        
+    }
+    .section4{
+        display: block;
+    }
+    .picture1,
+    .picture2{
+        width: 100%;
+    }
+    .picture2__pic{
+        width: 100%;
+        max-height: 250px;
+    }
+    .submit-now{
+        top: 95%;
+    }
+}
+@media screen and (max-width: 555px){
+    .section{
+        display: block;
+    }
+    .section__inform{
+        width: 100%;
+        text-align: center;
+    }
+    .section__pictures{
+        margin: 1rem auto -1rem auto;
+    }
+}
