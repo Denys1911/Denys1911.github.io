@@ -100,7 +100,7 @@ $(document).ready(function(){
 	$(".form").submit(function() { //Change
 		var th = $(this);
 		$.ajax({
-			type: "GET",
+			type: "POST",
 			url: "mail.php", //Change
 			data: th.serialize()
 		}).done(function() {
