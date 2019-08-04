@@ -6176,7 +6176,7 @@ select::placeholder {
   transition: all .5s ease;
 }
 
-.form__success .active ~ * {
+.form__success.active ~ * {
   -webkit-filter: blur(3px);
   filter: blur(3px);
 }
