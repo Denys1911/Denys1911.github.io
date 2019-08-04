@@ -1,6 +1,6 @@
+/// *** Mmenu *** ///
 document.addEventListener(
     "DOMContentLoaded", () => {
-        // Fire the plugin
         const menu = new Mmenu( "#my-menu", {
             "extensions": [
                "fx-menu-zoom",
@@ -32,7 +32,10 @@ document.addEventListener(
         );
     }
 );
+/// *** Mmenu *** ///
+
 $(document).ready(function(){
+    /// **** OWL CAROUSEL *** ///
     $(".services-carousel").on('initialized.owl.carousel', function(){
         setTimeout(function() {
             carouselWidth()
@@ -67,6 +70,7 @@ $(document).ready(function(){
                 ths.find('.services-carousel__item-image').css('height', thsheight);
         });
     };
+    /// **** OWL CAROUSEL *** ///
 
     //resize window
     function onResize(){
@@ -96,14 +100,14 @@ $(document).ready(function(){
 	$(".form").submit(function() { //Change
 		var th = $(this);
 		$.ajax({
-			type: "POST",
+			type: "GET",
 			url: "mail.php", //Change
 			data: th.serialize()
 		}).done(function() {
-			$(th).find(".form__success").classList.add(".active").css('display', 'flex').hide().fadeIn();
+			$(th).find(".form__success").addClass("active").css('display', 'flex').hide().fadeIn();
 			setTimeout(function() {
                 // Done Functions
-                $(th).find(".form__success").classList.remove(".active").fadeOut();
+                $(th).find(".form__success").removeClass("active").fadeOut();
 				th.trigger("reset");
 			}, 3000);
 		});

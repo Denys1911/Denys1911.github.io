@@ -571,20 +571,21 @@ select {
         right: 0;
         bottom: 0;
         left: 0;
+        z-index: 2;
         display: none;
 
         span {
-            @include font($monserat, 1.125rem, 700);
+            @include font($monserat, 1.5rem, 700);
 
             margin: auto;
             text-transform: uppercase;
         }
 
         & ~ * {
-            transition: all .5s ease;
+            transition: all 2s ease;
         }
 
-        .active {
+        &.active {
             & ~ * {
                 filter: blur(3px);
             }
