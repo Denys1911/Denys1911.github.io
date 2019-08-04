@@ -100,10 +100,10 @@ $(document).ready(function(){
 			url: "mail.php", //Change
 			data: th.serialize()
 		}).done(function() {
-			$(th).find(".form__success").classList.add(".active").css('display', 'flex').hide().fadeIn();
+			$(th).find(".form__success").addClass(".active").css('display', 'flex').hide().fadeIn();
 			setTimeout(function() {
                 // Done Functions
-                $(th).find(".form__success").classList.remove(".active").fadeOut();
+                $(th).find(".form__success").removeClass(".active").fadeOut();
 				th.trigger("reset");
 			}, 3000);
 		});
