@@ -610,6 +610,7 @@ $borders: #5aafb4, #da5b5b, #dbaf5a;
 .section-form {
     display: flex;
     justify-content: flex-end;
+    min-height: 81vh;
     background-size: contain;
 
     &__wrapper {
@@ -621,13 +622,19 @@ $borders: #5aafb4, #da5b5b, #dbaf5a;
 }
 
 /// *** Form elements stylization *** ///
-.selectize-control {
+.selectize-input {
     z-index: 0;
+}
+
+.selectize-dropdown-content {
+    max-height: 600px;
 }
 
 input,
 select,
 .selectize-input.items.has-options.full.has-items {
+    @include font($monserat, 1rem, 500);
+
     width: 100%;
     padding: .9rem 1.5rem;
     color: $white;
@@ -688,7 +695,9 @@ select,
     }
 
     .option {
-        padding: .9rem 1.5rem 0.5rem 1.5rem;
+        @include font($monserat, 1rem, 500);
+
+        padding: .9rem 1.5rem 0.9rem 1.5rem;
         font-size: 1rem;
         color: #333;
 

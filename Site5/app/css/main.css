@@ -6594,6 +6594,7 @@ button {
 .section-form {
   display: flex;
   justify-content: flex-end;
+  min-height: 81vh;
   background-size: contain;
 }
 
@@ -6604,13 +6605,20 @@ button {
   background-color: rgba(249, 199, 102, 0.9);
 }
 
-.selectize-control {
+.selectize-input {
   z-index: 0;
+}
+
+.selectize-dropdown-content {
+  max-height: 600px;
 }
 
 input,
 select,
 .selectize-input.items.has-options.full.has-items {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
   width: 100%;
   padding: .9rem 1.5rem;
   color: #fff;
@@ -6701,7 +6709,10 @@ select::placeholder,
 }
 
 .form .option {
-  padding: .9rem 1.5rem 0.5rem 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: .9rem 1.5rem 0.9rem 1.5rem;
   font-size: 1rem;
   color: #333;
 }
