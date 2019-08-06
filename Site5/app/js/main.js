@@ -117,7 +117,7 @@ $(document).ready(function(){
                 // Done Functions
                 $(th).find(".form__success").removeClass("active").fadeOut();
 				th.trigger("reset");
-			}, 3000);
+			}, 2500);
 		});
 		return false;
     });
