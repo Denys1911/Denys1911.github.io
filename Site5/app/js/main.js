@@ -117,7 +117,7 @@ $(document).ready(function(){
                 // Done Functions
                 $(th).find(".form__success").removeClass("active").fadeOut();
 				th.trigger("reset");
-			}, 3000);
+			}, 2500);
 		});
 		return false;
     });
@@ -182,6 +182,6 @@ $(document).ready(function(){
 
     /// *** PRELOADER *** ///
     $(window).on('load', function(){
-        $('.preloader').delay(1000).fadeOut('slow');
+        $('.preloader').fadeOut('slow');
     })
 });
