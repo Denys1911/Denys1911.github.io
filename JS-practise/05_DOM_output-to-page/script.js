@@ -38,7 +38,7 @@ document.querySelector('input').type = 'range';
 
 document.querySelector('button').addEventListener('click', () => {
     let print = document.querySelector('link').href;
-    if (print === 'http://127.0.0.1:5500/style2.css') {
+    if (print === 'style2.css') {
         document.querySelector('link').href = 'style3.css';
         document.querySelector('button').innerText = 'Return stylezation back';
     } else {
