@@ -38,7 +38,7 @@ document.querySelector('input').type = 'range';
 
 document.querySelector('button').addEventListener('click', () => {
     let print = document.querySelector('link').href;
-    if (print === 'https://denys1911.github.io/JS-practise/05_DOM_output-to-page/style2.css'') {
+    if (print === 'https://denys1911.github.io/JS-practise/05_DOM_output-to-page/style2.css') {
         document.querySelector('link').href == './style2.css';
         document.querySelector('button').innerText = 'Return stylezation back';
     } else {
