@@ -1,4 +1,6 @@
-label, button {
+label,
+button,
+input[type=submit] {
     display: block;
     margin: 15px;
 }
