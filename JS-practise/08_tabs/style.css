@@ -1,0 +1,25 @@
+.tabs {
+    padding: 15px;
+    margin: 30px auto;
+    border: 1px solid rgb(134, 132, 132);
+}
+
+.active {
+    font-weight: bold;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.tab {
+    padding: 5px 10px;
+    border: 1px solid rgb(134, 132, 132);
+}
+
+.tab:nth-of-type(2) {
+    margin-left: 10px;
+    margin-right: 10px;
+}
