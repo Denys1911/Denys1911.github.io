@@ -4,7 +4,9 @@ const gulp = require('gulp'),
       gulpStylelint = require('gulp-stylelint'),
       autoprefixer = require('gulp-autoprefixer'),
       concat = require('gulp-concat'),
-      uglify = require('gulp-uglify');
+      uglify = require('gulp-uglify'),
+      del = require('del'),
+      rename = require('gulp-rename');
     
 gulp.task('browser-sync', () => {
     browserSync.init({
@@ -29,11 +31,21 @@ gulp.task('scss', () => {
     }))
     .pipe(sass({outputStyle: "expanded"}))
     .pipe(autoprefixer({
-        overRideBrowsers: ['last 2 versions'],
-        cascade: false,
+        overRideBrowsers: ['last 10 versions'],
         grid: true
     }))
+    //.pipe(rename({suffix: '.min'}))  // if you want to minify your css, uncomment this line. This will just rename your main.css file into main.min.css
     .pipe(gulp.dest('app/css'))
+    .pipe(browserSync.reload({stream: true}))
+});
+
+gulp.task('css-libs', () => {
+    return gulp.src([
+        'node_modules/normalize.css/normalize.css',
+        'node_modules/swiper/dist/css/swiper.css'
+    ])
+    .pipe(concat('_libs.scss'))
+    .pipe(gulp.dest('app/scss'))
     .pipe(browserSync.reload({stream: true}))
 });
 
@@ -53,7 +65,7 @@ gulp.task('js', () => {
     .pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('libs', () => {
+gulp.task('js-libs', () => {
     return gulp.src([
         // put here destination of js files from plugins which are used on your project 
         'node_modules/swiper/dist/js/swiper.js'
@@ -70,4 +82,21 @@ gulp.task('watch', () => {
     gulp.watch('app/js/**/*.js', gulp.parallel('js'))
 });
 
-gulp.task('default', gulp.parallel('scss', 'libs', 'browser-sync', 'watch'));
+gulp.task('build', async () => {
+    let buildHtml = gulp.src('app/**/*.html')
+    .pipe(gulp.dest('dist'))
+    let buildCss = gulp.src('app/css/**/*.css')
+    .pipe(gulp.dest('dist/css'))
+    let buildJs = gulp.src('app/js/**/*.js')
+    .pipe(gulp.dest('dist/js'))
+    let buildImages = gulp.src('app/images/**/*.*')
+    .pipe(gulp.dest('dist/images'))
+    let buildHTML = gulp.src('app/fonts/**/*.*')
+    .pipe(gulp.dest('dist/fonts'))
+});
+
+gulp.task('del', async () => {
+    del.sync('dist');
+});
+
+gulp.task('default', gulp.parallel('css-libs', 'scss', 'js-libs', 'browser-sync', 'watch'));

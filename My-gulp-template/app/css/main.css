@@ -82,7 +82,7 @@ abbr[title] {
   text-decoration: underline;
   /* 2 */
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -943,4 +943,17 @@ button.swiper-pagination-bullet {
 .swiper-container-coverflow .swiper-wrapper {
   /* Windows 8 IE 10 fix */
   -ms-perspective: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.75;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
 }
