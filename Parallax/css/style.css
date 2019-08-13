@@ -3,9 +3,9 @@ body {
 }
 
 .parallax-image {
-    background-image: url(./img/342421_foto_oboi-avto_tachki_garazh_podemnik_BMW_1680x1050_\(www.GdeFon.ru\).jpg);
     background-repeat: no-repeat;
     height: 100%;
+    background-image: url(.././img/parallax.jpg)
 }
 
 .parallax,
