@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+}
+
+.parallax-image {
+    background-image: url(./img/342421_foto_oboi-avto_tachki_garazh_podemnik_BMW_1680x1050_\(www.GdeFon.ru\).jpg);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    height: 100%;
+}
+
+.parallax,
+.parallax-image {
+    min-height: 100vh;
+}
+
