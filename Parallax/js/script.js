@@ -1,5 +1,10 @@
 window.addEventListener('scroll', () => {
-    console.log(window.innerHeight)
-    console.log(pageYOffset-window.innerHeight)
-    document.querySelector('.parallax-image').style.backgroundPosition = 'center ' + ((pageYOffset-window.innerHeight)*0.35 - 150) + 'px'
+    let rect = document.querySelector('.parallax-image').getBoundingClientRect(),
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop,
+        distanseToElement = rect.top + scrollTop,
+        value = scrollTop - distanseToElement;
+    document.querySelector('.parallax-image').style.backgroundPosition = 'center ' + value*0.6 + 'px';
 });
+
+
+ 

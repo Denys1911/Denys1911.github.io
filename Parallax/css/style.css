@@ -4,12 +4,9 @@ body {
 
 .parallax-image {
     background-repeat: no-repeat;
-    height: 100%;
-    background-image: url(.././img/parallax.jpg)
+    min-height: 125vh;
+    background-image: url('https://images.pexels.com/photos/46710/pexels-photo-46710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
 }
 
-.parallax,
-.parallax-image {
-    min-height: 100vh;
-}
 
