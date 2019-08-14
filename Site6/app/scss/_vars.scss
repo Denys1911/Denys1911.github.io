@@ -1,0 +1,16 @@
+/// *** VARS ***///
+$background: rgba(#322d53, .87);
+$accent: #00e0d0;
+$white: #fff;
+$roboto: 'Roboto', sans-serif;
+$playfair: 'Playfair Display', serif;
+$hammersmith: 'Hammersmith One', sans-serif;
+/// *** VARS ***///
+
+/// *** MIXINS *** ///
+@mixin font($ff, $size, $weight) {
+    font-family: $ff;
+    font-size: $size;
+    font-weight: $weight;
+}
+/// *** MIXINS *** ///
