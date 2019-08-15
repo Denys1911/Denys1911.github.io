@@ -19,19 +19,19 @@
                     </a>
                     <ul class="header-inner__nav-list">
                         <li class="header-inner__nav-item"><a class="header-inner__nav-link" href="#">Home</a></li>
-                        <li class="header-inner__nav-item"><a class="header-inner__nav-link" href="#">About</a></li>
-                        <li class="header-inner__nav-item"><a class="header-inner__nav-link" href="#">Expertise</a></li>
-                        <li class="header-inner__nav-item"><a class="header-inner__nav-link" href="#">Teams</a></li>
-                        <li class="header-inner__nav-item"><a class="header-inner__nav-link" href="#">Works</a></li>
-                        <li class="header-inner__nav-item"><a class="header-inner__nav-link" href="#">People say</a></li>
-                        <li class="header-inner__nav-item"><a class="header-inner__nav-link" href="#">contact</a></li>
+                        <li class="header-inner__nav-item"><a class="header-inner__nav-link" href="#about">About</a></li>
+                        <li class="header-inner__nav-item"><a class="header-inner__nav-link" href="#expertise">Expertise</a></li>
+                        <li class="header-inner__nav-item"><a class="header-inner__nav-link" href="#teams">Teams</a></li>
+                        <li class="header-inner__nav-item"><a class="header-inner__nav-link" href="#works">Works</a></li>
+                        <li class="header-inner__nav-item"><a class="header-inner__nav-link" href="#people-say">People say</a></li>
+                        <li class="header-inner__nav-item"><a class="header-inner__nav-link" href="#contact">contact</a></li>
                     </ul>
                     <button class="nav-btn-close">+</button>
-                    <button class="nav-btn">
+                    <div class="nav-btn">
                         <div class="nav-btn__item"></div>
                         <div class="nav-btn__item"></div>
                         <div class="nav-btn__item"></div>
-                    </button>
+                    </div>
                 </nav>
                 <div class="header-inner__slider glide">
                     <div data-glide-el="track" class="glide__track">
@@ -54,7 +54,7 @@
                                 <p>
                                     This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
                                 </p>
-                                <a a href="#" class="main-btn header-inner__slider-btn">
+                                <a  href="#" class="main-btn header-inner__slider-btn">
                                     LEARN MORE
                                 </a>
                             </li>
@@ -65,7 +65,7 @@
                                 <p>
                                     This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
                                 </p>
-                                <a a href="#" class="main-btn header-inner__slider-btn">
+                                <a  href="#" class="main-btn header-inner__slider-btn">
                                     LEARN MORE
                                 </a>
                             </li>
@@ -84,7 +84,7 @@
     <div class="container">
         <div class="main-story">
             <div class="main-story__logo">
-                <img  class="main-story__logo-img" src="./images/Logo-2.png" alt="Tajam logotype"></img>
+                <img  class="main-story__logo-img" src="./images/Logo-2.png" alt="Tajam logotype">
             </div>
             <div class="main-story__description">
                 <h2 class="main-story__description-title">
@@ -103,7 +103,7 @@
         </div>
     </div>
     </main>
-    <section class="section-video" style="background-image: url(./images/bg-2.jpg);">
+    <section class="section-video" id="about" style="background-image: url(./images/bg-2.jpg);">
         <a class="section-video__inner" href="#">
             <img class="section-video__inner-img" src="./images/play.png" alt="Tajam story video">
             <h5>
@@ -111,7 +111,7 @@
             </h5>
         </a>    
     </section>
-    <section class="section-expertise">
+    <section class="section-expertise" id="expertise">
         <div class="container">
             <h3 class="title">
                 Expertise
@@ -179,7 +179,7 @@
             </ul>
         </div>
     </section>
-    <section class="section-team" style="background-image: url(./images/bg-3.jpg);">
+    <section class="section-team" id="teams" style="background-image: url(./images/bg-3.jpg);">
         <div class="container">
             <div class="section-team-inner">
                 <h3 class="title">
@@ -191,25 +191,25 @@
                 <div class="team">
                     <figure class="team__person">
                         <img src="./images/person-1.png" alt="Semf Usuk">
-                        <figcaption class="team__position">
+                        <figcaption class="team__post">
                             SEMF UCUK<br>CEO & FOUNDER
                         </figcaption> 
                     </figure>
                     <figure class="team__person">
                         <img src="./images/person-2.png" alt="Dik Aladin">
-                        <figcaption class="team__position">
+                        <figcaption class="team__post">
                             DIK ADALIN<br>ENGINEERING
                         </figcaption> 
                     </figure>
                     <figure class="team__person">
                         <img src="./images/person-3.png" alt="Jeng Kol">
-                        <figcaption class="team__position">
+                        <figcaption class="team__post">
                             JENG KOL<br>DESIGNER
                         </figcaption> 
                     </figure>
                     <figure class="team__person">
                         <img src="./images/person-4.png" alt="Pet Romak">
-                        <figcaption class="team__position">
+                        <figcaption class="team__post">
                             PET ROMAK<br>MARKETING
                         </figcaption> 
                     </figure>
@@ -217,9 +217,130 @@
                 <div class="section-team-inner__text">
                     Become part of our dream team, let’s join us ! 
                 </div>
-                <button class="main-btn section-team-inner__btn">
+                <button class="main-btn main-btn--button">
                     WE ARE HIRING
                 </button>
+            </div>
+        </div>
+    </section>
+    <section class="section-works" id="works">
+        <div class="section-works__description">
+            <h3 class="title-2">
+                Our works
+            </h3>
+            <a href="#" class="section-works__description-save">
+                See All Project in dribbble >
+            </a>
+        </div>
+        <div class="section-works__grid">
+            <a href="#"><img src="./images/grid-1.jpg" class="section-works__grid-image"></a>
+            <a href="#"><img src="./images/grid-2.jpg" class="section-works__grid-image"></a>
+            <a href="#"><img src="./images/grid-3.jpg" class="section-works__grid-image"></a>
+            <a href="#"><img src="./images/grid-4.jpg" class="section-works__grid-image"></a>
+            <a href="#"><img src="./images/grid-5.jpg" class="section-works__grid-image"></a>
+            <a href="#"><img src="./images/grid-6.jpg" class="section-works__grid-image"></a>
+            <a href="#"><img src="./images/grid-7.jpg" class="section-works__grid-image"></a>
+            <a href="#"><img src="./images/grid-8.jpg" class="section-works__grid-image"></a>
+            <a href="#"><img src="./images/grid-9.jpg" class="section-works__grid-image"></a>
+            <a href="#"><img src="./images/grid-10.jpg" class="section-works__grid-image"></a>
+            <a href="#"><img src="./images/grid-11.jpg" class="section-works__grid-image"></a>
+            <a href="#"><img src="./images/grid-12.jpg" class="section-works__grid-image"></a>
+            <a href="#"><img src="./images/grid-1.jpg" class="section-works__grid-image" data-number="1"></a>
+            <a href="#"><img src="./images/grid-2.jpg" class="section-works__grid-image" data-number="1"></a>
+            <a href="#"><img src="./images/grid-3.jpg" class="section-works__grid-image" data-number="1"></a>
+            <a href="#"><img src="./images/grid-4.jpg" class="section-works__grid-image" data-number="1"></a>
+            <a href="#"><img src="./images/grid-5.jpg" class="section-works__grid-image" data-number="1"></a>
+            <a href="#"><img src="./images/grid-6.jpg" class="section-works__grid-image" data-number="1"></a>
+            <a href="#"><img src="./images/grid-7.jpg" class="section-works__grid-image" data-number="1"></a>
+            <a href="#"><img src="./images/grid-8.jpg" class="section-works__grid-image" data-number="1"></a>
+            <a href="#"><img src="./images/grid-6.jpg" class="section-works__grid-image" data-number="2"></a>
+            <a href="#"><img src="./images/grid-7.jpg" class="section-works__grid-image" data-number="2"></a>
+            <a href="#"><img src="./images/grid-8.jpg" class="section-works__grid-image" data-number="2"></a>
+        </div>
+        <button class="main-btn main-btn--button" id="btn-load-more">Load more</button>
+    </section>
+    <section class="section-quotes" id="people-say" style="background-image: url(./images/bg-3.jpg);">
+        <div class="glide section-quotes-slider">
+            <div class="glide__track" data-glide-el="track">
+                <div class="section-quotes__inner glide__slides">
+                    <blockquote class="section-quotes__inner-item glide__slide">
+                        <p class="section-quotes__inner-item-text">
+                            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                        </p>
+                        <cite class="section-quotes__inner-item-author">
+                           - - - JANE GALADRIEL - - -<br>CEO TENGKUREP
+                        </cite>
+                    </blockquote>
+                    <blockquote class="section-quotes__inner-item glide__slide">
+                        <p class="section-quotes__inner-item-text">
+                            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                        </p>
+                        <cite class="section-quotes__inner-item-author">
+                            - - - JANE GALADRIEL - - -<br>CEO TENGKUREP
+                        </cite>
+                    </blockquote>
+                    <blockquote class="section-quotes__inner-item glide__slide">
+                        <p class="section-quotes__inner-item-text">
+                            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                        </p>
+                        <cite class="section-quotes__inner-item-author">
+                            - - - JANE GALADRIEL - - -<br>CEO TENGKUREP
+                        </cite>
+                    </blockquote>
+                     <blockquote class="section-quotes__inner-item glide__slide">
+                        <p class="section-quotes__inner-item-text">
+                            This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+                        </p>
+                        <cite class="section-quotes__inner-item-author">
+                            - - - JANE GALADRIEL - - -<br>CEO TENGKUREP
+                        </cite>
+                    </blockquote>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <i class="glide__arrow glide__arrow--left icon-angle-left" data-glide-dir="<"></i>
+                    <i class="glide__arrow glide__arrow--right icon-angle-right" data-glide-dir=">"></i>
+                </div>
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <img  class="glide__bullet" data-glide-dir="=0" src="./images/quotes-1.jpg" alt="Jane Galadriel">
+                    <img  class="glide__bullet" data-glide-dir="=1" src="./images/quotes-2.jpg" alt="Jane Galadriel">
+                    <img  class="glide__bullet" data-glide-dir="=2" src="./images/quotes-3.jpg" alt="Jane Galadriel">
+                    <img  class="glide__bullet" data-glide-dir="=3" src="./images/quotes-4.jpg" alt="Jane Galadriel">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-form" id="contact">
+        <div class="container container--flex">
+            <form class="form">
+                <h3 class="title-2">
+                    GIVE US A GOOD NEWS
+                </h3>
+                <input class="form__input" type="text" placeholder="Name" required>
+                <input class="form__input" type="email" placeholder="Email" required>
+                <input class="form__input" type="text" placeholder="Subject">
+                <textarea class="form__textarea" cols="30" rows="10" placeholder="Your message" required></textarea>
+                <input class="main-btn form__input-submit" type="submit" value="SUBMIT">
+            </form>
+            <div class="clients">
+                <h3 class="title-2">
+                    OUR HAPPY CLIENT
+                </h3>
+                <div class="clients__wrapper">
+                    <div class="clients__wrapper-left">
+                        <img class="clients__image" src="./images/client-1.png" alt="">
+                        <img class="clients__image" src="./images/client-2.png" alt="">
+                        <img class="clients__image" src="./images/client-3.png" alt="">
+                        <img class="clients__image" src="./images/client-4.png" alt="">
+                        <img class="clients__image" src="./images/client-5.png" alt="">
+                    </div>
+                    <div class="clients__wrapper-right">
+                        <img class="clients__image" src="./images/client-6.png" alt="">
+                        <img class="clients__image" src="./images/client-7.png" alt="">
+                        <img class="clients__image" src="./images/client-8.png" alt="">
+                        <img class="clients__image" src="./images/client-9.png" alt="">
+                        <img class="clients__image" src="./images/client-10.png" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
