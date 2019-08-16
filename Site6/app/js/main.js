@@ -33,16 +33,16 @@ window.addEventListener('scroll', () => {
     let item1 = document.querySelector('.header'),
         item2 = document.querySelector('.section-video'),
         item3 = document.querySelector('.section-team'),
-        item4 = document.querySelector('.section-quotes');
+        item4 = document.querySelector('.section-quotes'),
         itemList = [item1, item2, item3, item4];
     for (i = 0; i < 4; i++) {
         let rect = itemList[i].getBoundingClientRect(),
             scroll = pageYOffset,
             elementPosition = rect.top + scroll,
             value = scroll - elementPosition;
-            itemList[i].style.backgroundPosition = `center ${value*.35}px`    
+            itemList[i].style.backgroundPosition = `center ${value*.35}px`;   
     };
-});
+});   
 /// *** PARALLAX EFFECT *** ///
 
 /// *** PRELOADER *** ///
