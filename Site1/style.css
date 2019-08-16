@@ -66,6 +66,11 @@ display: flex;
     border: 1px solid transparent;
 }
 
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+}
+
 .link,.header__about, h1{
     color: white;
 }
