@@ -232,6 +232,16 @@ body{
 // *** slider
 
 // *** arrows settings(first)
+.slick-next{
+    position: absolute;
+    bottom: -80px;
+    right: 0;
+}
+.slick-prev{
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+}
 .slick{
     &-next{
         &::before{
