@@ -1064,7 +1064,6 @@ body {
   outline: none;
   position: absolute;
   bottom: 30px;
-  color: black;
 }
 
 .about__link::after {
@@ -1534,7 +1533,7 @@ body {
     margin-top: 20px;
   }
   .services__top, .services__items {
-    display: block;
+    flex-direction: column;
   }
   .services__title, .services__item {
     max-width: 80%;
@@ -1639,6 +1638,11 @@ body {
 @media (max-width: 350px) {
   .slick-list {
     max-width: 250px;
+  }
+  .services__title-title,
+  .form__title-title,
+  .news__title-title {
+    padding-left: 120px;
   }
 }
 

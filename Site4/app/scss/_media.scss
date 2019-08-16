@@ -48,7 +48,7 @@
     }
     .services{
         &__top, &__items{
-            display: block;
+            flex-direction: column;
         }
         &__title, &__item{
             max-width: 80%;
@@ -152,6 +152,11 @@
 @media (max-width:350px){
     .slick-list{
         max-width: 250px;
+    }
+    .services__title-title, 
+    .form__title-title,
+    .news__title-title {
+        padding-left: 120px;
     }
 }
 @media (min-width:680px){

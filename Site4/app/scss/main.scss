@@ -381,7 +381,6 @@ body{
         @include defaultbtn();
         position: absolute;
         bottom: 30px;
-        color: black;
 
         &::after{
             color: #fff;
