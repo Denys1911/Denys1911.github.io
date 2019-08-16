@@ -3,7 +3,7 @@
         font-size: 95%;
     }
 }
-@media only screen and (max-width : 840px) {
+@media screen and (max-width : 840px) {
     .content{
         flex-direction: column;
     }

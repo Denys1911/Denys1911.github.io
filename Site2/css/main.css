@@ -146,13 +146,13 @@ button:hover{
 	margin-left: 1rem;
 }
 .navbar{
-	min-height: 10vh;
+	min-height: 3.5rem;
 	background-color: #242424;
 	width: 100%;
 	display: inline-block;
 }
 .nav{
-	grid-template-columns: 5fr 1fr;
+	grid-template-columns: 3fr 1fr;
 }
 .navmenu{
 	display: grid;
@@ -162,6 +162,7 @@ button:hover{
 	align-items: stretch;
 }
 .navmenu__link{
+	line-height: 3.5rem;
 	color: white;
 	text-decoration: none;
 	border-right:  rgba(110, 108, 108, 0.8)  1px solid;
@@ -170,27 +171,19 @@ button:hover{
 	border-right: none;
 }
 .navmenu__link:hover,
-.specialbutton2 div:hover{
+.specialbutton2:hover{
 	background-color: #050505;
 }
-.navmenu__items{
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%)
-}
+
 /*  Кнопка "Гарантия 1год" */
 .specialbutton2{
-	all: unset;
 	color: white;
-	min-height: 10vh;
-	cursor: pointer;
-}
-.specialbutton2 div{
-	border: 2px solid white;
+	line-height: 3.5rem;
+	border: 1px solid white;
 	border-radius: 1rem;
-	padding: 0.3rem;
+	padding: 0 .5rem;
 }
-.specialbutton2:hover,
+
 .buttonformenu:hover{
 	box-shadow: none;
 }
