@@ -1052,6 +1052,7 @@ body {
   outline: none;
   position: absolute;
   bottom: 30px;
+  color: black;
 }
 
 .about__link::after {

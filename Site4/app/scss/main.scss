@@ -367,10 +367,12 @@ body{
         font-size: 14px;
         line-height: 24px;
     }
-    &__link{
+    &__link {
         @include defaultbtn();
         position: absolute;
         bottom: 30px;
+        color: black;
+
         &::after{
             color: #fff;
         }
@@ -463,9 +465,6 @@ body{
         padding-left: 10px;
         color: #231F20;
         border-bottom: 1px solid #e6e6e6;
-        &:last-child{
-            border-bottom: none;
-        }
         &:hover{
             background-color: #e6e6e6d3;
         }
