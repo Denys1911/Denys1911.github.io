@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-    <header class="header" style="background-image: url(./images/bg-1.jpg);">
+    <header class="header" id="home" style="background-image: url(./images/bg-1.jpg);">
         <div class="container">
             <div class="header-inner">
                 <nav class="header-inner__nav">
@@ -18,13 +18,13 @@
                         <img src="./images/Logo.png" alt="Tajam logotype">
                     </a>
                     <ul class="header-inner__nav-list">
-                        <li class="header-inner__nav-item"><a class="header-inner__nav-link">Home</a></li>
-                        <li class="header-inner__nav-item"><a class="header-inner__nav-link">About</a></li>
-                        <li class="header-inner__nav-item"><a class="header-inner__nav-link">Expertise</a></li>
-                        <li class="header-inner__nav-item"><a class="header-inner__nav-link">Teams</a></li>
-                        <li class="header-inner__nav-item"><a class="header-inner__nav-link">Works</a></li>
-                        <li class="header-inner__nav-item"><a class="header-inner__nav-link">People say</a></li>
-                        <li class="header-inner__nav-item"><a class="header-inner__nav-link">contact</a></li>
+                        <li class="header-inner__nav-item"><a class="header-inner__nav-link" href="#home">Home</a></li>
+                        <li class="header-inner__nav-item"><a class="header-inner__nav-link" href="#about">About</a></li>
+                        <li class="header-inner__nav-item"><a class="header-inner__nav-link" href="#expertise">Expertise</a></li>
+                        <li class="header-inner__nav-item"><a class="header-inner__nav-link" href="#teams">Teams</a></li>
+                        <li class="header-inner__nav-item"><a class="header-inner__nav-link" href="#works">Works</a></li>
+                        <li class="header-inner__nav-item"><a class="header-inner__nav-link" href="#people">People say</a></li>
+                        <li class="header-inner__nav-item"><a class="header-inner__nav-link" href="#contacts">contact</a></li>
                     </ul>
                     <button class="nav-btn-close">+</button>
                     <div class="nav-btn">
@@ -103,7 +103,7 @@
         </div>
     </div>
     </main>
-    <section class="section-video" style="background-image: url(./images/bg-2.jpg);">
+    <section class="section-video" id="about" style="background-image: url(./images/bg-2.jpg);">
         <a class="section-video__inner" href="#">
             <img class="section-video__inner-img" src="./images/play.png" alt="Tajam story video">
             <h5>
@@ -111,7 +111,7 @@
             </h5>
         </a>    
     </section>
-    <section class="section-expertise">
+    <section class="section-expertise" id="expertise">
         <div class="container">
             <h3 class="title">
                 Expertise
@@ -179,7 +179,7 @@
             </ul>
         </div>
     </section>
-    <section class="section-team" style="background-image: url(./images/bg-3.jpg);">
+    <section class="section-team" id="teams" style="background-image: url(./images/bg-3.jpg);">
         <div class="container">
             <div class="section-team-inner">
                 <h3 class="title">
@@ -223,7 +223,7 @@
             </div>
         </div>
     </section>
-    <section class="section-works">
+    <section class="section-works" id="works">
         <div class="section-works__description">
             <h3 class="title-2">
                 Our works
@@ -259,7 +259,7 @@
         </div>
         <button class="main-btn main-btn--button" id="btn-load-more">Load more</button>
     </section>
-    <section class="section-quotes" style="background-image: url(./images/bg-3.jpg);">
+    <section class="section-quotes" id="people" style="background-image: url(./images/bg-3.jpg);">
         <div class="glide section-quotes-slider">
             <div class="glide__track" data-glide-el="track">
                 <div class="section-quotes__inner glide__slides">
@@ -344,7 +344,7 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
         <div class="container">
             <div class="footer-inner">
                 <div class="footer-inner__privacy">
@@ -429,7 +429,15 @@
     </div>
     <button class="go-up" title="Go up"></button>
     <div class="preloader-wrapper">
-        <div class="preloader-box"></div>
+        <div class="preloader-box">
+            <div class="contain">
+                 <div class="item-1"></div>
+                <div class="item-2"></div>
+                <div class="item-3"></div>
+                <div class="item-4"></div>
+                <div class="item-5"></div>
+            </div>
+        </div>
     </div>
     <script src="./js/libs.min.js"></script>
     <script src="./js/main.js"></script>

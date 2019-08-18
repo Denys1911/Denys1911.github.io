@@ -67,39 +67,74 @@ a {
 }
 
 .preloader-box {
-    width: 100px;
-    height: 100px;
+    //width: 100px;
+    //height: 100px;
     margin: auto;
-    background-color: $accent;
-    animation: turning 2s ease infinite alternate;
+    //background-color: $accent;
 }
 
-@keyframes turning {
-    0% {
-        border-radius: 0;
-        transform: rotate(0deg) scale(1.2);
-    }
+$color-4: #ade7e5;
+$color-3: #30235f;
+$color-2: #46a3cc;
+$color-1: #13102d;
 
-    25% {
-        border-radius: 50% 0 0 0;
-        transform: rotate(45deg) scale(1);
-    }
+$color: $color-1, $color-2, $color-3, $color-4;
 
-    50% {
-        border-radius: 50% 50% 0 0;
-        transform: rotate(90deg) scale(.7);
-    }
+@mixin anim() {
+    @keyframes scale {
+        0% {
+            transform: scale(1);
+        }
 
-    75% {
-        border-radius: 50% 50% 50% 0;
-        transform: rotate(135deg) scale(.5);
-    }
+        50%,
+        75% {
+            transform: scale(2.5);
+        }
 
-    100% {
+        78%,
+        100% {
+            opacity: 0;
+        }
+    }
+}
+
+.contain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@for $i from 1 through 4 {
+    .item-#{$i} {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        margin: 7px;
+        background: #f583a1;
+        background-color: nth($color, $i);
         border-radius: 50%;
-        transform: rotate(180deg) scale(.7);
+
+        @include anim();
+
+        &::before {
+            width: 20px;
+            height: 20px;
+            content: '';
+            background-color: nth($color, $i);
+            border-radius: 50%;
+            opacity: 0.7;
+            transition: 0.5s all ease;
+            transform: scale(1);
+            animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+            animation-delay: 200ms * $i;
+        }
     }
 }
+
 /// *** PRELOADER *** ///
 
 /// *** MODAL WINDOW *** ///
