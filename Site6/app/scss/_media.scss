@@ -131,6 +131,11 @@
     .team {
         justify-content: space-around;
     }
+
+    .modal-form__textarea {
+        width: 250px;
+        height: 150px;
+    }
 }
 
 @media (max-width: 493px) {

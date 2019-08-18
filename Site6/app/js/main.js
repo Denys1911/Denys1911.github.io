@@ -8,6 +8,29 @@ new Glide('.section-quotes-slider', {
 }).mount();
 /// *** SLIDER *** ///
 
+/// *** SCROLL to ANCORS *** ///
+let item0 = document.querySelector('.header'),
+    item1 = document.querySelector('.section-video'),
+    item2 = document.querySelector('.section-expertise'),
+    item3 = document.querySelector('.section-team'),
+    item4 = document.querySelector('.section-works'),
+    item5 = document.querySelector('.section-quotes'),
+    item6 = document.querySelector('.footer'),
+    itemList = [item0, item1, item2, item3, item4, item5, item6],
+    linksList = document.querySelectorAll('.header-inner__nav-link');
+for (i = 0; i < 7; i++) {
+    let rect = itemList[i].getBoundingClientRect(),
+        scroll = pageYOffset,
+        elementPosition = rect.top + scroll;
+    linksList[i].addEventListener('click', () => {
+        window.scrollTo({
+            top: elementPosition,
+            behavior: 'smooth'
+        }); 
+    })
+};
+/// *** SCROLL to ANCORS *** ///
+
 /// *** NAV BUTTON'S *** ///
 document.querySelector('.nav-btn').addEventListener('click', () => {
     document.querySelector('.header-inner__nav-list').style.display = 'flex';
@@ -42,7 +65,7 @@ window.addEventListener('scroll', () => {
             value = scroll - elementPosition;
             itemList[i].style.backgroundPosition = `center ${value*.35}px`;   
     };
-});   
+});
 /// *** PARALLAX EFFECT *** ///
 
 /// *** PRELOADER *** ///
@@ -100,4 +123,34 @@ button.addEventListener('click', () => {
 });
 /// *** BUTTON LOAD MORE *** ///
 
+/// *** MODAL WINDOW *** ///
+let modalWindow = document.querySelector('.modal-wrapper');
 
+document.getElementById('modal').addEventListener('click', showModal);
+document.querySelector('.modal-form__close-btn').addEventListener('click', closeModal);
+
+function showModal() {
+    modalWindow.style.display = 'flex';
+    document.onkeydown = (event) =>  {
+        if (event.key == 'Escape') closeModal();
+    }
+}
+
+function closeModal() {
+    modalWindow.style.display = 'none';
+    document.onkeydown = null;
+}
+/// *** MODAL WINDOW *** ///
+
+/// *** SUBSCRIBE BUTTON *** ///
+let subscribeButton = document.querySelector('.footer-inner__social-input-button');
+subscribeButton.addEventListener('click', () => {
+    if(document.querySelector('.footer-inner__social-input').value != ''){
+        let newSpan = document.createElement('span');
+        newSpan.innerHTML = 'Subscribed successfully!';
+        newSpan.classList.add('footer-inner__social-success');
+        subscribeButton.insertAdjacentElement('afterend', newSpan);
+        setTimeout(() => newSpan.remove(), 1000);
+    };
+});
+/// *** SUBSCRIBE BUTTON *** ///

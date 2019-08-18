@@ -19,13 +19,18 @@ ul {
 a {
     text-decoration: none;
     cursor: pointer;
-    outline: none;
 }
 
 button {
     cursor: pointer;
     background: none;
     border: none;
+}
+
+input,
+textarea,
+button,
+a {
     outline: none;
 }
 
@@ -57,7 +62,43 @@ button {
     bottom: 0;
     left: 0;
     z-index: 10;
+    display: flex;
     background-color: #322d53;
+}
+
+.preloader-box {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    background-color: $accent;
+    animation: turning 2s ease infinite alternate;
+}
+
+@keyframes turning {
+    0% {
+        border-radius: 0;
+        transform: rotate(0deg) scale(1.2);
+    }
+
+    25% {
+        border-radius: 50% 0 0 0;
+        transform: rotate(45deg) scale(1);
+    }
+
+    50% {
+        border-radius: 50% 50% 0 0;
+        transform: rotate(90deg) scale(.7);
+    }
+
+    75% {
+        border-radius: 50% 50% 50% 0;
+        transform: rotate(135deg) scale(.5);
+    }
+
+    100% {
+        border-radius: 50%;
+        transform: rotate(180deg) scale(.7);
+    }
 }
 /// *** PRELOADER *** ///
 
@@ -74,22 +115,57 @@ button {
 }
 
 .modal-form {
+    position: relative;
+    padding: .8rem;
     margin: auto;
+    background-color: #fff;
+    box-shadow: 0 0 4px 2px #dadada;
 
-    &__input {
-        display: block;
-    }
+    label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-    &__textarea {
-        width: 400px;
-        height: 200px;
-        resize: none;
+        span {
+            @include font($playfair, 1.15rem, 500);
+        }
     }
 
     .main-btn {
         margin: 0 auto;
         color: $white;
+        cursor: pointer;
         background-color: $accent;
+    }
+
+    &__input {
+        @include font($roboto, 1rem, 300);
+
+        display: block;
+        margin: 10px 0;
+        cursor: pointer;
+    }
+
+    &__textarea {
+        width: 400px;
+        height: 200px;
+        padding: .7rem;
+        resize: none;
+    }
+
+    &__close-btn {
+        position: absolute;
+        top: -3px;
+        right: 3px;
+        font-size: 3rem;
+        font-weight: 100;
+        color: rgb(99, 97, 97);
+        transition: opacity .25s ease;
+        transform: rotate(45deg);
+
+        &:hover {
+            opacity: .7;
+        }
     }
 }
 /// *** MODAL WINDOW *** ///
@@ -147,7 +223,6 @@ button {
         width: 8rem;
         height: 3rem;
         background: transparent;
-        outline: none;
     }
 }
 
@@ -644,7 +719,6 @@ h1 {
         max-width: 29rem;
         padding: 0.5rem 1rem;
         margin-bottom: 1rem;
-        outline: none;
     }
 
     &__textarea {
@@ -782,7 +856,6 @@ h1 {
         padding: 0.8rem 1.6rem;
         color: $white;
         background-color: transparent;
-        outline: none;
 
         &::placeholder {
             color: $white;
@@ -795,12 +868,19 @@ h1 {
         line-height: 2.7rem;
         background-color: rgba(#a199b4, 0.7);
         border: none;
-        outline: none;
         transition: background-color .5s ease;
 
         &:hover {
             background-color: rgba(#a199b4, 1);
         }
+    }
+
+    &__social-success {
+        @include font($roboto, 1rem, 300);
+
+        padding: .5rem;
+        color: rgb(30, 243, 11);
+        border: 1px solid rgb(30, 243, 11);
     }
 
     &__social-icons {
