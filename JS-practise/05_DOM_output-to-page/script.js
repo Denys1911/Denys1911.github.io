@@ -28,8 +28,8 @@ document.querySelector('img').alt = 'Yellow cat';
 console.log(document.querySelector('img').src);
 document.querySelector('img').src = 'https://cdn2.iconfinder.com/data/icons/cat-power/64/cat_tied.png';
 
-console.log (document.querySelector('link').href);
-document.querySelector('link').href = './style2.css';
+console.log (document.querySelector('link').getAttribute('href'));
+document.querySelector('link').setAttribute('href', './style2.css');
 
 console.log(document.querySelector('input').type);
 document.querySelector('input').type = 'range';
@@ -37,12 +37,12 @@ document.querySelector('input').type = 'range';
 /// *** HOMEWORK (prepare stylezation of document before print) *** ///
 
 document.querySelector('button').addEventListener('click', () => {
-    let print = document.querySelector('link').href;
-    if (print === 'https://denys1911.github.io/JS-practise/05_DOM_output-to-page/style2.css') {
-        document.querySelector('link').href == 'https://denys1911.github.io/JS-practise/05_DOM_output-to-page/style3.css';
+    let print = document.querySelector('link').getAttribute('href');
+    if (print == './style2.css') {
+        document.querySelector('link').setAttribute('href', './style3.css');
         document.querySelector('button').innerText = 'Return stylezation back';
     } else {
-        document.querySelector('link').href == 'https://denys1911.github.io/JS-practise/05_DOM_output-to-page/style2.css';
+        document.querySelector('link').setAttribute('href', './style2.css');
         document.querySelector('button').innerText = 'Print';
     }
 })
