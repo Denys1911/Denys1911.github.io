@@ -51,7 +51,7 @@ gulp.task('css-libs', () => {
 
 /// *** STYLELINT AUTOFIX TASK *** ///
 gulp.task('fix', () => {
-    return gulp.src('app/scss/_fonts.scss') // here point your scss file( either css if you need) which you need to fix
+    return gulp.src('app/scss/main.scss') // here point your scss file( either css if you need) which you need to fix
     .pipe(gulpStylelint({
         failAfterError: false,  
         fix: true
