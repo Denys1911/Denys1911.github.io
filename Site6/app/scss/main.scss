@@ -33,6 +33,11 @@ a {
     outline: none;
 }
 
+input[type="submit"],
+input[type="file"] {
+    cursor: pointer;
+}
+
 ///*** Scrollbar stylezation ***///
 ::-webkit-scrollbar {
     width: 15px;
@@ -139,9 +144,6 @@ a {
 
     .main-btn {
         margin: 0 auto;
-        color: $white;
-        cursor: pointer;
-        background-color: $accent;
     }
 
     &__input {
@@ -149,7 +151,6 @@ a {
 
         display: block;
         margin: 10px 0;
-        cursor: pointer;
     }
 
     &__textarea {
@@ -214,9 +215,9 @@ a {
 
     &:hover,
     &:focus {
-        color: lighten($accent, 20%);
-        border-color: lighten($accent, 20%);
-        transform: scale(.95);
+        color: #fff;
+        background-color: $accent;
+        border-color: #fff;
     }
 
     &--button {
@@ -636,7 +637,7 @@ h1 {
     min-height: 80vh;
     padding: 3.75rem 1rem;
     overflow: hidden;
-    background-size: 100% 110%;
+    background-size: 150% 110%;
 
     /// *** GLIDE Stylezation *** ///
     .glide__bullets {
@@ -862,6 +863,7 @@ h1 {
         padding: 0.8rem 1.6rem;
         color: $white;
         background-color: transparent;
+        border: 1px solid #fff;
 
         &::placeholder {
             color: $white;
