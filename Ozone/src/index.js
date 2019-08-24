@@ -4,7 +4,7 @@ import getData from "./modules/getData";
 import renderCards from "./modules/renderCards";
 import renderCatalog from "./modules/renderCatalog";
 import toggleCheckbox from "./modules/toggleCheckbox";
-import cart from "./modules/cart";
+import basket from "./modules/basket";
 import addCard from "./modules/addCard";
 import stockFilter from "./modules/stockFilter";
 
@@ -13,7 +13,7 @@ import stockFilter from "./modules/stockFilter";
     renderCards(data);
     renderCatalog();
     toggleCheckbox();
-    cart();
+    basket();
     addCard();
     stockFilter();
 }());

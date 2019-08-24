@@ -216,7 +216,7 @@ nav {
 	}
 }
 
-#cart {
+#basket {
 	height: 56px;
 	width: 76px;
 	position: relative;
@@ -452,7 +452,7 @@ nav {
 
 }
 
-.cart {
+.basket {
 	display: none;
 	position: fixed;
 	top: 0;
@@ -488,7 +488,7 @@ nav {
 		border-radius: 3px;
 		padding: 20px;
 
-		#cart-empty {
+		#basket-empty {
 			font-size: 24px;
 			color: #4d5f71
 		}

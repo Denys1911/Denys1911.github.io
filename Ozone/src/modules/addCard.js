@@ -1,15 +1,15 @@
 export default function addCard() {
     const cards = document.querySelectorAll('.goods .card'),
-        cartWrapper = document.querySelector('.cart-wrapper'),
-        cartEmpty = document.getElementById('cart-empty'),
-        cartCounter = document.querySelector('.counter'),
-        cartTotal = document.querySelector('.cart-total span');
+        basketWrapper = document.querySelector('.basket-wrapper'),
+        basketEmpty = document.getElementById('basket-empty'),
+        basketCounter = document.querySelector('.counter'),
+        basketTotal = document.querySelector('.basket-total span');
 
     cards.forEach((card) => {
         const cardBtn = card.querySelector('button');
         cardBtn.addEventListener('click', () => {
             const cardClone = card.cloneNode(true);
-            cartWrapper.appendChild(cardClone);
+            basketWrapper.appendChild(cardClone);
             showData();
 
             const cardBtnRemove = cardClone.querySelector('.btn');
@@ -22,22 +22,22 @@ export default function addCard() {
     });
 
     function showData() {
-        const cartCardsNumber = cartWrapper.querySelectorAll('.card'),
-            cardsPrice = cartWrapper.querySelectorAll('.card-price');
+        const basketCardsNumber = basketWrapper.querySelectorAll('.card'),
+            cardsPrice = basketWrapper.querySelectorAll('.card-price');
         let sum = 0;
 
-        cartCounter.textContent = cartCardsNumber.length;
+        basketCounter.textContent = basketCardsNumber.length;
 
         cardsPrice.forEach((cardPrice) => {
             const price = parseFloat(cardPrice.textContent);
             sum += price;
         });
-        cartTotal.textContent = sum;
+        basketTotal.textContent = sum;
 
-        if (cartCardsNumber.length !== 0) {
-            cartEmpty.remove();
+        if (basketCardsNumber.length !== 0) {
+            basketEmpty.remove();
         } else {
-            cartWrapper.appendChild(cartEmpty);
+            basketWrapper.appendChild(basketEmpty);
         }
     }
 }
