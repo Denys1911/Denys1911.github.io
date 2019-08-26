@@ -52,15 +52,17 @@
     bottom: 0;
     left: 0;
     z-index: 10;
-    display: flex;
     background-color: rgba(128, 120, 120, .3);
 }
 
 .modal {
-    position: relative;
-    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 11;
     padding: 50px 50px 30px 50px;
     background-color: #fff;
+    transform: translate(-50%, -50%);
 }
 
 .hide {
