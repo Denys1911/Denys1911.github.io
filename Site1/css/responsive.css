@@ -3,6 +3,21 @@
        font-size: 95%;
    }
 }
+@media screen and (max-width: 850px){
+    .section5 {
+        flex-direction: column;
+    }
+    .section5-left-wrapper,
+    .section5__skill {
+        flex-basis: 100%;
+    }
+    .section5__skill {
+        margin: 15px 0;
+    }
+    .skill-image {
+        max-width: 70%;
+    }
+}
 @media screen and (max-width: 768px){
     html{
         font-size: 90%;
@@ -22,24 +37,6 @@
     .nav--open{
         display: block;
         margin-right: 2rem;
-    }
-}
-@media screen and (max-width: 690px){
-    .section5{
-        display: inline-block;
-    }
-    .section5__icons,
-    .section5__inform{
-        display: inline-block;
-    }
-    .section5__inform{
-        width: 70%;
-        text-align: center;
-        vertical-align: top
-    }
-    .section5__skill{
-        display: inline-block;
-        margin-left: 14%;
     }
 }
 @media screen and (max-width: 630px){
