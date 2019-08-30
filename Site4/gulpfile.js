@@ -23,7 +23,9 @@ gulp.task('script', function(){
 
 gulp.task('js', function(){
   return gulp.src([
+    'node_modules/jquery/dist/jquery.min.js',
     'node_modules/slick-carousel/slick/slick.js',
+    'plugins/fancybox-master/dist/jquery.fancybox.js',
     'plugins/jquery-form-styler/jquery.formstyler.js'
   ])
   .pipe(concat('libs.min.js'))
