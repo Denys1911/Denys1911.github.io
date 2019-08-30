@@ -44,6 +44,7 @@ gulp.task('script', function(){
 
 gulp.task('libs', function(){
     return gulp.src([
+        './node_modules/jquery/dist/jquery.js',
         './app/plugins/OwlCarousel2/dist/owl.carousel.js',
         './app/plugins/jQuery.equalHeights-master/jquery.equalheights.js',
         './app/plugins/fotorama-4.6.4.dev/fotorama.dev.js',
