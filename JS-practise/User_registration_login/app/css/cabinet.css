@@ -1,0 +1,96 @@
+body {
+    margin: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+button {
+    padding: 10px 18px;
+    font-size: 16px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid rgb(22, 165, 175);
+    border-radius: 10px;
+    transition: background-color .5s ease;
+}
+
+button:hover {
+    background-color: rgb(83, 221, 231);
+}
+
+#logout {
+    display: inline-block;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    outline: none;
+}
+
+.label {
+    font-size: 18px;
+    color: rgb(19, 133, 117);
+    display: block;
+}
+
+.label-sex {
+    margin-top: 10px;
+}
+
+.label-radio {
+    color: #000;
+}
+
+.update-sex {
+    display: none;
+}
+
+.radio-button {
+    display: inline-block;
+    margin: 0 10px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #000;
+    border-radius: 50%;
+}
+
+.update-sex:checked + .radio-button {
+    background-color: rgb(132, 209, 199);
+}
+
+#update-submit {
+    margin-top: 50px;
+}
+
+.alert {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    display: none;
+    padding: 15px 30px;
+    color: #fff;
+    background-color: rgb(97, 95, 95);
+    border-radius: 5px;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 440px) {
+    .label > input {
+        display: block;
+    }
+}
