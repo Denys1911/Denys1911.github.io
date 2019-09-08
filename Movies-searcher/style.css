@@ -133,7 +133,7 @@ body {
     100% {
         transform: rotate(360deg);
     }
-}
+} 
 
 @media (max-width: 900px) {
     .movies-list {
