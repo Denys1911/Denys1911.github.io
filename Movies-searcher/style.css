@@ -116,6 +116,7 @@ body {
     margin-bottom: 10px;
 }
 
+/* Preloader for movies
 .spinner {
     margin: 0 auto;
     width: 60px;
@@ -133,7 +134,7 @@ body {
     100% {
         transform: rotate(360deg);
     }
-} 
+} */
 
 @media (max-width: 900px) {
     .movies-list {

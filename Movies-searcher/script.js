@@ -21,10 +21,6 @@ function searchMovies() {
     
     function showMovies(request) {
         request.addEventListener('readystatechange', () => {
-            if (request.readyState !== 4) {
-                moviesContainer.innerHTML = '<div class="spinner"></div>';
-            }
-
             if (request.readyState === 4 && request.status === 200) {
                 const output = JSON.parse(request.responseText);
 
@@ -32,7 +28,6 @@ function searchMovies() {
                     moviesContainer.innerHTML = `<div class="error">По вашему запросу ничего не найдено!</div>`;
                 } else {
                     output.results.forEach(result => {
-                        moviesContainer.innerHTML = '';
                         moviesContainer.innerHTML += `
                             <li class="movies-list__item">
                                 <h2 class="movies-list__item-title">${result.name || result.title}</h2>
