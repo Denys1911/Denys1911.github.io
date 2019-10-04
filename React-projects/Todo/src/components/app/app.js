@@ -12,7 +12,7 @@ export default class App extends Component{
     maxId = 1;
 
     createTodoItem = label => {
-       return {
+        return {
            label,
            done: false,
            important: false,
@@ -45,6 +45,9 @@ export default class App extends Component{
 
     addItem = text => {
         const newItem = this.createTodoItem(text);
+        if (!newItem.label) {
+            return;
+        }
         this.setState(({todoData}) => {
             const newArray = [
                 ...todoData, newItem
