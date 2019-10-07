@@ -1,6 +1,6 @@
 # This is the repository for all my works. There are several main sections. 
 
-  In section "My websites" you can find all my sites, in this works I generally have trained how to work with HTML, CSS, SCSS, CSS @keyframes, Gulp, BEM, Linters, learned how to connect and customize plugins. However, in the last site all JS code, except slider, was written by me personally.
+  In section "My websites" you can find all my sites. In this works I generally have trained how to work with HTML, CSS, SCSS, CSS @keyframes, Gulp, BEM, Linters, learned how to connect and customize plugins. However, in the last site all JS code, except slider, was written by me personally.
   
   In section "JS projects" there are my JS projects and homeworks from several cources.
   
