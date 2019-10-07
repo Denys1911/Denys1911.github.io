@@ -1,0 +1,11 @@
+label,
+button,
+input[type=submit] {
+    display: block;
+    margin: 15px;
+}
+
+span {
+    padding: 5px 10px;
+    border: 1px solid greenyellow;
+}

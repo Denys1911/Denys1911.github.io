@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    user-select: none;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3px;
+    width: 100%;
+    max-width: 500px;
+    padding: 3px;
+    background-color: rgb(49, 49, 49);
+    border-radius: 7px;
+    transform: translate(-50%, -50%);
+}
+
+.item {
+    background-color: #b3fce5;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color .35s ease;
+}
+
+.num:active {
+    background-color: rgb(225, 248, 246);
+}
+
+.input {
+    grid-column: 1/-1;
+    padding: 20px 15px;
+    font-size: 20px;
+    background-color: #fff;
+    text-align: left;
+    cursor: auto;
+}
+
+.reset {
+    grid-column: 1/3;
+    background-color: rgb(231, 60, 60);
+}
+
+.reset:active {
+    background-color: rgb(255, 103, 103);
+}
+
+.arrow {
+    grid-column: 3/-1;
+    background-color: rgb(247, 250, 96);
+}
+
+.arrow:active {
+    background-color: rgb(249, 250, 168);
+}
+
+.equal {
+    grid-column: 4/-1;
+    grid-row: 6/8;
+    padding: 50px 20px;
+    background-color: rgb(82, 160, 248);
+}
+
+.equal:active {
+    background-color: rgb(138, 188, 245);
+}
+
+.zero {
+    grid-column: 1/3;
+}
