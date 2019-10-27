@@ -1,12 +1,12 @@
-const gulp = require('gulp'),
-      sass = require('gulp-sass'),
-      browserSync = require('browser-sync'),
-      gulpStylelint = require('gulp-stylelint'),
-      autoprefixer = require('gulp-autoprefixer'),
-      concat = require('gulp-concat'),
-      uglify = require('gulp-uglify'),
-      del = require('del'),
-      rename = require('gulp-rename');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const browserSync = require('browser-sync');
+const gulpStylelint = require('gulp-stylelint');
+const autoprefixer = require('gulp-autoprefixer');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const del = require('del');
+const rename = require('gulp-rename');
     
 gulp.task('browser-sync', () => {
     browserSync.init({
@@ -18,7 +18,7 @@ gulp.task('browser-sync', () => {
 
 gulp.task('html', () => {
     return gulp.src('app/*.html')
-    .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('scss', () => {
@@ -29,24 +29,24 @@ gulp.task('scss', () => {
           {formatter: 'string', console: true}
         ]
     }))
-    .pipe(sass({outputStyle: "expanded"}))
+    .pipe(sass({outputStyle: "compressed"}))
     .pipe(autoprefixer({
-        overRideBrowsers: ['last 10 versions'],
+        browsers: ['last 10 versions'],
         grid: true
     }))
-    //.pipe(rename({suffix: '.min'}))  // if you want to minify your css, uncomment this line. This will just rename your main.css file into main.min.css
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('app/css'))
-    .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('css-libs', () => {
     return gulp.src([
         'node_modules/normalize.css/normalize.css',
-        'node_modules/@glidejs/glide/dist/css/glide.core.css'
+        'node_modules/@glidejs/glide/dist/css/glide.core.css',
     ])
     .pipe(concat('_libs.scss'))
     .pipe(gulp.dest('app/scss'))
-    .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({stream: true}));
 });
 
 /// *** STYLELINT AUTOFIX TASK *** ///
@@ -56,43 +56,38 @@ gulp.task('fix', () => {
         failAfterError: false,  
         fix: true
     }))
-    .pipe(gulp.dest('app/scss'))  // Destination of your fixed file. If you need to override old, just point destination in the same folder
+    .pipe(gulp.dest('app/scss')); // Destination of your fixed file. If you need to override old, just point
+    // destination in the same folder
 });
 /// *** STYLELINT AUTOFIX TASK *** ///
 
 gulp.task('js', () => {
     return gulp.src('app/js/**/*.js')
-    .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('js-libs', () => {
     return gulp.src([
-        // put here destination of js files from plugins which are used on your project 
         'node_modules/@glidejs/glide/dist/glide.js',
     ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('app/js'))
-    .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('watch', () => {
-    gulp.watch('app/*.html', gulp.parallel('html'))
-    gulp.watch('app/scss/**/*.scss', gulp.parallel('scss'))
-    gulp.watch('app/js/**/*.js', gulp.parallel('js'))
+    gulp.watch('app/*.html', gulp.parallel('html'));
+    gulp.watch('app/scss/**/*.scss', gulp.parallel('scss'));
+    gulp.watch('app/js/**/*.js', gulp.parallel('js'));
 });
 
 gulp.task('build', async () => {
-    let buildHtml = gulp.src('app/**/*.html')
-    .pipe(gulp.dest('dist'))
-    let buildCss = gulp.src('app/css/**/*.css')
-    .pipe(gulp.dest('dist/css'))
-    let buildJs = gulp.src('app/js/**/*.js')
-    .pipe(gulp.dest('dist/js'))
-    let buildImages = gulp.src('app/images/**/*.*')
-    .pipe(gulp.dest('dist/images'))
-    let buildHTML = gulp.src('app/fonts/**/*.*')
-    .pipe(gulp.dest('dist/fonts'))
+    gulp.src('app/**/*.html').pipe(gulp.dest('dist'));
+    gulp.src('app/css/**/*.css').pipe(gulp.dest('dist/css'));
+    gulp.src('app/js/**/*.js').pipe(gulp.dest('dist/js'));
+    gulp.src('app/images/**/*.*').pipe(gulp.dest('dist/images'));
+    gulp.src('app/fonts/**/*.*').pipe(gulp.dest('dist/fonts'));
 });
 
 gulp.task('del', async () => {
