@@ -1,0 +1,11 @@
+body {
+    margin: 15px 30px;
+}
+
+.hide {
+    display: none;
+}
+
+.text-color {
+    color: #61ff06;
+}
