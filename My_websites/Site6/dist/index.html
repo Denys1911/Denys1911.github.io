@@ -246,7 +246,7 @@
                 <div class="section-team-inner__text">
                     Become part of our dream team, let’s join us ! 
                 </div>
-                <button class="main-btn main-btn--button" id="modal">
+                <button class="main-btn main-btn--button" id="open-modal-btn">
                     WE ARE HIRING
                 </button>
             </div>
@@ -261,32 +261,8 @@
                 See All Project in dribbble >
             </a>
         </div>
-        <div class="section-works__grid">
-            <a href="#"><img src="./images/grid-1.jpg" class="section-works__grid-image" alt="our works"></a>
-            <a href="#"><img src="./images/grid-2.jpg" class="section-works__grid-image" alt="our works"></a>
-            <a href="#"><img src="./images/grid-3.jpg" class="section-works__grid-image" alt="our works"></a>
-            <a href="#"><img src="./images/grid-4.jpg" class="section-works__grid-image" alt="our works"></a>
-            <a href="#"><img src="./images/grid-5.jpg" class="section-works__grid-image" alt="our works"></a>
-            <a href="#"><img src="./images/grid-6.jpg" class="section-works__grid-image" alt="our works"></a>
-            <a href="#"><img src="./images/grid-7.jpg" class="section-works__grid-image" alt="our works"></a>
-            <a href="#"><img src="./images/grid-8.jpg" class="section-works__grid-image" alt="our works"></a>
-            <a href="#"><img src="./images/grid-9.jpg" class="section-works__grid-image" alt="our works"></a>
-            <a href="#"><img src="./images/grid-10.jpg" class="section-works__grid-image" alt="our works"></a>
-            <a href="#"><img src="./images/grid-11.jpg" class="section-works__grid-image" alt="our works"></a>
-            <a href="#"><img src="./images/grid-12.jpg" class="section-works__grid-image" alt="our works"></a>
-            <a href="#"><img src="./images/grid-1.jpg" class="section-works__grid-image" alt="our works" data-number="1"></a>
-            <a href="#"><img src="./images/grid-2.jpg" class="section-works__grid-image" alt="our works" data-number="1"></a>
-            <a href="#"><img src="./images/grid-3.jpg" class="section-works__grid-image" alt="our works" data-number="1"></a>
-            <a href="#"><img src="./images/grid-4.jpg" class="section-works__grid-image" alt="our works" data-number="1"></a>
-            <a href="#"><img src="./images/grid-5.jpg" class="section-works__grid-image" alt="our works" data-number="1"></a>
-            <a href="#"><img src="./images/grid-6.jpg" class="section-works__grid-image" alt="our works" data-number="1"></a>
-            <a href="#"><img src="./images/grid-7.jpg" class="section-works__grid-image" alt="our works" data-number="1"></a>
-            <a href="#"><img src="./images/grid-8.jpg" class="section-works__grid-image" alt="our works" data-number="1"></a>
-            <a href="#"><img src="./images/grid-6.jpg" class="section-works__grid-image" alt="our works" data-number="2"></a>
-            <a href="#"><img src="./images/grid-7.jpg" class="section-works__grid-image" alt="our works" data-number="2"></a>
-            <a href="#"><img src="./images/grid-8.jpg" class="section-works__grid-image" alt="our works" data-number="2"></a>
-        </div>
-        <button class="main-btn main-btn--button" id="btn-load-more">Load more</button>
+        <div class="section-works__grid"></div>
+        <button class="main-btn main-btn--button" id="btn-show-all-works">Show all</button>
     </section>
     <section class="section-quotes" id="people" style="background-image: url(./images/bg-3.jpg);">
         <div class="glide section-quotes-slider">
@@ -433,12 +409,13 @@
                     <h5 class="footer-title">
                         Stay in touch
                     </h5>
-                    <div>
+                    <form>
                         <input class="footer-inner__social-input" type="email" placeholder="Subscribe our newsletter">
                         <button class="footer-inner__social-input-button">
                             Submit
                         </button>
-                    </div>
+                    </form>
+                    <span class="footer-inner__social-success"></span>
                     <div class="footer-inner__social-icons">
                         <a href="#" class="footer-inner__social-icons-item">
                             <i class="icon-facebook-f"></i>
@@ -479,7 +456,7 @@
             <input class="main-btn main-btn--input-submit" type="submit" value="SUBMIT">
         </form>
     </div>
-    <button class="go-up" title="Go up"></button>
+    <button class="scroll-to-top-btn" title="Go up"></button>
     <div class="preloader-wrapper">
         <ul class="preloader">
             <li class="item-1"></li>
@@ -490,6 +467,7 @@
     </div>
 
     <script src="./js/libs.min.js"></script>
+    <script src="./js/functions.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>
