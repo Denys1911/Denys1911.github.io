@@ -79,6 +79,10 @@
         min-height: 70vh;
         background-size: 200% 120%;
     }
+
+    .flex {
+        display: flex !important;
+    }
 }
 
 @media (max-width: 660px) {
@@ -148,32 +152,6 @@
     .expertise-tools__item:not(:last-child) {
         border-bottom: 1px solid #ebebeb;
     }
-
-    /// *** GLIDE Stylezation *** ///
-    .glide__arrow--left {
-        bottom: 5%;
-        left: 0;
-    }
-
-    .glide__arrow--right {
-        right: 0;
-        bottom: 5%;
-    }
-    /// *** GLIDE Stylezation *** ///
-}
-
-@media (min-width: 533px) {
-    /// *** GLIDE Stylezation *** ///
-    .glide__arrow--left {
-        bottom: 5%;
-        left: 20%;
-    }
-
-    .glide__arrow--right {
-        right: 20%;
-        bottom: 5%;
-    }
-    /// *** GLIDE Stylezation *** ///
 }
 
 @media (min-width: 556px) {

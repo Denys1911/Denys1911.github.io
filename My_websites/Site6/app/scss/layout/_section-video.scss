@@ -1,0 +1,28 @@
+.section-video {
+    display: flex;
+    min-height: 80vh;
+    overflow: hidden;
+    background-size: 100% 110%;
+
+    &__inner {
+        @include font($roboto, 1rem, 900);
+
+        position: relative;
+        z-index: 2;
+        padding: 1rem 2rem;
+        margin: auto;
+        color: $white;
+        text-align: center;
+        text-transform: uppercase;
+
+        &:hover .section-video__inner-img,
+        &:focus .section-video__inner-img {
+            transform: scale(.8);
+        }
+    }
+
+    &__inner-img {
+        width: 100%;
+        transition: transform .5s ease;
+    }
+}
