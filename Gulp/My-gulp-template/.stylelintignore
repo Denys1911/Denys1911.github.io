@@ -1,3 +1,5 @@
 app/css/main.css
 app/js/libs.min.js
 app/scss/_libs.scss
+app/scss/vendors/_libs.scss
+app/scss/main.scss
