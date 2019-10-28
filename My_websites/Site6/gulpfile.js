@@ -45,7 +45,7 @@ gulp.task('css-libs', () => {
         'node_modules/@glidejs/glide/dist/css/glide.core.css',
     ])
     .pipe(concat('_libs.scss'))
-    .pipe(gulp.dest('app/scss'))
+    .pipe(gulp.dest('app/scss/vendors'))
     .pipe(browserSync.reload({stream: true}));
 });
 
