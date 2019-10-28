@@ -1,0 +1,177 @@
+.footer {
+    padding: 4.5rem 0;
+    background-color: $background;
+}
+
+.footer-inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    color: $white;
+
+    &__privacy {
+        display: flex;
+        flex-basis: 30%;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    &__privacy-text {
+        @include font($roboto, .875rem, 300);
+
+        margin-bottom: 2.5rem;
+    }
+
+    &__privacy-list {
+        display: flex;
+        align-self: flex-end;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    &__privacy-list-item {
+        a {
+            @include font($playfair, .875rem, 500);
+
+            padding: .5rem;
+            color: $white;
+            text-transform: uppercase;
+            transition: color .35s ease;
+
+            &:hover,
+            &:focus {
+                color: $accent;
+            }
+        }
+    }
+
+    &__contacts {
+        flex-basis: 30%;
+        margin: 0 2rem;
+        text-align: center;
+    }
+
+    &__contacts-adress,
+    &__contacts-tel {
+        @include font($roboto, .875rem, 300);
+
+        color: $white;
+        transition: color .35s ease;
+
+        &:hover,
+        &:focus {
+            color: $accent;
+        }
+
+        &::before {
+            margin-right: .5rem;
+            font-family: 'icomoon';
+        }
+    }
+
+    &__contacts-adress {
+        &::before {
+            content: "\f095";
+        }
+    }
+
+    &__contacts-tel {
+        display: block;
+
+        &::before {
+            content: "\f041";
+        }
+    }
+
+    &__social {
+        display: flex;
+        flex-basis: 33%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__social-input {
+        @include font($roboto, .875rem, 300);
+
+        width: 73%;
+        padding: 0.8rem 1.6rem;
+        color: $white;
+        background-color: transparent;
+        border: 1px solid #fff;
+
+        &::placeholder {
+            color: $white;
+        }
+    }
+
+    &__social-input-button {
+        width: 4.4rem;
+        margin: 1rem 0;
+        line-height: 2.7rem;
+        background-color: rgba(#a199b4, 0.7);
+        border: none;
+        transition: background-color .5s ease;
+
+        &:hover {
+            background-color: rgba(#a199b4, 1);
+        }
+    }
+
+    &__social-success {
+        @include font($roboto, 1rem, 300);
+
+        height: 2.5rem;
+        padding: .3rem;
+        opacity: 0;
+        transition: all .5s ease;
+
+        &--approved {
+            color: rgb(30, 243, 11);
+            border: 1px solid rgb(30, 243, 11);
+            opacity: 1;
+        }
+
+        &--rejected {
+            color: rgb(243, 54, 41);
+            border: 1px solid rgb(243, 54, 41);
+            opacity: 1;
+        }
+    }
+
+    &__social-icons {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    &__social-icons-item {
+        display: inline-block;
+        width: 2.5rem;
+        height: 2.5rem;
+        color: $white;
+        text-align: center;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        transition: all .5s ease;
+
+        &:hover,
+        &:focus {
+            color: $accent;
+            border-color: $accent;
+        }
+
+        i {
+            line-height: 2.5rem;
+        }
+    }
+
+    &__social-copyrights {
+        @include font($playfair, .875rem, 500);
+    }
+}

@@ -1,0 +1,47 @@
+.section-form {
+    padding: 3.75rem 0;
+}
+
+.form {
+    flex-basis: 50%;
+
+    &__input,
+    &__textarea {
+        @include font($roboto, .875rem, 300);
+
+        display: block;
+        width: 100%;
+        max-width: 29rem;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+    }
+
+    &__textarea {
+        resize: vertical;
+    }
+}
+
+.clients {
+    flex-basis: 40%;
+    text-align: center;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__wrapper-left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__wrapper-right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__image {
+        max-width: 7rem;
+        margin-bottom: 2.5rem;
+    }
+}

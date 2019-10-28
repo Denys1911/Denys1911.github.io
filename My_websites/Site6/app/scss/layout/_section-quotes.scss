@@ -1,0 +1,45 @@
+.section-quotes {
+    display: flex;
+    min-height: 80vh;
+    padding: 3.75rem 1rem;
+    overflow: hidden;
+    background-size: 150% 110%;
+
+    &__inner {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__inner-item {
+        margin-right: 0;
+        margin-left: 0;
+        text-align: center;
+        cursor: grab;
+    }
+
+    &__inner-item-text {
+        @include font($playfair, 1rem, 500);
+    }
+
+    &__inner-item-author {
+        @include font($roboto, .875rem, 300);
+
+        text-transform: uppercase;
+    }
+}
+
+.section-quotes-slider {
+    max-width: 49rem;
+    padding-top: 3rem;
+    margin: auto;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        font-family: 'icomoon';
+        font-size: 2rem;
+        content: "\e977";
+        transform: translateX(-50%);
+    }
+}
