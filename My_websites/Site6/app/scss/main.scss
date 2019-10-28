@@ -2,7 +2,6 @@
 @import "fonts";
 @import "vars";
 
-
 * {
     box-sizing: border-box;
 }
@@ -39,144 +38,9 @@ input[type="file"] {
     cursor: pointer;
 }
 
-///*** Scrollbar stylezation ***///
-::-webkit-scrollbar {
-    width: 15px;
-}
-
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px 0 rgba(51, 51, 51, 0.3);
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient($color-1 5%, $color-2 20%, $color-3 50%, $color-4 80%);
-    border-radius: 7px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(#312b66 5%, #30235f 20%, #2f8bb3, #299692);
-}
-
-///*** Scrollbar stylezation ***///
-
-/// *** PRELOADER *** ///
-.preloader-wrapper {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-    display: flex;
-    background-color: #322d53;
-}
-
-.preloader {
-    display: flex;
-    margin: auto;
-}
-
-@for $i from 1 through 4 {
-    .item-#{$i},
-    .item-#{$i}::before {
-        width: 25px;
-        height: 25px;
-        background-color: nth($color, $i);
-        border-radius: 50%;
-    }
-
-    .item-#{$i} {
-        display: flex;
-        margin: 9px;
-
-        &::before {
-            margin: auto;
-            content: '';
-            animation: scale 2s ease 200ms * $i infinite;
-        }
-    }
-}
-
-@keyframes scale {
-    0% {
-        transform: scale(1);
-    }
-
-    50%,
-    75% {
-        transform: scale(2.5);
-    }
-
-    78%,
-    100% {
-        opacity: 0;
-    }
-}
-/// *** PRELOADER *** ///
-
-/// *** MODAL WINDOW *** ///
-.modal-wrapper {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 9;
-    display: none;
-    background-color: rgba(#dadada, .8);
-}
-
-.modal-form {
-    position: relative;
-    padding: .8rem;
-    margin: auto;
-    background-color: #fff;
-    box-shadow: 0 0 4px 2px #dadada;
-
-    label {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        span {
-            @include font($playfair, 1.15rem, 500);
-        }
-    }
-
-    .main-btn {
-        margin: 0 auto;
-    }
-
-    &__input {
-        @include font($roboto, 1rem, 300);
-
-        display: block;
-        margin: 10px 0;
-    }
-
-    &__textarea {
-        width: 400px;
-        height: 200px;
-        padding: .7rem;
-        resize: none;
-    }
-
-    &__close-btn {
-        position: absolute;
-        top: -3px;
-        right: 3px;
-        font-size: 3rem;
-        font-weight: 100;
-        color: rgb(99, 97, 97);
-        transition: opacity .25s ease;
-        transform: rotate(45deg);
-
-        &:hover {
-            opacity: .7;
-        }
-    }
-}
-/// *** MODAL WINDOW *** ///
+@import "preloader";
+@import "scrollbar";
+@import "modal-window";
 
 /// *** BUTTONS *** ///
 .nav-btn {
@@ -234,7 +98,7 @@ input[type="file"] {
     }
 }
 
-.go-up {
+.scroll-to-top-btn {
     position: fixed;
     right: -5rem;
     bottom: 2rem;
@@ -257,6 +121,10 @@ input[type="file"] {
         font-size: 1.5rem;
         color: #13102d;
         content: "\f104";
+    }
+
+    &--shift {
+        right: 2rem;
     }
 }
 /// *** BUTTONS *** ///
@@ -623,11 +491,10 @@ h1 {
         &:hover {
             opacity: .7;
         }
-    }
 
-    &__grid-image[data-number="1"],
-    &__grid-image[data-number="2"] {
-        display: none;
+        &--hidden {
+            display: none;
+        }
     }
 }
 /// *** SECTION WORKS *** ///
@@ -887,9 +754,22 @@ h1 {
     &__social-success {
         @include font($roboto, 1rem, 300);
 
-        padding: .5rem;
-        color: rgb(30, 243, 11);
-        border: 1px solid rgb(30, 243, 11);
+        height: 2.5rem;
+        padding: .3rem;
+        opacity: 0;
+        transition: all .5s ease;
+
+        &--approved {
+            color: rgb(30, 243, 11);
+            border: 1px solid rgb(30, 243, 11);
+            opacity: 1;
+        }
+
+        &--rejected {
+            color: rgb(243, 54, 41);
+            border: 1px solid rgb(243, 54, 41);
+            opacity: 1;
+        }
     }
 
     &__social-icons {

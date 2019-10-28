@@ -79,6 +79,10 @@
         min-height: 70vh;
         background-size: 200% 120%;
     }
+
+    .flex {
+        display: flex !important;
+    }
 }
 
 @media (max-width: 660px) {
