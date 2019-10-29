@@ -9,32 +9,33 @@ p {
     text-align: center;
 }
 
-.field {
-    width: 300px;
-    height: 300px;
+.chessboard {
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    height: 320px;
     margin: 0 auto;
     cursor: pointer;
     border: 1px solid #000;
 }
 
-.chess-block {
-    float: left;
-    width: 37.5px;
-    height: 37.5px;
+.chessboard-field {
+    width: 40px;
+    height: 40px;
     background-color: #fff;
 }
 
-.chess-block--black {
+.chessboard-field--black {
     background-color: #000;
 }
 
-.chess-block--green {
+.chessboard-field--green {
     background-color: rgb(23, 201, 23);
 }
 
-.chess-block--blue {
+.chessboard-field--blue {
     background-color: rgb(74, 237, 248);
-    background-image: url(./image/black_knight.png);
+    background-image: url(../image/black_knight.png);
     background-size: contain;
 }
 
