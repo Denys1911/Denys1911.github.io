@@ -4,7 +4,7 @@ const peopleList = document.querySelector('.people-list');
 const newPersonFormWrapper = document.querySelector('.new-person-form-wrapper');
 const showFormBtn = document.querySelector('.show-form-btn');
 
-rewritePeopleArrIfLocalStorageIsPresent('people-list');
+createLocalStorageOrRewritePeopleArr('people-list');
 createPeopleList(peopleList, peopleDataArr);
 createForm(newPersonFormWrapper, {});
 

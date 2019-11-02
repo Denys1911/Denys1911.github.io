@@ -1,8 +1,10 @@
 'use strict';
 
-function rewritePeopleArrIfLocalStorageIsPresent(storageName) {
+function createLocalStorageOrRewritePeopleArr(storageName) {
     if (localStorage.getItem(storageName)) {
         peopleDataArr = JSON.parse(localStorage.getItem(storageName));
+    } else {
+        localStorage.setItem(storageName, JSON.stringify(peopleDataArr));
     }
 }
 
