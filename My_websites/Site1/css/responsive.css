@@ -1,84 +1,102 @@
-@media screen and (max-width: 992px){
-   html{
-       font-size: 95%;
-   }
+@media screen and (max-width: 992px) {
+    html {
+        font-size: 95%;
+    }
 }
-@media screen and (max-width: 850px){
+
+@media screen and (max-width: 850px) {
     .section5 {
         flex-direction: column;
     }
+
     .section5-left-wrapper,
     .section5__skill {
         flex-basis: 100%;
     }
+
     .section5__skill {
         margin: 15px 0;
     }
+
     .skill-image {
         max-width: 70%;
     }
 }
-@media screen and (max-width: 768px){
-    html{
+
+@media screen and (max-width: 768px) {
+    html {
         font-size: 90%;
     }
-    .header__about{
+
+    .header__about {
         margin: 7rem auto;
-        
     }
-    .nav-button{
+
+    .nav-button {
         display: block;
     }
-    .nav{
-        display: none;
+
+    .nav {
         position: relative;
         right: 20%;
+        display: none;
     }
-    .nav--open{
+
+    .nav--open {
         display: block;
         margin-right: 2rem;
     }
 }
-@media screen and (max-width: 630px){
-    .section__tel{
+
+@media screen and (max-width: 630px) {
+    .section__tel {
         max-height: 250px;
     }
 }
-@media screen and (max-width: 600px){
-    .page__row{
+
+@media screen and (max-width: 600px) {
+    .page__row {
         margin-bottom: 0.6rem;
     }
-    html{
+
+    html {
         font-size: 85%;
     }
-    .header__about{
+
+    .header__about {
         margin: 5rem auto 5rem auto;
-        
     }
-    .section4{
+
+    .section4 {
         display: block;
     }
+
     .picture1,
-    .picture2{
+    .picture2 {
         width: 100%;
     }
-    .picture2__pic{
+
+    .picture2__pic {
         width: 100%;
         max-height: 250px;
     }
-    .submit-now{
+
+    .submit-now {
         top: 95%;
     }
 }
-@media screen and (max-width: 555px){
-    .section{
+
+@media screen and (max-width: 555px) {
+    .section {
         display: block;
     }
-    .section__inform{
+
+    .section__inform {
         width: 100%;
         text-align: center;
     }
-    .section__pictures{
+
+    .section__pictures {
         margin: 1rem auto -1rem auto;
     }
 }
