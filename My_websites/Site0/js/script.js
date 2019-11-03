@@ -5,10 +5,10 @@ $(document).ready(function(){
         autoplay:true,
         autoplayTimeout: 3500
     });
+
     $(".btn-nav").on("click", function() {
-        var target = $(this).data("target");
+        const target = $(this).data("target");
         $(target).toggleClass("nav__list--open");
     });
-    
-  });
+});
 

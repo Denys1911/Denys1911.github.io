@@ -1,22 +1,26 @@
 @media screen and (max-width:992px){
-    html{
+    html {
         font-size: 90%;
     }
 }
 @media screen and (max-width:768px){
-    html{
+    html {
         font-size: 85%;
     }
-    .nav__btn{
+
+    .nav__btn {
         display: block;
     }
-    .nav__list{
+
+    .nav__list {
         display: none;
     }
-    .nav__list--open{
+
+    .nav__list--open {
         display: block;
     }
-    .nav__link{
+
+    .nav__link {
         padding: 1rem;
     }
 }
@@ -24,22 +28,27 @@
     html{
         font-size: 80%;
     }
+
     .header__logo,
-    .header__contact{
+    .header__contact {
         float: none;
         text-align: center;
     }
-    .header__logo{
+
+    .header__logo {
         margin-bottom: 1rem;
     }
-    .grid__item{
+
+    .grid__item {
         float: none;
         width: 100%;  
     }
-    .advantage{
+
+    .advantage {
         display: block;
     }
-    .advantage__item{
+
+    .advantage__item {
         margin-right: 0;
         width: 100% ;
         margin-bottom:1rem; 
