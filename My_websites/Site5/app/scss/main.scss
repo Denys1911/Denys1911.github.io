@@ -142,7 +142,7 @@ button {
 /// *** BUTTONS *** ///
 
 /// *** LINKS *** ///
-.adress {
+.address {
     &::before {
         content: "\f2c6";
     }
@@ -160,7 +160,7 @@ button {
     }
 }
 
-.adress,
+.address,
 .tel,
 .time {
     @include font($monserat, 1rem, 500);
