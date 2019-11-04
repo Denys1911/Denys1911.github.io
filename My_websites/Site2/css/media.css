@@ -1,93 +1,119 @@
-@media screen and (max-width : 992px) {
-    html,body{
+@media screen and (max-width: 992px) {
+    html,
+    body {
         font-size: 95%;
     }
 }
-@media screen and (max-width : 840px) {
-    .content{
+
+@media screen and (max-width: 840px) {
+    .content {
         flex-direction: column;
     }
 }
-@media screen and (max-width : 768px) {
-    html,body{
+
+@media screen and (max-width: 768px) {
+    html,
+    body {
         font-size: 90%;
     }
-    .navmenu{
+
+    .nav-menu {
         display: none;
     }
-    .buttonformenu{
+
+    .menu-button {
         display: inline-block;
         align-self: flex-start;
     }
-    .specialbutton2{
+
+    .guarantee-button {
         align-self: flex-start;
     }
-    .nav{
+
+    .nav {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         margin: 0.8rem;
     }
-    .nav--open{
+
+    .nav--open {
         display: flex;
         flex-direction: column;
     }
-    .navmenu__items{
+
+    .nav-menu__items {
         margin: 8px;
     }
-    .navmenu:first-child{
+
+    .nav-menu:first-child {
         margin: 3px 0;
     }
-    .navmenu__link{
-        border:  rgba(110, 108, 108, 0.8)  1px solid;
+
+    .nav-menu__item {
+        border: rgba(110, 108, 108, 0.8)  1px solid;
     }
-    .navmenu__link:last-child{
-        border:  rgba(110, 108, 108, 0.8)  1px solid;
+
+    .nav-menu__item:last-child {
+        border: rgba(110, 108, 108, 0.8)  1px solid;
     }
 }
-@media only screen and (max-width : 695px) {
-    .section2__img{
+
+@media only screen and (max-width: 695px) {
+    .section2__img {
         width: 70%;
     }
 }
-@media only screen and (max-width : 628px) {
-    .header__top{
+
+@media only screen and (max-width: 628px) {
+    .header__top {
         padding-bottom: 10px;
     }
 }
-@media only screen and (max-width : 480px) {
-    .section2__img{
+
+@media only screen and (max-width: 480px) {
+    .section2__img {
         height: 10rem;
     }
-    html,body{
+
+    html,
+    body {
         font-size: 85%;
     }
-    .specialbutton1{
-        font-size: 0.8rem;
+
+    .repair-assessment-button {
         padding-right: 0;
+        font-size: 0.8rem;
     }
-    .services__item:nth-of-type(3) .services__img{
+
+    .services__item:nth-of-type(3) .services__img {
         padding-top: 1.5rem;
     }
 }
-@media only screen and (max-width : 430px) {
-    html,body{
+
+@media only screen and (max-width: 430px) {
+    html,
+    body {
         font-size: 80%;
     }
-    .services__img{
+
+    .services__img {
         padding: 0;
-     }
-    .services__item:nth-of-type(2) .services__img{
+    }
+
+    .services__item:nth-of-type(2) .services__img {
         height: 5rem;
     }
-    .logo{
-        top: 0%;
+
+    .logo {
+        top: 0;
     }
 }
-@media only screen and (max-width : 360px) {
-    .section2{
-        background-color: #d6d6d6;
+
+@media only screen and (max-width: 360px) {
+    .section2 {
         padding: 0;
+        background-color: #d6d6d6;
     }
 
     .header__buttons {
