@@ -1,0 +1,46 @@
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 15px  0 15px;
+    background-color: #f6fafd;
+
+    &-image {
+        align-self: flex-end;
+        margin-right: 40px;
+
+        &__picture {
+            height: 500px;
+        }
+    }
+
+    &-description {
+        &__text {
+            font-size: 22px;
+            line-height: 40px;
+            color: $darkgrey;
+        }
+
+        &__author {
+            font-weight: 700;
+        }
+
+        &__author-position {
+            font-weight: 700;
+            color: $lightgrey;
+        }
+    }
+
+    @media (max-width: 750px) {
+        display: block;
+
+        .content-description {
+            max-width: 550px;
+        }
+
+        .content-description__text {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+}

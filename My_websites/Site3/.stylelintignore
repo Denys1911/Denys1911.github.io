@@ -1,2 +1,2 @@
 app/css/main.css
-app/css/libs.css
+app/scss/vendors/_libs.scss

@@ -1,0 +1,30 @@
+.btn,
+.btn-secondary {
+    width: 100%;
+    line-height: 50px;
+    cursor: pointer;
+    outline: none;
+    transition: all .6s;
+}
+
+.btn {
+    max-width: 290px;
+    background: linear-gradient(to right, $gradient-left, $gradient-right);
+    border: none;
+
+    &:hover {
+        transform: scale(0.97);
+    }
+}
+
+.btn-secondary {
+    max-width: 190px;
+    font-size: 18px;
+    color: $darkgrey;
+    background-color: $whitecolor;
+    border: 1px solid $lightgrey;
+
+    &:hover {
+        background: linear-gradient(to right, $gradient-left, $gradient-right);
+    }
+}

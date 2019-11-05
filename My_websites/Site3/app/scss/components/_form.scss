@@ -1,0 +1,17 @@
+.form {
+    display: flex;
+
+    input {
+        width: 100%;
+        max-width: 350px;
+        padding: 0 20px;
+        line-height: 50px;
+        background: rgba(255, 255, 255, .25);
+        border: none;
+        outline: none;
+
+        &::placeholder {
+            color: $whitecolor;
+        }
+    }
+}

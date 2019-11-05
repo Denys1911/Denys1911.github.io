@@ -1,0 +1,30 @@
+.get-started {
+    padding: 80px 0;
+    color: $whitecolor;
+    background: linear-gradient(to right, $gradient-left, $gradient-right);
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 40px;
+        font-size: 55px;
+        font-weight: 700;
+        line-height: 60px;
+    }
+
+    &__text {
+        width: 80%;
+        margin: 0 auto 40px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    @media (max-width: 750px) {
+        .get-started__title {
+            font-size: 45px;
+        }
+
+        .get-started__text {
+            width: 100%;
+        }
+    }
+}
