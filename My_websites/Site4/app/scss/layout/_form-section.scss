@@ -1,0 +1,75 @@
+.form {
+    &__inner {
+        background-image: url(../img/girl.png);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: contain;
+    }
+
+    &__box {
+        max-width: 850px;
+    }
+
+    &__box-inner {
+        display: flex;
+        justify-content: space-between;
+
+        input,
+        label,
+        textarea {
+            display: block;
+            width: 100%;
+            outline: none;
+        }
+
+        input,
+        textarea {
+            border: 1px solid #e6e6e6;
+        }
+
+        label {
+            font-family: $roboto;
+            line-height: 36px;
+            color: #282828;
+        }
+
+        input {
+            height: 40px;
+            padding: 0 10px;
+            margin-bottom: 8px;
+        }
+
+        textarea {
+            height: 210px;
+            padding: 10px;
+            margin-bottom: 50px;
+            resize: none;
+        }
+    }
+
+    &__box-left {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    &__box-right {
+        width: 100%;
+        max-width: 555px;
+
+        &::after {
+            display: block;
+            clear: both;
+            content: '';
+        }
+    }
+
+    &__box-btn {
+        @include default-btn;
+
+        float: right;
+        font-weight: 400;
+        color: #282828;
+        cursor: pointer;
+        background-color: #fff;
+    }
+}

@@ -1,0 +1,5 @@
+app/css/main.min.css
+app/js/libs.min.js
+app/scss/main.scss
+app/scss/vendors/_libs.scss
+app/scss/base/_font.scss

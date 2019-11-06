@@ -1,0 +1,47 @@
+.advantages {
+    min-height: 285px;
+    padding: 50px 0 40px 0;
+    font-family: $roboto;
+    color: #fff;
+    background-image: url(../img/advantages-fon.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        padding: 0 40px;
+        text-align: center;
+    }
+
+    &__title {
+        position: relative;
+        padding-top: 60px;
+        margin: 0;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            padding-top: 6px;
+            font-family: 'icomoon';
+            content: "\f00c";
+            border: 1px solid $accent;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__text {
+        line-height: 24px;
+        color: #d3d2d2;
+    }
+}

@@ -1,0 +1,74 @@
+.slick-next {
+    position: absolute;
+    right: 0;
+    bottom: -80px;
+
+    &::before {
+        font-family: 'icomoon';
+        color: white;
+        content: "\f105";
+    }
+}
+
+.slick-prev {
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+
+    &::before {
+        font-family: 'icomoon';
+        color: white;
+        content: "\f104";
+    }
+}
+
+.slick-arrow {
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: $accent;
+    border: 1px solid white;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.slick-disabled {
+    cursor: default;
+    background-color: transparent;
+}
+
+.slick-list {
+    max-width: 665px;
+}
+
+.slick-slide {
+    cursor: grab;
+}
+
+.news__comments {
+    > .slick-arrow {
+        border: 1px solid #2e2a2a38;
+    }
+
+    > .slick-next,
+    .slick-prev {
+        &::before {
+            color: #2e2a2a38;
+        }
+    }
+
+    > .slick-next {
+        position: absolute;
+        right: 0;
+        bottom: -80px;
+    }
+
+    > .slick-prev {
+        position: absolute;
+        right: 75px;
+        bottom: -80px;
+    }
+}

@@ -1,0 +1,23 @@
+.services,
+.form,
+.news {
+    padding: 50px 0 30px;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+    }
+
+    &__title {
+        max-width: 520px;
+    }
+
+    &__title-title {
+        @include title-title;
+    }
+
+    &__title-text {
+        padding-left: 140px;
+    }
+}

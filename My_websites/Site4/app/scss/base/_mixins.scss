@@ -1,0 +1,54 @@
+@mixin header-icons {
+    position: absolute;
+    left: 0;
+    font-family: 'icomoon';
+    color: $accent;
+}
+
+@mixin default-btn {
+    position: relative;
+    padding: 8px 50px 8px 24px;
+    font-family: $roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #fff;
+    border: 1px solid $accent;
+    outline: none;
+
+    &::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 40px;
+        font-family: 'icomoon';
+        content: '\f105';
+        background-color: $accent;
+    }
+}
+
+@mixin title-title {
+    position: relative;
+    padding-left: 140px;
+    margin-bottom: 10px;
+    font-family: $roboto;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #212020;
+
+    &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100px;
+        height: 2px;
+        content: '';
+        background-color: $accent;
+        transform: translateY(-50%);
+    }
+}

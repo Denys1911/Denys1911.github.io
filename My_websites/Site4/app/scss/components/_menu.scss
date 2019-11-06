@@ -1,0 +1,37 @@
+.menu {
+    li {
+        display: inline-block;
+    }
+
+    a {
+        padding: 0 16px;
+        font-size: 16px;
+        line-height: 36px;
+        color: #323232;
+        border: 1px solid transparent;
+
+        &:hover {
+            border-color: $accent;
+            transition: all .3s;
+        }
+    }
+
+    li + li {
+        padding-left: 10px;
+    }
+
+    &__btn {
+        display: none;
+        cursor: pointer;
+    }
+
+    &__btn-part {
+        width: 20px;
+        height: 2px;
+        background-color: black;
+
+        &:nth-last-of-type(2) {
+            margin: 5px 0;
+        }
+    }
+}
