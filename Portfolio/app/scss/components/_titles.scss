@@ -1,0 +1,16 @@
+.section-title,
+.section-subtitle {
+    text-transform: uppercase;
+}
+
+.section-title {
+    @include font($font-family-1, 1.8rem, 700);
+
+    margin-top: 0;
+}
+
+.section-subtitle {
+    @include font($font-family-1, 1.2rem, 300);
+
+    letter-spacing: 1px;
+}

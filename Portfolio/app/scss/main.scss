@@ -5,15 +5,12 @@
 
 @import "vendors/libs";
 
+@import "components/titles";
 @import "components/media";
 
 .header {
     min-height: 100vh;
-    margin: $gutter;
-
-    &__logo {
-        
-    }
+    padding: $gutter;
 
     &__nav {
         display: flex;
@@ -48,7 +45,7 @@
     }
 
     &__nav-list-item a {
-        @include font($font-family, 1.3rem, 400);
+        @include font($font-family-1, 1.3rem, 400);
 
         padding: .5rem 1rem;
         color: inherit;
@@ -73,19 +70,19 @@
     }
 
     &__inner-greeting {
-        @include font($font-family, 5rem, 700);
+        @include font($font-family-1, 5rem, 700);
     }
 
     &__inner-name {
-        @include font($font-family, 2rem, 400);
+        @include font($font-family-1, 2rem, 400);
     }
 
     &__inner-title {
-        @include font($font-family, 2rem, 400);
+        @include font($font-family-1, 2rem, 400);
     }
 
     &__inner-github {
-        @include font($font-family, 1.5rem, 400);
+        @include font($font-family-1, 1.5rem, 400);
 
         flex-shrink: 1;
         width: 45%;
@@ -100,6 +97,78 @@
             color: $accent-2;
             background-color: $accent-1;
             border-color: $accent-2;
+        }
+    }
+}
+
+.about {
+    padding: $gutter;
+    text-align: center;
+    background-color: $bg-color-1;
+
+    &__title {
+        margin-bottom: $gutter * 2;
+        border-bottom: 1px solid $accent-4;
+    }
+
+    &__title-text {
+        padding-bottom: $gutter;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__inner-description {
+        flex-basis: 40%;
+    }
+
+    &__inner-description p {
+        text-align: left;
+    }
+
+    &__inner-photo {
+        margin: 0 3rem;
+    }
+
+    &__inner-photo img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+    }
+
+    &__inner-details {
+        flex-basis: 40%;
+    }
+
+    &__inner-details ul {
+        margin-bottom: $gutter;
+        text-align: left;
+    }
+
+    &__inner-details-link {
+        color: inherit;
+        transition: color $transition-duration ease;
+
+        &:hover {
+            color: $accent-4;
+        }
+    }
+
+    &__inner-details-cv {
+        display: inline-block;
+        padding: .8rem 2rem;
+        color: $accent-4;
+        border: 1px solid $accent-4;
+        border-radius: 1rem;
+        transition: all $transition-duration ease;
+
+        &:hover {
+            color: $accent-2;
+            background-color: $accent-4;
         }
     }
 }
