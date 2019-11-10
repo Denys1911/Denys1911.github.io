@@ -1,0 +1,105 @@
+@import "base/fonts";
+@import "base/vars";
+@import "base/mixins";
+@import "base/basic-styles";
+
+@import "vendors/libs";
+
+@import "components/media";
+
+.header {
+    min-height: 100vh;
+    margin: $gutter;
+
+    &__logo {
+        
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: $gutter;
+    }
+
+    &__nav-list {
+        display: flex;
+    }
+
+    &__nav-list-item {
+        &:not(:last-child) {
+            margin-right: $gutter;
+        }
+
+        @for $i from 1 through length($colors-mix) {
+            &:nth-child(#{$i}) {
+                color: nth($colors-mix, $i);
+                background-image: linear-gradient(nth($colors-mix, $i));
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                background-size: 0 2px;
+                transition: all $transition-duration ease-out;
+
+                &:hover {
+                    background-size: 100% 2px;
+                }
+            }
+        }
+    }
+
+    &__nav-list-item a {
+        @include font($font-family, 1.3rem, 400);
+
+        padding: .5rem 1rem;
+        color: inherit;
+    }
+
+    &__inner {
+        display: flex;
+    }
+
+    &__inner-info {
+        display: flex;
+        flex-basis: 60%;
+        flex-direction: column;
+    }
+
+    &__inner-image {
+        flex-basis: 40%;
+    }
+
+    &__inner-image img {
+        width: 100%;
+    }
+
+    &__inner-greeting {
+        @include font($font-family, 5rem, 700);
+    }
+
+    &__inner-name {
+        @include font($font-family, 2rem, 400);
+    }
+
+    &__inner-title {
+        @include font($font-family, 2rem, 400);
+    }
+
+    &__inner-github {
+        @include font($font-family, 1.5rem, 400);
+
+        flex-shrink: 1;
+        width: 45%;
+        padding: .5rem 1.5rem;
+        color: $accent-1;
+        text-align: center;
+        background-color: $accent-2;
+        border: 3px solid transparent;
+        transition: all $transition-duration ease;
+
+        &:hover {
+            color: $accent-2;
+            background-color: $accent-1;
+            border-color: $accent-2;
+        }
+    }
+}
