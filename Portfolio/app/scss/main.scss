@@ -169,6 +169,52 @@
         &:hover {
             color: $accent-2;
             background-color: $accent-4;
+            transform: scale(.95, .95);
+        }
+    }
+}
+
+.skills {
+    padding: $gutter;
+    text-align: center;
+
+    &__inner {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__inner-hard,
+    &__inner-soft {
+        flex-basis: 50%;
+    }
+
+    &__inner-title {
+        position: relative;
+        padding: .5rem;
+        margin-bottom: $gutter * 2;
+
+        &::before {
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            width: 60%;
+            height: 2px;
+            content: '';
+            background-color: $accent-5;
+        }
+    }
+
+    &__inner-list {
+        column-count: 2;
+
+        li {
+            padding: .4rem;
+            border-radius: .5rem;
+            transition: all $transition-duration ease;
+            
+            &:hover {
+                background-color: $accent-7;
+            }
         }
     }
 }
