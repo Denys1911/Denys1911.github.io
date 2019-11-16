@@ -3,3 +3,35 @@
     font-size: $size;
     font-weight: $weight;
 }
+
+@mixin hover-underline($colors-arr) {
+    @for $i from 1 through length($colors-arr) {
+        &:nth-child(#{$i}) {
+            color: nth($colors-arr, $i);
+            background-image: linear-gradient(nth($colors-arr, $i));
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: 0 2px;
+            transition: all $transition-duration ease-out;
+
+            &:hover {
+                background-size: 100% 2px;
+            }
+        }
+    }
+}
+
+@mixin buttons-stylization($color-1, $color-2, $hover-bg-color, $border-thickness) {
+    padding: .5rem 1.5rem;
+    color: $color-1;
+    text-align: center;
+    background-color: $color-2;
+    border: $border-thickness solid transparent;
+    transition: all $transition-duration ease;
+
+    &:hover {
+        color: $color-2;
+        background-color: $hover-bg-color;
+        border-color: $color-2;
+    }
+}

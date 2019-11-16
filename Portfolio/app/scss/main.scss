@@ -6,6 +6,7 @@
 @import "vendors/libs";
 
 @import "components/titles";
+@import "components/scrollbar";
 @import "components/media";
 
 .header {
@@ -24,23 +25,10 @@
     }
 
     &__nav-list-item {
+        @include hover-underline($colors-mix-1);
+
         &:not(:last-child) {
             margin-right: $gutter;
-        }
-
-        @for $i from 1 through length($colors-mix) {
-            &:nth-child(#{$i}) {
-                color: nth($colors-mix, $i);
-                background-image: linear-gradient(nth($colors-mix, $i));
-                background-repeat: no-repeat;
-                background-position: center bottom;
-                background-size: 0 2px;
-                transition: all $transition-duration ease-out;
-
-                &:hover {
-                    background-size: 100% 2px;
-                }
-            }
         }
     }
 
@@ -63,10 +51,10 @@
 
     &__inner-image {
         flex-basis: 40%;
-    }
 
-    &__inner-image img {
-        width: 100%;
+        img {
+            width: 100%;
+        }
     }
 
     &__inner-greeting {
@@ -83,27 +71,14 @@
 
     &__inner-github {
         @include font($font-family-1, 1.5rem, 400);
+        @include buttons-stylization($accent-1, $accent-2, $accent-1, 3px);
 
         flex-shrink: 1;
         width: 45%;
-        padding: .5rem 1.5rem;
-        color: $accent-1;
-        text-align: center;
-        background-color: $accent-2;
-        border: 3px solid transparent;
-        transition: all $transition-duration ease;
-
-        &:hover {
-            color: $accent-2;
-            background-color: $accent-1;
-            border-color: $accent-2;
-        }
     }
 }
 
 .about {
-    padding: $gutter;
-    text-align: center;
     background-color: $bg-color-1;
 
     &__title {
@@ -124,10 +99,10 @@
 
     &__inner-description {
         flex-basis: 40%;
-    }
 
-    &__inner-description p {
-        text-align: left;
+        p {
+            text-align: left;
+        }
     }
 
     &__inner-photo {
@@ -142,11 +117,11 @@
 
     &__inner-details {
         flex-basis: 40%;
-    }
 
-    &__inner-details ul {
-        margin-bottom: $gutter;
-        text-align: left;
+        ul {
+            margin-bottom: $gutter;
+            text-align: left;
+        }
     }
 
     &__inner-details-link {
@@ -159,25 +134,13 @@
     }
 
     &__inner-details-cv {
-        display: inline-block;
-        padding: .8rem 2rem;
-        color: $accent-4;
-        border: 1px solid $accent-4;
-        border-radius: 1rem;
-        transition: all $transition-duration ease;
+        @include buttons-stylization($accent-4, $accent-2, transparent, 2px);
 
-        &:hover {
-            color: $accent-2;
-            background-color: $accent-4;
-            transform: scale(.95, .95);
-        }
+        display: inline-block;
     }
 }
 
 .skills {
-    padding: $gutter;
-    text-align: center;
-
     &__inner {
         display: flex;
         justify-content: space-around;
@@ -213,8 +176,176 @@
             transition: all $transition-duration ease;
             
             &:hover {
-                background-color: $accent-7;
+                background-color: $accent-5;
             }
         }
+    }
+}
+
+.works {
+    background-color: $accent-7;
+
+    &__header-buttons {
+        display: flex;
+        justify-content: center;
+
+        li {
+            @include hover-underline($colors-mix-2);
+        }
+    }
+
+    &__header-button {
+        @include font($font-family-1, 1.3rem, 400);
+
+        padding: .5rem 1rem;
+        color: inherit;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        color: $accent-1;
+    }
+
+    &__list-item-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 1.5rem;
+        transition: all $transition-duration ease;
+    }
+
+    &__list-item-hover {
+        @include font($font-family-1, .9rem, 700);
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: $gutter / 2;
+        border-radius: 1.5rem;
+        opacity: 0;
+        transition: all $transition-duration ease;
+
+        h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin: 0;
+            text-align: left;
+        }
+    }
+
+    &__list-item-hover-buttons {
+        a {
+            @include buttons-stylization($accent-2, $accent-1, transparent, 2px);
+
+            cursor: pointer;
+        }
+    }
+
+    &__list-item {
+        position: relative;
+        flex-basis: 49%;
+        margin-top: 2%;
+        overflow: hidden;
+        border: 1px solid $accent-1;
+        border-radius: 1.5rem;
+        box-shadow: 0 0 2px 3px rgb(201, 201, 201);
+
+        &:nth-of-type(odd) {
+            margin-right: 2%;
+        }
+
+        &:hover .works__list-item-hover {
+            background-color: rgba(26, 26, 26, 0.75);
+            opacity: 1;
+        }
+
+        &:hover .works__list-item-img {
+            transform: scale(1.1, 1.1);
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $gutter;
+    background-image: linear-gradient(to bottom right, #012 0%, #678 33.9%, #8a9 64%, #fff 100%);
+
+    &__icons-list {
+        display: flex;
+    }
+
+    &__icons-list-link {
+        position: relative;
+        display: flex;
+        padding: .9rem;
+        margin: 0.5rem;
+        overflow: hidden;
+        background-color: $accent-7;
+        border-radius: 30%;
+        box-shadow: 0 5px 15px -5px $accent-2;
+
+        i {
+            z-index: 2;
+            font-size: 1.8rem;
+            color: $accent-4;
+            transition: all $transition-duration ease;
+        }
+
+        &::before {
+            position: absolute;
+            top: 90%;
+            left: -110%;
+            width: 120%;
+            height: 120%;
+            content: "";
+            background: $accent-4;
+            transform: rotate(45deg);
+        }
+
+        &:hover::before {
+            top: -10%;
+            left: -10%;
+            animation: icons-hover 0.7s 1;
+        }
+
+        &:hover i {
+            color: $accent-7;
+            transform: scale(1.07, 1.07);
+        }
+
+        @keyframes icons-hover {
+            0% {
+                top: 90%;
+                left: -110%;
+            }
+      
+            50% {
+                top: -30%;
+                left: 10%;
+            } 
+            
+            100% {
+                top: -10%;
+                left: -10%;
+            }
+        }
+    }
+
+    &__copyright {
+        @include font($font-family-1, 1.1rem, 500);
     }
 }

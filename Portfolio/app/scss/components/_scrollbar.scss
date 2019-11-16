@@ -1,0 +1,16 @@
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px 0 rgba(51, 51, 51, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(lighten($accent-3, 20%) 0%, lighten($accent-4, 20%) 50%, lighten($accent-5, 20%) 100%);
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient($accent-3 0%, $accent-4 50%, $accent-5 100%);
+}

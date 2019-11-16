@@ -7,7 +7,7 @@ $orange: #feb62b;
 $red: rgb(255, 74, 74);
 $light-grey: rgb(233, 225, 225);
 
-$gutter: 20px;
+$gutter: 1.25rem;
 $font-family-1: 'Muli', sans-serif;
 $transition-duration: .35s;
 $accent-1: $white;
@@ -18,4 +18,5 @@ $accent-5: $orange;
 $accent-6: $red;
 $accent-7: $light-grey;
 $bg-color-1: $light-blue;
-$colors-mix: $accent-2, $accent-3, $accent-4, $accent-5, $accent-6;
+$colors-mix-1: $accent-2, $accent-3, $accent-4, $accent-5, $accent-6;
+$colors-mix-2: $accent-2, $accent-6, $accent-5, $accent-3;

@@ -16,3 +16,9 @@ ul {
 a {
     text-decoration: none;
 }
+
+main,
+section {
+    padding: $gutter;
+    text-align: center;
+}
