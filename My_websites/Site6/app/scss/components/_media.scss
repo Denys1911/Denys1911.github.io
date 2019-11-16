@@ -86,18 +86,12 @@
 }
 
 @media (max-width: 660px) {
+    html {
+        font-size: 80%;
+    }
+    
     .expertise-tools__item {
         flex-basis: 100%;
-    }
-
-    html {
-        font-size: 80%;
-    }
-}
-
-@media (max-width: 565px) {
-    html {
-        font-size: 80%;
     }
 }
 
