@@ -7,6 +7,7 @@
 
     &__nav {
         display: flex;
+        flex-shrink: 1;
         align-items: center;
         justify-content: space-between;
         margin-bottom: $gutter;
@@ -67,7 +68,6 @@
         display: flex;
         flex-grow: 1;
         align-items: center;
-        margin-bottom: $gutter * 2;
     }
 
     &__inner-info {
