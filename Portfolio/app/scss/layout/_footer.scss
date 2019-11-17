@@ -1,0 +1,56 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $gutter;
+    background-image: linear-gradient(to bottom right, #012 0%, #678 33.9%, #8a9 64%, #fff 100%);
+
+    &__icons-list {
+        display: flex;
+    }
+
+    &__icons-list-link {
+        position: relative;
+        display: flex;
+        padding: .9rem;
+        margin: 0.5rem;
+        overflow: hidden;
+        background-color: $accent-7;
+        border-radius: 30%;
+        box-shadow: 0 5px 15px -5px $accent-2;
+
+        i {
+            z-index: 2;
+            font-size: 1.8rem;
+            color: $accent-4;
+            transition: all $transition-duration ease;
+        }
+
+        &::before {
+            position: absolute;
+            top: 90%;
+            left: -110%;
+            width: 120%;
+            height: 120%;
+            content: "";
+            background: $accent-4;
+            transform: rotate(45deg);
+        }
+
+        &:hover::before {
+            top: -10%;
+            left: -10%;
+            animation: icons-hover 0.7s 1;
+        }
+
+        &:hover i {
+            color: $accent-7;
+            transform: scale(1.07, 1.07);
+        }
+    }
+
+    &__copyright {
+        @include font($font-family-1, 1.1rem, 500);
+    }
+}

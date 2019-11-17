@@ -1,0 +1,73 @@
+@keyframes menu-appearing {
+    0% {
+        bottom: 100%;
+        left: 100%;
+    }
+
+    10% {
+        bottom: 90%;
+        left: 90%;
+    }
+
+    20% {
+        bottom: 80%;
+        left: 80%;
+    }
+
+    30% {
+        bottom: 70%;
+        left: 70%;
+    }
+
+    40% {
+        bottom: 60%;
+        left: 60%;
+    }
+
+    50% {
+        bottom: 50%;
+        left: 50%;
+    }
+
+    60% {
+        bottom: 40%;
+        left: 40%;
+    }
+
+    70% {
+        bottom: 30%;
+        left: 30%;
+    }
+
+    80% {
+        bottom: 20%;
+        left: 20%;
+    }
+
+    90% {
+        bottom: 10%;
+        left: 10%;
+    }
+
+    100% {
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@keyframes icons-hover {
+    0% {
+        top: 90%;
+        left: -110%;
+    }
+
+    50% {
+        top: -30%;
+        left: 10%;
+    }
+    
+    100% {
+        top: -10%;
+        left: -10%;
+    }
+}

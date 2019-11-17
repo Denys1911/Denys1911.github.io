@@ -1,0 +1,185 @@
+@media (max-width: 992px) {
+    html {
+        font-size: 90%;
+    }
+
+    .about {
+        &__inner {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__inner-photo {
+            order: -1;
+        }
+
+        &__inner-description {
+            width: 80%;
+
+            p {
+                text-align: center;
+            }
+        }
+
+        &__inner-details {
+            ul {
+                text-align: center;
+            }
+        }
+    }
+
+    .skills__inner {
+        flex-direction: column;
+    }
+
+    .works__list-item {
+        flex-basis: 70%;
+    }
+
+    .works__list-item-hover {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 85%;
+    }
+
+    .about__inner-description {
+        width: 100%;
+    }
+
+    .works__list-item {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+    .header {
+        &__inner {
+            justify-content: center;
+        }
+
+        &__inner-info {
+            flex-basis: 100%;
+            text-align: center;
+        }
+
+        &__inner-name {
+            margin-top: 1rem;
+        }
+
+        &__inner-title {
+            margin: 2rem 0;
+        }
+
+        &__inner-github {
+            margin: auto;
+        }
+
+        &__inner-image {
+            display: none;
+        }
+
+        &__nav-list {
+            display: none;
+
+            &--active {
+                position: fixed;
+                top: 0;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                background-color: $accent-2;
+                opacity: .95;
+                animation: menu-appearing .25s ease-out 1;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        &__nav-list-item {
+            &:nth-child(1) {
+                color: $accent-1;
+                background-image: linear-gradient($accent-7);
+            }
+
+            a {
+                font-size: 2rem;
+            }
+        }
+
+        &__nav-btn {
+            display: flex;
+            flex-direction: column;
+
+            &--active {
+                > .header__nav-btn-item {
+                    background-color: $accent-1;
+                }
+
+                > :nth-child(1) {
+                    transform: rotate(45deg) translate(2px, -3px);
+                }
+    
+                > :nth-child(2) {
+                    opacity: 0;
+                    transform: scale(0.2, 0.2);
+                }
+    
+                > :nth-child(3) {
+                    transform: rotate(-45deg) translateX(-2px);
+                }
+            }
+        }
+    }
+
+    .skills__inner-list {
+        column-count: 1;
+    }
+}
+
+@media (max-width: 565px) {
+    html {
+        font-size: 80%;
+    }
+}
+
+@media (max-width: 450px) {
+    .header {
+        &__inner-greeting {
+            font-size: 4rem;
+        }
+    
+        &__inner-name,
+        &__inner-title,
+        &__inner-github {
+            font-size: 1.5rem;
+        }
+
+        &__inner-github {
+            width: 60%;
+        }
+    }
+
+    .works__list-item-hover {
+        font-size: .8rem;
+        font-weight: 400;
+    }
+
+    .works__header-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 993px) {
+    .works__list-item {
+        &:nth-of-type(odd) {
+            margin-right: 2%;
+        }
+    }
+}

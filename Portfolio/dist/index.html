@@ -4,12 +4,322 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gulp template</title>
+    <title>Denys Goloborodko Portfolio</title>
     <link rel="shortcut icon" type="image/x-icon" href="./images/favicon/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
-    <script src="./js/libs.min.js"></script>
+    <header class="header">
+        <nav class="header__nav">
+            <a href="#" class="header__logo">
+                <img src="./images/logo.svg" alt="logo">
+            </a>
+            <div class="header__nav-btn">
+                <span class="header__nav-btn-item"></span>
+                <span class="header__nav-btn-item"></span>
+                <span class="header__nav-btn-item"></span>
+            </div>
+            <ul class="header__nav-list">
+                <li class="header__nav-list-item">
+                    <a href="#">Intro</a>
+                </li>
+                <li class="header__nav-list-item">
+                    <a href="#">About</a>
+                </li>
+                <li class="header__nav-list-item">
+                    <a href="#">Skills</a>
+                </li>
+                <li class="header__nav-list-item">
+                    <a href="#">My works</a>
+                </li>
+                <li class="header__nav-list-item">
+                    <a href="#">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__inner">
+            <div class="header__inner-info">
+                <span class="header__inner-greeting">Hello!</span>
+                <span class="header__inner-name">My name is Denys.</span>
+                <h1 class="header__inner-title">
+                    I'm a Front‑end developer.
+                </h1>
+                <a href="https://github.com/Denys1911" class="header__inner-github" target="blank">
+                    Github
+                </a>
+            </div>
+            <div class="header__inner-image">
+                <img src="./images/banner-image.png" alt="banner">
+            </div>
+        </div>
+    </header>
+    <!-- <main class="about">
+        <div class="about__title">
+            <h2 class="section-title">About</h2>
+            <div class="about__title-text">Let's get acquainted closer</div>
+        </div>
+        <div class="about__inner">
+            <div class="about__inner-description">
+                <h3 class="section-subtitle">About me</h3>
+                <p>
+                    I'm a hardworking, detail-oriented web developer, passionate about creating beautiful code using
+                    best practices.
+                </p>
+                <p>
+                    I love learning new and better ways to create user experiences with clean, efficient, and scalable 
+                    code. I consider work an ongoing education, and I'm always looking for opportunities to work with those who 
+                    are willing to share their knowledge as much as I want to learn. At the end of the day, my primary goal is 
+                    to create something beautiful with people that bring out the best in me.
+                </p>
+            </div>
+            <div class="about__inner-photo">
+                <img src="./images/avatar.jpg" alt="avatar">
+            </div>
+            <div class="about__inner-details">
+                <h3 class="section-subtitle">Personal information</h3>
+                <ul>
+                    <li>
+                        <b>Full name:</b> Denys Goloborodko
+                    </li>
+                    <li>
+                        <b>Date of birth:</b> 19.11.1998
+                    </li>
+                    <li>
+                        <b>Place of residence:</b> Odesa
+                    </li>
+                    <li>
+                        <b>Tel:</b>
+                        <a href="tel:380951707853" class="about__inner-details-link">
+                            +380951707853
+                        </a>
+                    </li>
+                    <li>
+                        <b>Email:</b>
+                        <a href="mailto:den.od.1911@gmail.com" class="about__inner-details-link">
+                            den.od.1911@gmail.com
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="about__inner-details-cv">
+                    Download CV
+                </a>
+            </div>
+        </div>
+    </main>
+    <section class="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills__inner">
+            <div class="skills__inner-hard">
+                <h3 class="section-subtitle skills__inner-title">
+                    Hard skills
+                </h3>
+                <ul class="skills__inner-list">
+                    <li>JavaScript (ES6+)</li>
+                    <li>React.js (Basic)</li>
+                    <li>HTML</li>
+                    <li>CSS (Sass / Scss, Flex, Grid, Bootstrap)</li>
+                    <li>Responsive Web Design</li>
+                    <li>BEM</li>
+                    <li>Git / Github</li>
+                    <li>Webpack / Gulp</li>
+                    <li>Npm</li>
+                    <li>Babel</li>
+                    <li>Adobe Photoshop</li>
+                    <li>English (intermediate / upper-intermediate)</li>
+                </ul>
+            </div>
+            <div class="skills__inner-soft">
+                <h3 class="section-subtitle skills__inner-title">
+                    Soft skills
+                </h3>
+                <ul class="skills__inner-list">
+                    <li>Responsibility</li>
+                    <li>Hardworking</li>
+                    <li>High degree of self-organization</li>
+                    <li>Readiness for difficulties</li>
+                    <li>Focus on achieving results</li>
+                    <li>Easygoing</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="works">
+        <div class="works__header">
+            <h2 class="section-title">My works</h2>
+            <ul class="works__header-buttons">
+                <li>
+                    <button class="works__header-button">
+                        All
+                    </button>
+                </li>
+                <li>
+                    <button class="works__header-button">
+                        React Projects
+                    </button>
+                </li>
+                <li>
+                    <button class="works__header-button">
+                        JS Projects
+                    </button>
+                </li>
+                <li>
+                    <button class="works__header-button">
+                        WebSites
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <ul class="works__list">
+            <li class="works__list-item">
+                <img src="./images/react-app.png" alt="" class="works__list-item-img">
+                <div class="works__list-item-hover">
+                    <h3>Todo List</h3>
+                    <p>
+                        In this project I have learned to work with: create-react-app, JSX, props, functional and class 
+                        components, state, setState, events, controllable components and forms in React.
+                    </p>
+                    <div class="works__list-item-hover-buttons">
+                        <a>View</a>
+                        <a>Code</a>
+                    </div>
+                </div>
+            </li>
+            <li class="works__list-item">
+                <img src="./images/site-6.png" alt="" class="works__list-item-img">
+                <div class="works__list-item-hover">
+                    <h3>Todo List</h3>
+                    <p>
+                        In this project I have learned to work with: create-react-app, JSX, props, functional and class 
+                        components, state, setState, events, controllable components and forms in React.
+                    </p>
+                    <div class="works__list-item-hover-buttons">
+                        <a>View</a>
+                        <a>Code</a>
+                    </div>
+                </div>
+            </li>
+            <li class="works__list-item">
+                <img src="./images/site-5.png" alt="" class="works__list-item-img">
+                <div class="works__list-item-hover">
+                    <h3>Todo List</h3>
+                    <p>
+                        In this project I have learned to work with: create-react-app, JSX, props, functional and class 
+                        components, state, setState, events, controllable components and forms in React.
+                    </p>
+                    <div class="works__list-item-hover-buttons">
+                        <a>View</a>
+                        <a>Code</a>
+                    </div>
+                </div>
+            </li>
+            <li class="works__list-item">
+                <img src="./images/site-4.png" alt="" class="works__list-item-img">
+                <div class="works__list-item-hover">
+                    <h3>Todo List</h3>
+                    <p>
+                        In this project I have learned to work with: create-react-app, JSX, props, functional and class 
+                        components, state, setState, events, controllable components and forms in React.
+                    </p>
+                    <div class="works__list-item-hover-buttons">
+                        <a>View</a>
+                        <a>Code</a>
+                    </div>
+                </div>
+            </li>
+            <li class="works__list-item">
+                <img src="./images/site-3.png" alt="" class="works__list-item-img">
+                <div class="works__list-item-hover">
+                    <h3>Todo List</h3>
+                    <p>
+                        In this project I have learned to work with: create-react-app, JSX, props, functional and class 
+                        components, state, setState, events, controllable components and forms in React.
+                    </p>
+                    <div class="works__list-item-hover-buttons">
+                        <a>View</a>
+                        <a>Code</a>
+                    </div>
+                </div>
+            </li>
+            <li class="works__list-item">
+                <img src="./images/site-2.png" alt="" class="works__list-item-img">
+                <div class="works__list-item-hover">
+                    <h3>Todo List</h3>
+                    <p>
+                        In this project I have learned to work with: create-react-app, JSX, props, functional and class 
+                        components, state, setState, events, controllable components and forms in React.
+                    </p>
+                    <div class="works__list-item-hover-buttons">
+                        <a>View</a>
+                        <a>Code</a>
+                    </div>
+                </div>
+            </li>
+            <li class="works__list-item">
+                <img src="./images/site-1.png" alt="" class="works__list-item-img">
+                <div class="works__list-item-hover">
+                    <h3>Todo List</h3>
+                    <p>
+                        In this project I have learned to work with: create-react-app, JSX, props, functional and class 
+                        components, state, setState, events, controllable components and forms in React.
+                    </p>
+                    <div class="works__list-item-hover-buttons">
+                        <a>View</a>
+                        <a>Code</a>
+                    </div>
+                </div>
+            </li>
+            <li class="works__list-item">
+                <img src="./images/site-0.png" alt="" class="works__list-item-img">
+                <div class="works__list-item-hover">
+                    <h3>Todo List</h3>
+                    <p>
+                        In this project I have learned to work with: create-react-app, JSX, props, functional and class 
+                        components, state, setState, events, controllable components and forms in React.
+                    </p>
+                    <div class="works__list-item-hover-buttons">
+                        <a>View</a>
+                        <a>Code</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <footer class="footer">
+        <ul class="footer__icons-list">
+            <li>
+                <a href="https://github.com/Denys1911" class="footer__icons-list-link" target="blank" title="github">
+                    <i class="icon-github"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/denys-goloborodko-b24005175/" class="footer__icons-list-link" 
+                    target="blank" title="linkedin">
+                    <i class="icon-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://t.me/Denys1911" class="footer__icons-list-link" target="blank" title="telegram">
+                    <i class="icon-telegram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/profile.php?id=100040301806747" class="footer__icons-list-link" 
+                    target="blank" title="facebook">
+                    <i class="icon-facebook2"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.codewars.com/users/Denys1911" class="footer__icons-list-link" target="blank" title="codewars">
+                    <i class="icon-codewars"></i>
+                </a>
+            </li>
+        </ul>
+        <p class="footer__copyright">
+            @ Denys Goloborodko 2019
+        </p>
+    </footer> -->
+
     <script src="./js/main.js"></script>
 </body>
 </html>

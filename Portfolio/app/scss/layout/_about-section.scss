@@ -1,0 +1,61 @@
+.about {
+    background-color: $bg-color-1;
+
+    &__title {
+        margin-bottom: $gutter * 2;
+        border-bottom: 1px solid $accent-4;
+    }
+
+    &__title-text {
+        padding-bottom: $gutter;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__inner-description {
+        flex-basis: 40%;
+
+        p {
+            text-align: left;
+        }
+    }
+
+    &__inner-photo {
+        margin: 0 3rem;
+    }
+
+    &__inner-photo img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+    }
+
+    &__inner-details {
+        flex-basis: 40%;
+
+        ul {
+            margin-bottom: $gutter;
+            text-align: left;
+        }
+    }
+
+    &__inner-details-link {
+        color: inherit;
+        transition: color $transition-duration ease;
+
+        &:hover {
+            color: $accent-4;
+        }
+    }
+
+    &__inner-details-cv {
+        @include buttons-stylization($accent-4, $accent-2, transparent, 2px);
+
+        display: inline-block;
+    }
+}
