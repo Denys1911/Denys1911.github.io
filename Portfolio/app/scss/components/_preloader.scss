@@ -1,0 +1,61 @@
+.preloader-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    background-color: $accent-2;
+}
+
+.preloader {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    margin: auto;
+
+    &__part {
+        position: absolute;
+        width: 86px;
+        height: 86px;
+        opacity: 0;
+        transform: rotate(225deg);
+        animation: preloader 5.74s infinite;
+
+        &:nth-child(1) {
+            animation-delay: 1.26s;
+        }
+
+        &:nth-child(2) {
+            animation-delay: 0.24s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 0.51s;
+        }
+
+        &:nth-child(4) {
+            animation-delay: 0.75s;
+        }
+
+        &:nth-child(5) {
+            animation-delay: 1s;
+        }
+
+        @for $i from 1 through length($colors-mix-3) {
+            &:nth-child(#{$i}) > div {
+                background-color: nth($colors-mix-3, $i);
+            }
+        }
+    }
+
+    &__part-ball {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 11px;
+        height: 11px;
+        border-radius: 11px;
+    }
+}

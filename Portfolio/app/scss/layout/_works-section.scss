@@ -67,6 +67,10 @@
             @include buttons-stylization($accent-2, $accent-1, transparent, 2px);
 
             cursor: pointer;
+
+            &:nth-child(1) {
+                margin-right: 0.5rem;
+            }
         }
     }
 

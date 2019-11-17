@@ -1,4 +1,7 @@
 .header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     padding: $gutter;
 
@@ -31,13 +34,16 @@
     }
 
     &__nav-btn {
-        z-index: 3;
+        position: absolute;
+        top: $gutter * 2;
+        right: $gutter;
+        z-index: 4;
         display: none;
         cursor: pointer;
     }
 
     &__nav-list {
-        z-index: 2;
+        z-index: 3;
         display: flex;
     }
 
@@ -59,6 +65,9 @@
 
     &__inner {
         display: flex;
+        flex-grow: 1;
+        align-items: center;
+        margin-bottom: $gutter * 2;
     }
 
     &__inner-info {

@@ -96,7 +96,7 @@
                 margin: 0;
                 background-color: $accent-2;
                 opacity: .95;
-                animation: menu-appearing .25s ease-out 1;
+                animation: menu-appearing $transition-duration ease-out 1;
                 animation-fill-mode: forwards;
             }
         }
@@ -117,6 +117,8 @@
             flex-direction: column;
 
             &--active {
+                position: fixed;
+
                 > .header__nav-btn-item {
                     background-color: $accent-1;
                 }

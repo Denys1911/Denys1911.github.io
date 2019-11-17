@@ -1,7 +1,56 @@
+@keyframes preloader {
+    0% {
+        z-index: 99;
+        opacity: 1;
+        transform: rotate(180deg);
+        animation-timing-function: ease-out;
+    }
+    
+    7% {
+        opacity: 1;
+        transform: rotate(300deg);
+        animation-timing-function: linear;
+    }
+    
+    30% {
+        opacity: 1;
+        transform: rotate(410deg);
+        animation-timing-function: ease-in-out;
+    }
+    
+    39% {
+        opacity: 1;
+        transform: rotate(645deg);
+        animation-timing-function: linear;
+    }
+    
+    70% {
+        opacity: 1;
+        transform: rotate(770deg);
+        animation-timing-function: ease-out;
+    }
+    
+    75% {
+        opacity: 1;
+        transform: rotate(900deg);
+        animation-timing-function: ease-out;
+    }
+    
+    76% {
+        opacity: 0;
+        transform: rotate(900deg);
+    }
+    
+    100% {
+        opacity: 0;
+        transform: rotate(900deg);
+    }
+}
+
 @keyframes menu-appearing {
     0% {
-        bottom: 100%;
-        left: 100%;
+        bottom: 200%;
+        left: 200%;
     }
 
     10% {

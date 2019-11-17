@@ -1,0 +1,31 @@
+.scroll-to-top-btn {
+    position: fixed;
+    right: -5rem;
+    bottom: 2rem;
+    z-index: 2;
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: .2rem .5rem 0 .4rem;
+    cursor: pointer;
+    background-color: rgba($accent-5, .4);
+    border: 2px solid $accent-2;
+    border-radius: 50%;
+    outline: none;
+    transition: all $transition-duration ease;
+    
+    &::before {
+        @include font($font-family-2, 1.5rem, normal);
+
+        line-height: 3.5rem;
+        color: $accent-2;
+        content: "\ea50";
+    }
+
+    &:hover {
+        background-color: lighten($accent-3, 10);
+    }
+
+    &--shift {
+        right: 2rem;
+    }
+}
