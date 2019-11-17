@@ -1,102 +1,60 @@
-@media screen and (max-width: 992px) {
-    html {
-        font-size: 95%;
-    }
-}
-
-@media screen and (max-width: 850px) {
-    .section5 {
-        flex-direction: column;
-    }
-
-    .section5-left-wrapper,
-    .section5__skill {
-        flex-basis: 100%;
-    }
-
-    .section5__skill {
-        margin: 15px 0;
-    }
-
-    .skill-image {
-        max-width: 70%;
-    }
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width:992px){
     html {
         font-size: 90%;
     }
-
-    .header__about {
-        margin: 7rem auto;
-    }
-
-    .nav-button {
-        display: block;
-    }
-
-    .nav {
-        position: relative;
-        right: 20%;
-        display: none;
-    }
-
-    .nav--open {
-        display: block;
-        margin-right: 2rem;
-    }
 }
-
-@media screen and (max-width: 630px) {
-    .section__tel {
-        max-height: 250px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .page__row {
-        margin-bottom: 0.6rem;
-    }
-
+@media screen and (max-width:768px){
     html {
         font-size: 85%;
     }
 
-    .header__about {
-        margin: 5rem auto 5rem auto;
-    }
-
-    .section4 {
+    .nav__btn {
         display: block;
     }
 
-    .picture1,
-    .picture2 {
-        width: 100%;
+    .nav__list {
+        display: none;
     }
 
-    .picture2__pic {
-        width: 100%;
-        max-height: 250px;
+    .nav__list--open {
+        display: block;
     }
 
-    .submit-now {
-        top: 95%;
+    .nav__link {
+        padding: 1rem;
     }
 }
-
-@media screen and (max-width: 555px) {
-    .section {
-        display: block;
+@media screen and (max-width:600px){
+    html{
+        font-size: 80%;
     }
 
-    .section__inform {
-        width: 100%;
+    .header__logo,
+    .header__contact {
+        float: none;
         text-align: center;
     }
 
-    .section__pictures {
-        margin: 1rem auto -1rem auto;
+    .header__logo {
+        margin-bottom: 1rem;
+    }
+
+    .grid__item {
+        float: none;
+        width: 100%;  
+    }
+
+    .advantage {
+        display: block;
+    }
+
+    .advantage__item {
+        margin-right: 0;
+        width: 100% ;
+        margin-bottom:1rem; 
+    }
+    
+    .slider__item{
+        min-height: 20rem;
     }
 }

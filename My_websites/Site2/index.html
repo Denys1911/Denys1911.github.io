@@ -1,302 +1,244 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Site 2</title>
-    <link rel="stylesheet" href="css/main.css"/>
-    <link rel="stylesheet" href="css/media.css">
+    <title>Site 1</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap&subset=cyrillic"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <header>
-        <div class="header__top">
-            <div class="container">
-                <div class="header_top grid">
-                    <div class="header__map grid">
-                        <div class="map"><img src="./img/map.png" alt=""></div>
-                        <div class="address grid ">
-                            <strong>МОСКВА</strong>
-                            <a class="address__link" href="#">
-                                <div>ул. Верейская 29, стр.5</div>
-                            </a>
-                        </div>
+    <div class="page__row page__row--layer">
+        <div class="page__cover">
+            <header class="header">
+                <div class="header__logo">
+                    <a href="#" class="header__link">
+                        <img src="images/LOGO.png" alt="">
+                    </a>
+                </div>
+                <div class="header__menu">
+                    <div data-target="#forbtn" class="nav-button">
+                        <div class="nav-button__part"></div>
+                        <div class="nav-button__part"></div>
+                        <div class="nav-button__part"></div>
                     </div>
-                    <div class="header__logo grid">
-                        <a href="#" class="cancel"><img src="./img/Logo.png" class="logo" alt=""></a>
-                    </div>
-                    <div class="header__contacts grid">
-                        <div class="tel">
-                            +(380) <span>951707853</span>
-                        </div>
-                        <a href="#" class="address__link">
-                            ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК
-                        </a>
-                    </div>
+                    <ul class="nav" id="forbtn">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Hello</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Services</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Portfolio</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Team</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Blog</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__about">
+                    <h1>WE ARE CODE CAFE</h1>
+                    <p class="header__description">
+                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                    </p>
+                </div>
+            </header>
+        </div>
+    </div>
+    <div class="page__row">
+        <div class="page__cell">
+            <div class="section">
+                <div class="section__inform">
+                    <h2>THIS IS BOUNCY</h2>
+                    <p>
+                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+                        deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+                        provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
+                        fuga. Et harum quidem rerum facilis est et expedita distinctio.
+                    </p>
+                    <a href="#" class="link">Read more</a>
+                </div>
+                <div class="section__pictures">
+                    <img class="section__tel" src="images/tel2.jpg" alt="">
                 </div>
             </div>
         </div>
-        <div class="header__reputation">
-            <div class="container">
-                <h1>АВТОСЕРВИС С БЕЗУПРЕЧНОЙ РЕПУТАЦИЕЙ</h1>
-                <div class="header__buttons grid">
-                    <button class="repair-assessment-button">
-                        Оценить стоимость<br>ремонта по фото
-                    </button>
-                    <button>Прайс</button>
+    </div>
+    <div class="page__row page_row--section2">
+        <div class="page__cell">
+            <div class="section2">
+                <div class="section2__details">
+                    <h2>DETAILS ABOUT BOUNTY</h2>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                </div>
+                <div class="section2__icons">
+                    <div class="icons">
+                        <a href="#"><img src="images/icon1.png" alt="" class="icons__picture"></a>
+                    </div>
+                    <div class="icons">
+                        <a href="#"><img src="images/icon2.png" alt="" class="icons__picture"></a>
+                    </div>
+                    <div class="icons">
+                        <a href="#"> <img src="images/icon3.svg" alt="" class="icons__picture"></a>
+                    </div>
+                </div>
+                <div class="section2__ideas">
+                    <h3>Creative ideas</h3>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                        voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+                        cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id
+                        est laborum et dolorum fuga. Et harum quidem.
+                    </p>
                 </div>
             </div>
         </div>
-    </header>
-    <div class="nav-bar">
-        <div class="container">
-            <nav class="nav grid">
-                <div class="menu-button">
-                    <div class="menu-button__part"></div>
-                    <div class="menu-button__part"></div>
-                    <div class="menu-button__part"></div>
+    </div>
+    <div class="page__row">
+        <div class="section3">
+            <h2>FEATURED PROJECTS</h2>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+        </div>
+    </div>
+    <div class="page__row page_row-section4">
+        <div class="section4">
+            <div class="picture1">
+                <img class="picture1__pic" src="images/picture1.png" alt="">
+            </div>
+            <div class="picture2">
+                <a class="picture2__link" href="#">
+                    <img class="picture2__pic" src="images/picture2.png" alt="">
+                    <div class="picture2__overlay">
+                        <div class="picture2__text">VINTAGE</div>
+                    </div>
+                </a>
+            </div>
+            <div class="picture2">
+                <a class="picture2__link" href="#">
+                    <img class="picture2__pic" src="images/picture3.png" alt="">
+                    <div class="picture2__overlay">
+                        <div class="picture2__text">BRANDING</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="submit-now">
+            <button class="submit-now__button">Submit now</button>
+        </div>
+    </div>
+    <div class="page__row">
+        <div class="section3">
+            <h2>OUR SERVICES</h2>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+        </div>
+    </div>
+    <div class="page__row">
+        <div class="page__cell">
+            <div class="section5">
+                <div class="section5-left-wrapper">
+                    <div class="section5__icons">
+                        <a href="#">
+                            <div class="icons">
+                                <img src="images/icon4.png" alt="" class="icons__picture">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="icons">
+                                <img src="images/icon5.svg" alt="" class="icons__picture">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="icons">
+                                <img src="images/icon6.png" alt="" class="icons__picture">
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="icons">
+                                <img src="images/icon7.svg" alt="" class="icons__picture">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="section5__inform">
+                        <h3>Graphic Design</h3>
+                        <p>
+                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                            voluptatum deleniti.
+                        </p>
+                        <p>Quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+                            sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+                        </p>
+                    </div>
                 </div>
-                <ul class="nav-menu">
-                    <li class="nav-menu__item">
-                        <a href="#">
-                            <img src="./img/home.png" alt="icon" class="nav-menu__icons"> Главная
-                        </a>
+                <ul class="section5__skill">
+                    <li class="section5__skill-item">
+                        <img class="skill-image" src="images/skill1.jpg" alt="">
+                        <div class="text">Branding</div>
                     </li>
-                    <li class="nav-menu__item">
-                        <a href="#">
-                            <img src="./img/aboutus.png" alt="icon" class="nav-menu__icons"> О нас
-                        </a>
+                    <li class="section5__skill-item">
+                        <img class="skill-image" src="images/skill2.png" alt="">
+                        <div class="text">Web Design</div>
                     </li>
-                    <li class="nav-menu__item">
-                        <a href="#">
-                            <img src="./img/price.png" alt="icon" class="nav-menu__icons"> Цены
-                        </a>
-                    </li>
-                    <li class="nav-menu__item">
-                        <a href="#">
-                            <img src="./img/ourworks.png" alt="icon" class="nav-menu__icons"> Наши работы
-                        </a>
-                    </li>
-                    <li class="nav-menu__item">
-                        <a href="#">
-                            <img src="./img/partners.png" alt="icon" class="nav-menu__icons"> Партнеры
-                        </a>
-                    </li>
-                    <li class="nav-menu__item">
-                        <a href="#">
-                            <img src="./img/map2.png" alt="icon" class="nav-menu__icons"> Контакты
-                        </a>
+                    <li class="section5__skill-item">
+                        <img class="skill-image" src="images/skill3.png" alt="">
+                        <div class="text">UI/UX</div>
                     </li>
                 </ul>
-                <a href="#" class="guarantee-button">Гарантия 1 год на все работы</a>
-            </nav>
-        </div>
-    </div>
-    <div class="services">
-        <div class="container container-services">
-            <h2 class="services__headline">
-                Услуги мастерской <strong>Авто</strong><span>Холл</span>
-            </h2>
-            <ul class="services__list grid">
-                <li class="services__item">
-                    <a href="#" class="services__link">
-                        <img src="./img/car.png" alt="" class="services__img">
-                        Кузовной ремонт
-                    </a>
-                    <div class="services__button">&xdtri;</div>
-                </li>
-                <li class="services__item">
-                    <a href="#" class="services__link">
-                        <img src="./img/ball.png" alt="" class="services__img">
-                        Механические работы
-                    </a>
-                    <div class="services__button">&xdtri;</div>
-                </li>
-                <li class="services__item">
-                    <a href="#" class="services__link">
-                        <img src="./img/express.png" alt="" class="services__img">
-                        Экспресс услуги
-                    </a>
-                    <div class="services__button">&xdtri;</div>
-                </li>
-                <li class="services__item">
-                    <a href="#" class="services__link">
-                        <img src="./img/kit.png" alt="" class="services__img">
-                        Диагностика
-                    </a>
-                    <div class="services__button">&xdtri;</div>
-                </li>
-                <li class="services__item">
-                    <a href="#" class="services__link">
-                        <img src="./img/spanner.png" alt="" class="services__img">
-                        Слесарные работы
-                    </a>
-                    <div class="services__button">&xdtri;</div>
-                </li>
-                <li class="services__item">
-                    <a href="#" class="services__link">
-                        <img src="./img/plastic.png" alt="" class="services__img">
-                        Ремонт пластика
-                    </a>
-                    <div class="services__button">&xdtri;</div>
-                </li>
-            </ul>
-            <ul class="works-list works-list--hide">
-                <li class="works-list__item">
-                    <a>Стапельные работы</a>
-                </li>
-                <li class="works-list__item">
-                    <a>Жестяные работы</a>
-                </li>
-                <li class="works-list__item">
-                    <a>Арматурные работы</a>
-                </li>
-                <li class="works-list__item">
-                    <a>Покраска автомобиля</a>
-                </li>
-                <li class="works-list__item">
-                    <a>Локальная покраска</a>
-                </li>
-                <li class="works-list__item">
-                    <a>Покраска мотоцикла</a>
-                </li>
-                <li class="works-list__item">
-                    <a>Абразивная полировка</a>
-                </li>
-                <li class="works-list__item">
-                    <a>Легкая полировка блеск</a>
-                </li>
-                <li class="works-list__item">
-                    <a>Защитная полировка</a>
-                </li>
-                <li class="works-list__item">
-                    <a>Антикоррозийная обработка кузова</a>
-                </li>
-                <li class="works-list__item">
-                    <a>Удаление вмятин без покраски</a>
-                </li>
-            </ul>
-            <button class="services__button2">Оставить заявку</button>
-        </div>
-    </div>
-    <div class="section1">
-        <div class="container">
-            <h2 class="section1__headline"> Мы - Профессионалы высочайшего класса </h2>
-            <p class="section1__p">
-                Мы используем самые качественные материалы и работы осуществляются теми, кто являются профессионалами
-                высочайшего класса.
-            </p>
-        </div>
-    </div>
-    <div class="section2">
-        <div class="container container-section2 grid">
-            <div class="section2__item">
-                <a>
-                    <img class="section2__img" src="./img/антикоррозийная-обработка-автомобиля.jpg" alt="">
-                </a>
-                <p class="section2__p">
-                    Нам под силу виртуозное выполнение такого сложного автотехнического процесса,
-                    как антикоррозийная обработка автомобиля! Многие владельцы современных машин считают, что коррозия
-                    им не страшна, но это не так.
-                </p>
-            </div>
-            <div class="section2__item">
-                <a>
-                    <img class="section2__img" src="./img/абразивная-полировка-кузова.jpg" alt="">
-                </a>
-                <p class="section2__p">
-                    Автомобиль современного делового человека должен иметь презентабельный вид. Многие наши клиенты,
-                    бросив критический взгляд на свою машину, понимают, что ей необходима абразивная полировка кузова.
-                    Она применяется в тех случаях, когда на поверхности автомобиля изобилуют дефекты.
-                </p>
-            </div>
-            <div class="section2__item">
-                <a>
-                    <img class="section2__img" src="./img/кузовной-ремонт.png" alt="">
-                </a>
-                <p class="section2__p">
-                    Одной из самых востребованных нашими клиентами услуг является локальный ремонт бамперов прочего
-                    пластика. В наши дни, как и ранее, бамперы защищают автомобили в ходе столкновения. Бампера
-                    современных автомобилей изготовлены из пластика, стоят дорого и являются достаточно ломкими.
-                </p>
-            </div>
-            <div class="section2__item">
-                <a>
-                    <img class="section2__img" src="./img/локальный-ремонт-переднего-бампера.jpg" alt="">
-                </a>
-                <p class="section2__p">
-                    Наши специалисты способны привести в идеальное состояние приобретенный подержанный автомобиль
-                    либо машину, которая недавно побывала в «автопеределке».
-                </p>
-            </div>
-            <div class="section2__item">
-                <a>
-                    <img class="section2__img" src="./img/стапельные-работы.jpg" alt="">
-                </a>
-                <p class="section2__p">
-                    Для владельцев автомашин марки Mercedes, BMW, Mini, Ford, Volkswagen, Mazda, Hyundai,
-                    нуждающихся в том, чтобы осуществить кузовной ремонт на самом высоком уровне либо покраску
-                    автомобиля, гостеприимно распахивает свои двери сервис «Автохолл».
-                </p>
-            </div>
-            <div class="section2__item">
-                <a>
-                    <img class="section2__img" src="./img/maxresdefault.jpg" alt="">
-                </a>
-                <p class="section2__p">
-                    Порой, даже с очень внимательным и аккуратным водителем, имеющим большой стаж, случается серьезная
-                    авария, которая приводит автомобиль к серьезной деформации кузова. В этом случае нами могут быть
-                    выполнены стапельные работы.
-                </p>
             </div>
         </div>
     </div>
-    <div class="section3">
-        <div class="container">
-            <div class="section3__headline grid">
-                <h3>Все виды работ по ремонту авто</h3>
-                <button class="section3__btn">Оставить заявку</button>
-            </div>
-            <div class="content">
-                <img src="./img/garage.png" alt="" class="content__img">
-                <p class="content__p">
-                    При выполнении всех работ, будь то локальная покраска автомобиля или полировка кузова, полная
-                    покраска автомобиля или ремонт акпп,  работники технического центра «Автохолл» ставят на первое
-                    место тандем «Качество и Скорость». Каждый из нас – от директора центра до рядового работника –
-                    является автолюбителем, и мы четко представляем себе, что для человека, привыкшего с помощью
-                    автомобиля ежедневно перемещаться по городу из пункта «А» в пункт «Б», наличие идеально
-                    функционирующего транспортного средства – вопрос № 1. Желая нашим клиентам удачного пути, мы
-                    напоминаем им, что компания «Автохолл» не просто предлагает лучший кузовной ремонт Москвы, но
-                    и является своеобразным маяком для всех москвичей, который освещает путь водителей на самых
-                    сложных дорогах и гарантирует надежность, безопасность и комфорт!
-                </p>
+    <div class="page__row page_row--section6">
+        <div class="section3 section3--text-style">
+            <h2>SUBSCRIBE US</h2>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+        </div>
+        <div class="section6">
+            <div>
+                <label>
+                    Your Email address
+                    <input type="email">
+                </label>
             </div>
         </div>
     </div>
-    <footer class="grid">
-        <div class="footer__site">© avtohall.com 2019</div>
-        <ul class="footer__list grid">
-            <li class="footer__item">
-                <a href="#" class="footer__link">О нас</a>
-            </li>
-            <li class="footer__item">
-                <a href="#" class="footer__link">Цена</a>
-            </li>
-            <li class="footer__item">
-                <a href="#" class="footer__link">Полезная информация</a>
-            </li>
-            <li class="footer__item">
-                <a href="#" class="footer__link">Форум</a>
-            </li>
-            <li class="footer__item">
-                <a href="#" class="footer__link">Карта сайта</a>
-            </li>
-            <li class="footer__item">
-                <a href="#" class="footer__link">Контакты</a>
-            </li>
-        </ul>
-    </footer>
-
+    <div class="page__row">
+        <div class="section3 mod">
+            <footer class="footer">
+                <div class="footer__text">
+                    <h3 class="footer__header">BOUNCY</h3>
+                    <p>Copyright 2019. All rights Reserved</p>
+                </div>
+                <div class="footer__icons">
+                    <a class="footer__link" href="">
+                        <img class="footer__picture" src="images/viber.svg" alt="">
+                    </a>
+                    <a class="footer__link" href="">
+                        <img class="footer__picture" src="images/linkedin.svg" alt="">
+                    </a>
+                    <a class="footer__link" href="">
+                        <img class="footer__picture" src="images/telegram.svg" alt="">
+                    </a>
+                    <a class="footer__link" href="">
+                        <img class="footer__picture" src="images/twitter.png" alt="">
+                    </a>
+                    <a class="footer__link" href="">
+                        <img class="footer__picture" src="images/Instagram.svg" alt="">
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>

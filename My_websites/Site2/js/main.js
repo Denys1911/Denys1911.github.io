@@ -1,17 +1,6 @@
-const menuButton = document.querySelector(".menu-button");
-const servicesButtons = document.querySelectorAll(".services__button");
+const navButton = document.querySelector(".nav-button");
 
-menuButton.addEventListener("click", function () {
-    const navMenu = document.querySelector(".nav-menu");
+navButton.addEventListener('click', function () {
+    const navMenu = document.querySelector(".nav");
     navMenu.classList.toggle("nav--open");
 });
-
-servicesButtons.forEach(function (button) {
-    button.addEventListener("click", function() {
-        const worksList = document.querySelector(".works-list");
-        worksList.classList.toggle('works-list--hide');
-    })
-});
-
-
-

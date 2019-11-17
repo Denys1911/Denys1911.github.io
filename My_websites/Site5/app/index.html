@@ -4,420 +4,414 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Smitler</title>
-    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans%7CMontserrat:100,300,400,500,700,800&display=swap&subset=cyrillic"
+    <title>Logotype</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon/favicon.ico?">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700%7CRoboto:400,500&display=swap&subset=cyrillic"
           rel="stylesheet">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
-    <div>
-        <header class="header" style="background-image: url(./images/top-bg.jpg);">
-            <div class="header-main">
-                <div class="header-main__contacts">
-                    <a href="#">
-                        <img src="./images/logo-1.svg" alt="" class="logo">
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__inner">
+                    <a class="header__tel" href="tel:380963092145">
+                        +38 (096) 309 21 45
                     </a>
-                    <a href="tel:74951189435" class="header-main__contacts-tel">
-                        +7 (495) 118-94-35
+                    <a class="header__email" href="mailto:layout585@gmail.com">
+                        layout585@gmail.com
+                    </a>
+                    <a data-fancybox data-src="#modal" class="header__btn">
+                        Бесплатная консультация
                     </a>
                 </div>
-                <div class="header-main__about">
-                    <div class="header-main__about-wrapper">
-                        <div class="header-main__about-inner">
-                            <h3>
-                                ДОБРО ПОЖАЛОВАТЬ В ПРОФЕССИОНАЛЬНЫЙ
-                            </h3>
-                            <h1>
-                                САЛОН КРАСОТЫ
-                            </h1>
-                            <h4>
-                                В МОСКВЕ
-                            </h4>
-                            <p>
-                                S&Mitler – это салон красоты бизнес-класса. Мастера салона дарят посетителям уверенность
-                                в себе и индивидуальный стиль. Здесь представлены все самые востребованные услуги
-                                бьюти-индустрии.
-                            </p>
-                            <a href="#" class="btn-main">
-                                О САЛОНЕ
-                            </a>
+            </div>
+        </div>
+        <div class="header__content">
+            <div class="container">
+                <div class="header__content-inner">
+                    <div class="header__logo">
+                        <a href="#">
+                            <img src="./img/logo.png" alt="">
+                        </a>
+                    </div>
+                    <nav class="menu">
+                        <div class="menu__btn">
+                            <div class="menu__btn-part"></div>
+                            <div class="menu__btn-part"></div>
+                            <div class="menu__btn-part"></div>
+                        </div>
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#"> О компании</a></li>
+                            <li><a href="#"> Услуги</a></li>
+                            <li><a href="#">  Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="slider">
+        <div class="container">
+            <ul class="slider__inner">
+                <li class="slider__item">
+                    <div class="slider__title">
+                        КОМПЛЕКСНОЕ ЗАКРЫТИЕ ПРЕДПРИЯТИЯ
+                    </div>
+                    <div class="slider__text">
+                        Полное прекращение существования юридического лица с сохранением легальности всей
+                        предыдущей деятельности.
+                    </div>
+                    <a data-fancybox data-src="#modal" href="javascript:;" class="slider__btn">
+                        Оставить заявку
+                    </a>
+                </li>
+                <li class="slider__item">
+                    <div class="slider__title">
+                        КОМПЛЕКСНОЕ ЗАКРЫТИЕ ПРЕДПРИЯТИЯ
+                    </div>
+                    <div class="slider__text">
+                        Полное прекращение существования юридического лица с сохранением легальности всей
+                        предыдущей деятельности.
+                    </div>
+                    <a data-fancybox data-src="#modal" href="javascript:;" class="slider__btn">
+                        Оставить заявку
+                    </a>
+                </li>
+                <li class="slider__item">
+                    <div class="slider__title">
+                        КОМПЛЕКСНОЕ ЗАКРЫТИЕ ПРЕДПРИЯТИЯ
+                    </div>
+                    <div class="slider__text">
+                        Полное прекращение существования юридического лица с сохранением легальности всей
+                        предыдущей деятельности.
+                    </div>
+                    <a data-fancybox data-src="#modal" href="javascript:;" class="slider__btn">
+                        Оставить заявку
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="services">
+        <div class="container">
+            <div class="services__top">
+                <div class="services__title">
+                    <div class="services__title-title">
+                        Наши Услуги
+                    </div>
+                    <div class="services__title-text">
+                        Комплексный подход к вашему вопросу, своевременная правовую помощь, представление
+                        интересов во всех судебных инстанциях.
+                    </div>
+                </div>
+                <a href="#" class="services__btn">
+                    Показать все услуги
+                </a>
+            </div>
+            <ul class="services__items">
+                <li class="services__item">
+                    <img src="./img/about-1.png" alt="">
+                    <div class="services__item-title">
+                        Банкротство и ликвидация
+                    </div>
+                    <div class="services__item-text">
+                        Полное прекращение существования юридического лица с сохранением легальности всей
+                        предыдущей деятельности
+                    </div>
+                    <div class="services__item-links">
+                        <a class="services__item-link1" href="#">
+                            Подробнее
+                        </a>
+                        <a class="services__item-link2" data-fancybox data-src="#modal" href="javascript:;">
+                            Заказать
+                        </a>
+                    </div>
+                </li>
+                <li class="services__item">
+                    <img src="./img/about-2.png" alt="">
+                    <div class="services__item-title">
+                        Адвокатское сопровождение
+                    </div>
+                    <div class="services__item-text">
+                        Мы гарантируем полное профессиональное обслуживание клиентов в заявленных сферах деятельности
+                        и соблюдение конфиденциальности.
+                    </div>
+                    <div class="services__item-links">
+                        <a class="services__item-link1" href="#">
+                            Подробнее
+                        </a>
+                        <a class="services__item-link2" data-fancybox data-src="#modal" href="javascript:;">
+                            Заказать
+                        </a>
+                    </div>
+                </li>
+                <li class="services__item">
+                    <img src="./img/about-3.png" alt="">
+                    <div class="services__item-title">
+                        Налоговый аудит
+                    </div>
+                    <div class="services__item-text">
+                        Налоговый аудит проводят перед проведением налоговых проверок; при оценке возможных налоговых
+                        рисков; при оптимизации налогообложения.
+                    </div>
+                    <div class="services__item-links">
+                        <a class="services__item-link1" href="#">
+                            Подробнее
+                        </a>
+                        <a class="services__item-link2" data-fancybox data-src="#modal" href="javascript:;">
+                            Заказать
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="about">
+        <div class="container">
+            <div class="about__inner">
+                <div class="about__title">
+                    О компании
+                </div>
+                <div class="about__text">
+                    Компания специализируется на оказании услуг в сфере корпоративного права, налогового консалтинга,
+                    представительства в судах, ликвидации и банкротства предприятий. На сегодняшний день, коллектив
+                    компании объединяет высокопрофессиональных экспертов имеющих
+                </div>
+                <a href="#" class="about__link">
+                    Узнать больше
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="form">
+        <div class="container">
+            <div class="form__inner">
+                <div class="form__content">
+                    <div class="form__title">
+                        <div class="form__title-title">
+                            Получить Консультацию
+                        </div>
+                        <div class="form__title-text">
+                            Комплексный подход к вашему вопросу, своевременная правовую помощь, представление
+                            интересов во всех судебных инстанциях.
                         </div>
                     </div>
                 </div>
+                <div class="form__box">
+                    <form>
+                        <div class="form__box-inner">
+                            <div class="form__box-left">
+                                <label>
+                                    E-mail
+                                    <input type="text" placeholder="example@domain.com" required>
+                                </label>
+                                <label>
+                                    Контактный телефон
+                                    <input type="text" placeholder="+38 (096) 3549564" required>
+                                </label>
+                                <label>
+                                    ФИО
+                                    <input type="text" placeholder="Иванов Иван Иванович" required>
+                                </label>
+                                <label>
+                                    Тема вопроса
+                                    <select>
+                                        <option>-------------</option>
+                                        <option>-------------</option>
+                                        <option>-------------</option>
+                                        <option>-------------</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="form__box-right">
+                                <label>
+                                    Сообщение
+                                    <textarea></textarea>
+                                </label>
+                                <button type="submit" class="form__box-btn">
+                                    Получить консультацию
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="header-navigation">
-                <a href="#my-menu" class="hamburger hamburger--spin">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
+        </div>
+    </section>
+    <section class="advantages">
+        <div class="container">
+            <div class="advantages__inner">
+                <div class="advantages__item">
+                    <h3 class="advantages__title">
+                        Десятки добровольных ликвидаций ежемесячно
+                    </h3>
+                    <p class="advantages__text">
+                        Мы умеем минимизировать все риски в процессе добровольной ликвидации юридических лиц.
+                    </p>
+                </div>
+                <div class="advantages__item">
+                    <h3 class="advantages__title">
+                        Отличное знание законов в сфере банкротства
+                    </h3>
+                    <p class="advantages__text">
+                        Позволяют нам эффективно отстаивать как интересы кредиторов, так и интересы собственников
+                        проблемной организации.
+                    </p>
+                </div>
+                <div class="advantages__item">
+                    <h3 class="advantages__title">
+                        Большой опыт сопровождения банкротства
+                    </h3>
+                    <p class="advantages__text">
+                        Мы обладаем большим опытом сопровождения процедур банкротства предприятий.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="news">
+        <div class="container">
+            <div class="news__top">
+                <div class="news__title">
+                    <div class="news__title-title">
+                        Новости Компании
+                    </div>
+                    <div class="news__title-text">
+                        Комплексный подход к вашему вопросу, своевременная правовую помощь, представление интересов
+                        во всех судебных инстанциях.
+                    </div>
+                </div>
+                <a href="#" class="news__btn">
+                    Открыть все новости
                 </a>
-                <nav id="my-menu">
-                    <ul>
-                        <li><a href="#">Парихмахерский сервис</a></li>
-                        <li><a href="#">Косметологический сервис</a></li>
-                        <li><a href="#">Маникюрный сервис</a></li>
-                        <li><a href="#">Массаж и SPA</a></li>
-                        <li><a href="#">Солярий</a></li>
-                        <li><a href="#">Наши специалисты</a></li>
-                        <li><a href="#">Новости</a></li>
-                        <li><a href="#">Прайс лист</a></li>
-                        <li><a href="#">Наши сертификаты</a></li>
-                        <li><a href="#">О салоне</a></li>
-                    </ul>
-                </nav>
-                <ul class="header-navigation__links">
-                    <li><a href="#" class="facebook"></a></li>
-                    <li><a href="#" class="instagram"></a></li>
-                    <li><a href="#" class="vk"></a></li>
+            </div>
+            <div class="news__inner">
+                <ul class="news__comments">
+                    <li class="news__comments-item">
+                        <h3 class="news__comments-title">
+                            Банкротство и ликвидация предприятия в Украине
+                        </h3>
+                        <p class="news__comments-text">
+                            «На сегодняшний день, коллектив компании объединяет высокопрофессиональных экспертов
+                            имеющих специализации в отдельных областях права. На сегодняшний день, коллектив компании
+                            объединяет высокопрофессиональных экспертов имеющих специализации в отдельных областях
+                            права. На сегодняшний день, коллектив компании объединяет высокопрофессиональных экспертов
+                            имеющих специализации в отдельных областях права...»
+                        </p>
+                        <i class="news__comments-author">
+                            Андрей Ворошилов, генеральный директор компании Bankom
+                        </i>
+                    </li>
+                    <li class="news__comments-item">
+                        <h3 class="news__comments-title">
+                            Банкротство и ликвидация предприятия в Украине
+                        </h3>
+                        <p class="news__comments-text">
+                            «На сегодняшний день, коллектив компании объединяет высокопрофессиональных экспертов имеющих
+                            специализации в отдельных областях права. На сегодняшний день, коллектив компании объединяет
+                            высокопрофессиональных экспертов имеющих специализации в отдельных областях права.
+                            На сегодняшний день, коллектив компании объединяет высокопрофессиональных экспертов имеющих
+                            специализации в отдельных областях права...»
+                        </p>
+                        <i class="news__comments-author">
+                            Андрей Ворошилов, генеральный директор компании Bankom
+                        </i>
+                    </li>
+                    <li class="news__comments-item">
+                        <h3 class="news__comments-title">
+                            Банкротство и ликвидация предприятия в Украине
+                        </h3>
+                        <p class="news__comments-text">
+                            «На сегодняшний день, коллектив компании объединяет   высокопрофессиональных экспертов
+                            имеющих специализации в   отдельных областях права. На сегодняшний день, коллектив
+                            компании объединяет высокопрофессиональных экспертов   имеющих специализации в отдельных
+                            областях права. На сегодняшний день, коллектив компании объединяет высокопрофессиональных
+                            экспертов имеющих специализации в   отдельных областях права...»
+                        </p>
+                        <i class="news__comments-author">
+                            Андрей Ворошилов, генеральный директор компании Bankom
+                        </i>
+                    </li>
                 </ul>
-            </div>
-        </header>
-        <div class="header-information">
-            <a href="#" class="address">
-                г. Москва, ул. Ивана Бабушкина, 22с1
-            </a>
-            <a  href="tel:74951189435" class="tel">
-                +7 (495) 118-94-35
-            </a>
-            <a href="#" class="time">
-                Время работы: ежедневно, 10:00 - 22:00
-            </a>
-        </div>
-    </div>
-    <section class="services">
-        <div class="owl-carousel services-carousel">
-            <div class="services-carousel__item">
-                <div class="services-carousel__item-content">
-                    <a href="#">
-                        <img src="./images/logo-2.svg" alt="" class="logo2">
+                <div class="news__blog">
+                    <a href="#" class="news__blog-left">
+                        <div class="news__blog-image">
+                            <img class="news__blog-img" src="./img/blog-picture1.jpg" alt="">
+                            <div class="news__blog-data">03.04</div>
+                        </div>
+                        <h4 class="news__blog-title">
+                            Новость компании
+                        </h4>
+                        <p class="news__blog-text">
+                            На сегодняшний день, коллектив компании объединяет высокопрофессиональных экспертов имеющих
+                            специализации в отдельных областях права...»
+                        </p>
                     </a>
-                    <h2 class="services-carousel__item-content-title">
-                        КОСМЕТОЛОГИЧЕСКИЙ
-                    </h2>
-                    <span class="services-carousel__item-content-subtitle">
-                        СЕРВИС
-                    </span>
-                    <div class="services-carousel__item-content-prices">Ключевая услуга #1 - <strong>8500$</strong></div>
-                    <div class="services-carousel__item-content-prices">Ключевая услуга #2 - <strong>8500$</strong></div>
-                    <div class="services-carousel__item-content-prices">Ключевая услуга #3 - <strong>8500$</strong></div>
-                    <a href="#" class="btn-secondary">
-                        ВСЕ УСЛУГИ
+                    <a href="#" class="news__blog-right">
+                        <div class="news__blog-image">
+                            <img class="news__blog-img" src="./img/blog-picture2.jpg" alt="">
+                            <div class="news__blog-data">03.04</div>
+                        </div>
+                        <h4 class="news__blog-title">
+                            Новость компании
+                        </h4>
+                        <p class="news__blog-text">
+                            На сегодняшний день, коллектив компании объединяет высокопрофессиональных экспертов имеющих
+                            специализации в отдельных областях права...»
+                        </p>
                     </a>
                 </div>
-                <div class="services-carousel__item-image">
-                    <img src="./images/service.png" alt="">
-                </div>
-            </div>
-            <div class="services-carousel__item">
-                <div class="services-carousel__item-content">
-                    <a href="#">
-                        <img src="./images/logo-2.svg" alt="" class="logo2">
-                    </a>
-                    <h2 class="services-carousel__item-content-title">
-                        ПАРИКМАХЕРСКИЙ
-                    </h2>
-                    <span class="services-carousel__item-content-subtitle">
-                        СЕРВИС
-                    </span>
-                    <div class="services-carousel__item-content-prices">Ключевая услуга #1 - <strong>8500$</strong></div>
-                    <div class="services-carousel__item-content-prices">Ключевая услуга #2 - <strong>8500$</strong></div>
-                    <div class="services-carousel__item-content-prices">Ключевая услуга #3 - <strong>8500$</strong></div>
-                    <a href="#" class="btn-secondary">
-                        ВСЕ УСЛУГИ
-                    </a>
-                </div>
-                <div class="services-carousel__item-image">
-                    <img src="./images/service2.png" alt="">
-                </div>
-            </div>
-            <div class="services-carousel__item">
-                <div class="services-carousel__item-content">
-                    <a href="#">
-                    <img src="./images/logo-2.svg" alt="" class="logo2">
-                    </a>
-                    <h2 class="services-carousel__item-content-title">
-                        МАНИКЮРНЫЙ
-                    </h2>
-                    <span class="services-carousel__item-content-subtitle">
-                        СЕРВИС
-                    </span>
-                    <div class="services-carousel__item-content-prices">Ключевая услуга #1 - <strong>8500$</strong></div>
-                    <div class="services-carousel__item-content-prices">Ключевая услуга #2 - <strong>8500$</strong></div>
-                    <div class="services-carousel__item-content-prices">Ключевая услуга #3 - <strong>8500$</strong></div>
-                    <a href="#" class="btn-secondary">
-                        ВСЕ УСЛУГИ
-                    </a>
-                </div>
-                <div class="services-carousel__item-image">
-                        <img src="./images/service3.png" alt="">
-                </div>
-            </div>
-            <div class="services-carousel__item">
-                <div class="services-carousel__item-content">
-                    <a href="#">
-                        <img src="./images/logo-2.svg" alt="" class="logo2">
-                    </a>
-                    <h2 class="services-carousel__item-content-title">
-                        КОСМЕТОЛОГИЧЕСКИЙ
-                    </h2>
-                    <span class="services-carousel__item-content-subtitle">
-                        СЕРВИС
-                    </span>
-                    <div class="services-carousel__item-content-prices">Ключевая услуга #1 - <strong>8500$</strong></div>
-                    <div class="services-carousel__item-content-prices">Ключевая услуга #2 - <strong>8500$</strong></div>
-                    <div class="services-carousel__item-content-prices">Ключевая услуга #3 - <strong>8500$</strong></div>
-                    <a href="#" class="btn-secondary">
-                        ВСЕ УСЛУГИ
-                    </a>
-                </div>
-                <div class="services-carousel__item-image">
-                    <img src="./images/service.png" alt="">
-                </div>
-            </div>
-            <div class="services-carousel__item">
-                <div class="services-carousel__item-content">
-                    <a href="#">
-                        <img src="./images/logo-2.svg" alt="" class="logo2">
-                    </a>
-                    <h2 class="services-carousel__item-content-title">
-                        ПАРИКМАХЕРСКИЙ
-                    </h2>
-                    <span class="services-carousel__item-content-subtitle">
-                        СЕРВИС
-                    </span>
-                    <div class="services-carousel__item-content-prices">Ключевая услуга #1 - <strong>8500$</strong></div>
-                    <div class="services-carousel__item-content-prices">Ключевая услуга #2 - <strong>8500$</strong></div>
-                    <div class="services-carousel__item-content-prices">Ключевая услуга #3 - <strong>8500$</strong></div>
-                    <a href="#" class="btn-secondary">
-                        ВСЕ УСЛУГИ
-                    </a>
-                </div>
-                <div class="services-carousel__item-image">
-                    <img src="./images/service2.png" alt="">
-                </div>
-            </div>
-            <div class="services-carousel__item">
-                <div class="services-carousel__item-content">
-                    <a href="#">
-                    <img src="./images/logo-2.svg" alt="" class="logo2">
-                    </a>
-                    <h2 class="services-carousel__item-content-title">
-                        МАНИКЮРНЫЙ
-                    </h2>
-                    <span class="services-carousel__item-content-subtitle">
-                        СЕРВИС
-                    </span>
-                    <div class="services-carousel__item-content-prices">Ключевая услуга #1 - <strong>8500$</strong></div>
-                    <div class="services-carousel__item-content-prices">Ключевая услуга #2 - <strong>8500$</strong></div>
-                    <div class="services-carousel__item-content-prices">Ключевая услуга #3 - <strong>8500$</strong></div>
-                    <a href="#" class="btn-secondary">
-                        ВСЕ УСЛУГИ
-                    </a>
-                </div>
-                <div class="services-carousel__item-image">
-                        <img src="./images/service3.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section-gallery" style="background-image: url(./images/photos/foto-16.jpg);">
-        <div class="section-gallery__inner">
-            <div class="section-gallery__description">
-                <h2 class="section-title">
-                    КОРОЛЕВСКИЙ <span>САЛОН</span>
-                </h2>
-                <p class="section-gallery__description-text">
-                    S&Mitler встречает своих посетителей современным дизайном и атмосферой уюта: огромное светлое
-                    пространство, изящная мебель, мягкие бархатные кресла.  Это отличное место для того, чтобы
-                    посвятить пару часов только себе!
-                </p>
-                <p class="section-gallery__description-text">
-                    Дамам здесь предложат экстраординарный ассортимент косметологических процедур и качественный
-                    нейл-сервис, а мужчин порадуют услугами стилистов и уходом за лицом.
-                </p>
-            </div>
-            <div data-content="inbox" class="section-gallery__photos fotorama">
-                <a href="./images/photos/small/foto-13.jpg"><img src="./images/photos/thumbs/foto-13.jpg" alt=""></a>
-                <a href="./images/photos/small/foto-15.jpg"><img src="./images/photos/thumbs/foto-15.jpg" alt=""></a>
-                <a href="./images/photos/small/foto-16.jpg"><img src="./images/photos/thumbs/foto-16.jpg" alt=""></a>
-                <a href="./images/photos/small/foto-18.jpg"><img src="./images/photos/thumbs/foto-18.jpg" alt=""></a>
-                <a href="./images/photos/small/foto-19.jpg"><img src="./images/photos/thumbs/foto-19.jpg" alt=""></a>
-                <a href="./images/photos/small/foto-23.jpg"><img src="./images/photos/thumbs/foto-23.jpg" alt=""></a>
-            </div>
-        </div>
-    </section>
-    <section class="section-form" style="background-image: url(./images/madama.jpg);">
-        <div class="section-form__wrapper">
-            <form class="form">
-                <!-- Hidden Required Fields -->
-                <input type="hidden" name="project_name" value="Smitler saloon">
-                <input type="hidden" name="admin_email" value="blabladdropp123@gmail.com">
-                <input type="hidden" name="form_subject" value="New request">
-                <!-- END Hidden Required Fields -->
-                <div class="form__success"><span>Спасибо за вашу заявку!</span></div>
-                <a href="#">
-                    <img src="./images/logo-2.svg" alt="" class="logo2">
-                </a>
-                <div class="section-title">
-                    ОСТАВИТЬ ЗАЯВКУ
-                </div>
-                <p class="form__text">
-                    Оставьте заявку и мы перезвоним вам в течение 15 минут.
-                </p>
-                <input type="text" name="Name" placeholder="Ваше имя..." required>
-                <input type="text" name="E-mail" placeholder="Ваш адрес электронной почты..." required>
-                <select>
-                    <option class="option" disabled selected value>Выберите услугу...</option>
-                    <option>Косметологический</option>
-                    <option>Маникюрный</option>
-                    <option>Парихмахерский</option>
-                    <option>Массаж и SPA</option>
-                    <option>Солярий</option>
-                </select>
-                <button class="btn-secondary">Отправить</button>
-            </form> 
-        </div>
-    </section>
-    <section class="section-comments" style="background-image: url(./images/bg-2.jpg);">
-        <div class="section-comments__inner">
-            <h2 class="section-title">
-                ОТЗЫВЫ <span>НАШИХ КЛИЕНТОВ</span>
-            </h2>
-            <div class="owl-carousel comments-carousel">
-                <div class="comments-carousel__item">
-                    <div class="comments-carousel__item-author">
-                        Оксана
-                    </div>
-                    <div class="comments-carousel__item-date">
-                        29-07-16
-                    </div>
-                    <div class="comments-carousel__item-mark">
-                        <i class="icon-star"></i>
-                        <i class="icon-star"></i>
-                        <i class="icon-star"></i>
-                        <i class="icon-star"></i>
-                        <i class="icon-star"></i>
-                    </div>
-                    <p class="comments-carousel__item-text">
-                        Мне очень повезло! Я случайно попала в салон красоты S&Mitler, когда возвращалась с работы.
-                        Времени, записываться на стрижку, у меня не было. И, на удачу, я попала в смену стилиста
-                        Марины. Я сама не знала, как я хочу постричься, но Марина предлагала несколько вариантов.
-                        И в итоге я получила колоссальное удовольствие от конечного итога! Марина с моими волосами
-                        сделала что-то невероятно красивое! После стрижки волосы стали более объемными и гладкими!
-                        Спасибо Мариночке за индивидуальный подход и качество выполненной работы!!!
-                    </p>
-                </div>
-                <div class="comments-carousel__item">
-                    <div class="comments-carousel__item-author">
-                        Оксана
-                    </div>
-                    <div class="comments-carousel__item-date">
-                        29-07-16
-                    </div>
-                    <div class="comments-carousel__item-mark">
-                        <i class="icon-star"></i>
-                        <i class="icon-star"></i>
-                        <i class="icon-star"></i>
-                        <i class="icon-star"></i>
-                        <i class="icon-star"></i>
-                    </div>
-                    <p class="comments-carousel__item-text">
-                        Мне очень повезло! Я случайно попала в салон красоты S&Mitler, когда возвращалась с работы.
-                        Времени, записываться на стрижку, у меня не было. И, на удачу, я попала в смену стилиста
-                        Марины. Я сама не знала, как я хочу постричься, но Марина предлагала несколько вариантов.
-                        И в итоге я получила колоссальное удовольствие от конечного итога! Марина с моими волосами
-                        сделала что-то невероятно красивое! После стрижки волосы стали более объемными и гладкими! !
-                    </p>
-                </div>
-                <div class="comments-carousel__item">
-                    <div class="comments-carousel__item-author">
-                        Александра
-                    </div>
-                    <div class="comments-carousel__item-date">
-                        29-07-16
-                    </div>
-                    <div class="comments-carousel__item-mark">
-                        <i class="icon-star"></i>
-                        <i class="icon-star"></i>
-                        <i class="icon-star"></i>
-                        <i class="icon-star"></i>
-                        <i class="icon-star"></i>
-                    </div>
-                    <p class="comments-carousel__item-text">
-                        Мне очень повезло! Я случайно попала в салон красоты S&Mitler, когда возвращалась с работы.
-                        Времени, записываться на стрижку, у меня не было. И, на удачу, я попала в смену стилиста Марины.
-                        Я сама не знала, как я хочу постричься, но Марина предлагала несколько вариантов. И в итоге я
-                        получила колоссальное удовольствие от конечного итога!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section-partners" style="background-image: url(./images/bg-3.jpg);">
-        <div class="section-partners__inner">
-            <h2 class="section-title">
-                <span>НАШИ ПАРТНЁРЫ</span>
-            </h2>
-            <div class="owl-carousel partners-carousel">
-                <img src="./images/partners/brend1.png" alt="">
-                <img src="./images/partners/brend2.png" alt="">
-                <img src="./images/partners/brend3.png" alt="">
-                <img src="./images/partners/brend4.png" alt="">
-                <img src="./images/partners/brend2.png" alt="">
             </div>
         </div>
     </section>
     <footer class="footer">
-        <div class="footer__social">
-            <a href="#">
-                <img src="./images/logo-1.svg" alt="" class="logo">
-            </a>
-            <p class="footer__social-text">
-                Салон красоты бизнес-класса в Москве
-            </p>
-            <ul class="footer__social-links">
-                <li><a href="#" class="facebook"></a></li>
-                <li><a href="#" class="instagram"></a></li>
-                <li><a href="#" class="vk"></a></li>
-            </ul>
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__inner">
+                    <div class="footer__left">
+                        <h4 class="footer__title">
+                            Комплексное закрытие предприятия
+                        </h4>
+                        <p class="footer__text">
+                            Полное прекращение существования юридического лица с сохранением легальности всей предыдущей
+                            деятельности.
+                        </p>
+                        <a data-fancybox data-src="#modal" href="javascript:;"  class="footer__btn">
+                            Бесплатная консультация
+                        </a>
+                        <a class="footer__tel"  href="tel:380963092145">
+                            +38 (096) 309 21 45
+                        </a>
+                        <a class="footer__email" href="#">
+                            layout585@gmail.com
+                        </a>
+                        <a class="footer__adress" href="#">
+                            Киев, ул.Пушиной, 13
+                        </a>
+                    </div>
+                    <div class="footer__map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.124391996489!2d30.364922015731644!3d50.457408279476354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc919501b4ef%3A0x71a476f68f4c8246!2z0YPQuy4g0KTQtdC-0LTQvtGA0Ysg0J_Rg9GI0LjQvdC-0LksIDEzLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1563478909101!5m2!1sru!2sua"
+                                class="footer__map-location"></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
-        <nav class="footer__services">
-            <ul class="footer__services-menu">
-                <li class="footer__services-item"><a href="#">Парихмахерский сервис</a></li>
-                <li class="footer__services-item"><a href="#">Маникюрный сервис</a></li>
-                <li class="footer__services-item"><a href="#">Косметологический сервис</a></li>
-                <li class="footer__services-item"><a href="#">Массаж и SPA</a></li>
-                <li class="footer__services-item"><a href="#">Солярий</a></li>
-                <li class="footer__services-item"><a href="#">Наши специалисты</a></li>
-            </ul>
-        </nav>
-        <ul class="footer__contacts">
-            <li><a href="#" class="address">
-                г. Москва, ул. Ивана Бабушкина, <br> 22с1
-            </a></li>
-            <li><a  href="tel:74951189435" class="tel">
-                +7 (495) 118-94-35
-            </a></li>
-            <li><a href="#" class="time">
-                Время работы: ежедневно, <br> 10:00 - 22:00
-            </a></li>
-        </ul>
-        <iframe class="footer__map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21980.572931053568!2d30.730246293824873!3d46.47699267809403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c631564f22c6bb%3A0x4823f935d86d207d!2z0KHQsNC70L7QvSDQutGA0LDRgdC-0YLRiyBiZWF1dHkgLSBjbHVi!5e0!3m2!1sru!2sua!4v1565012037725!5m2!1sru!2sua"
-                width="400" height="250"></iframe>
+        <div class="footer__copyrights">
+            © 2017 Template by Anastasia Shaposhnyk. Все права защищены.
+        </div>
     </footer>
 
-    <button class="up">
-        <i class="icon-angle-double-left" title="Наверх"></i>
-    </button>
-
-    <div class="preloader">
-        <div class="pulse"></div>
+    <div id="modal">
+        <form>
+            <input type="text" placeholder="Имя" required>
+            <input type="text" placeholder="Номер телефона или email" required>
+            <input type="submit" value="Отправить">
+        </form>
     </div>
 
     <script src="./js/libs.min.js"></script>
-    <script src="./plugins/mmenu-js-master/dist/mmenu.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

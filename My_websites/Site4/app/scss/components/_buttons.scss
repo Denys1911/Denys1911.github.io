@@ -1,54 +1,30 @@
-.header,
-.footer {
-    &__btn {
-        position: relative;
-        float: right;
-        padding: 5px 20px 4px 50px;
-        font-size: 16px;
-        line-height: 36px;
-        color: #1b1b1b;
-        background-color: $accent;
+.btn,
+.btn-secondary {
+    width: 100%;
+    line-height: 50px;
+    cursor: pointer;
+    outline: none;
+    transition: all .6s;
+}
 
-        &::before {
-            position: absolute;
-            left: 22px;
-            font-family: 'icomoon';
-            color: #1b1b1b;
-            content: "\f0b1";
-        }
-        
-        &:hover {
-            cursor: pointer;
-        }
+.btn {
+    max-width: 290px;
+    background: linear-gradient(to right, $gradient-left, $gradient-right);
+    border: none;
+
+    &:hover {
+        transform: scale(0.97);
     }
+}
 
-    &__tel,
-    &__email {
-        line-height: 45px;
-        color: #cbcacb;
-        letter-spacing: 0.25px;
-    }
+.btn-secondary {
+    max-width: 190px;
+    font-size: 18px;
+    color: $darkgrey;
+    background-color: $whitecolor;
+    border: 1px solid $lightgrey;
 
-    &__tel {
-        position: relative;
-        padding-right: 30px;
-        padding-left: 20px;
-
-        &::before {
-            content: "\f095";
-
-            @include header-icons;
-        }
-    }
-
-    &__email {
-        position: relative;
-        padding-left: 24px;
-
-        &::before {
-            content: "\f003";
-
-            @include header-icons;
-        }
+    &:hover {
+        background: linear-gradient(to right, $gradient-left, $gradient-right);
     }
 }

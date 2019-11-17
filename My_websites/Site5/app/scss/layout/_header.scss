@@ -1,0 +1,26 @@
+.header {
+    font-family: $roboto;
+
+    &__top {
+        background-color: #303030;
+    }
+
+    &__contacts {
+        &::after {
+            display: block;
+            clear: both;
+            content: '';
+        }
+    }
+
+    &__logo {
+        padding: 34px 0 23px;
+    }
+
+    &__content-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
