@@ -13,7 +13,7 @@ function getElementPosition(element) {
 }
 
 function handleLoadOnWindow() {
-    const fadeTarget = document.querySelector(".preloader-wrapper");
+    const fadeTarget = document.querySelector('.preloader-wrapper');
     let opacityValue = fadeTarget.style.opacity;
     opacityValue = 1;
 
@@ -22,7 +22,7 @@ function handleLoadOnWindow() {
             opacityValue -= 0.1;
         } else {
             clearInterval(fadeEffect);
-            fadeTarget.style.display = "none";
+            fadeTarget.style.display = 'none';
         }
     }
 
