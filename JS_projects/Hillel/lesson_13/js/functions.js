@@ -24,12 +24,21 @@ function createPeopleList(peopleList, peopleDataArr) {
     });
 }
 
-function createForm(wrapper, {id, name, age, city}) {
+function createForm(wrapper, {id, name, age, city, email, tel, card}) {
      wrapper.innerHTML = `
         <form class="form-group person-form" ${id ? `data-id=${id}` : ''}>
-            <input type="text" class="form-control" ${name ? `value=${name}` : ''} name="name" placeholder="Name">
-            <input type="number" class="form-control" ${age ? `value=${age}` : ''} name="age" placeholder="Age" min="0">
-            <input type="text" class="form-control" ${city ? `value=${city}` : ''} name="city" placeholder="City">
+            <input type="text" class="form-control" ${name ? `value="${name}"` : ''} name="name" 
+                placeholder="Name: starts with capital letter">
+            <input type="number" class="form-control" ${age ? `value="${age}"` : ''} name="age" 
+                placeholder="Age: 0-199" min="0">
+            <input type="text" class="form-control" ${city ? `value="${city}"` : ''} name="city" 
+                placeholder="City: starts with capital letter">
+            <input type="email" class="form-control" ${email ? `value="${email}"` : ''} name="email" 
+                placeholder="Email: ivanov@gmail.com">
+            <input type="tel" class="form-control" ${tel ? `value="${tel}"` : ''} name="tel" 
+                placeholder="Tel: +380*********">
+            <input type="text" class="form-control" ${card ? `value="${card}"` : ''} name="card" 
+                placeholder="Card: XXXX XXXX XXXX XXXX">
             <input type="button" class="btn btn-success confirm-form-btn" value="Save">
         </form>
     `;
@@ -52,6 +61,9 @@ function createPersonAdditionalInfo(wrapper, personData) {
         <div class="person-additional-info">
             <span>Age: ${personData.age}</span>
             <span>Place of residence: ${personData.city}</span>
+            <span>Email: ${personData.email}</span>
+            <span>Telephone: ${personData.tel}</span>
+            <span>Card: ${personData.card}</span>
         </div>
     `;
 }
@@ -90,14 +102,21 @@ function getNewPersonId(peopleDataArr) {
 }
 
 function validateForm(form) {
-    for (let i = 0; i < form.elements.length; i++) {
-        const formElement = form.elements[i];
+    const regExpArr = {
+        name: /^[A-Z][a-z]+$/,
+        age: /^(?:\d|[1-9]\d|1\d\d)$/,
+        city: /^[A-Z][a-z]+(?:[\s-][A-Z][a-z]+)*$/,
+        email: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
+        tel: /^\+380(?:67|96|97|98|50|66|95|99|63|93|73)\d{7}$/,
+        card: /^(\d{4} \d{4} \d{4} \d{4}|\d{4}-\d{4}-\d{4}-\d{4})$/,
+    };
 
-        if (formElement.type === 'number' && (formElement.value < 0 || formElement.value > 200)) {
-            return false;
-        }
+    function isValid(regEx, str) {
+        return regEx.test(str);
+    }
 
-        if (!formElement.value) {
+    for (let key in regExpArr) {
+        if (!isValid(regExpArr[key], form.elements[key].value)) {
             return false;
         }
     }
