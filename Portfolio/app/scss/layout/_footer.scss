@@ -38,13 +38,15 @@
             transform: rotate(45deg);
         }
 
-        &:hover::before {
+        &:hover::before,
+        &:focus::before {
             top: -10%;
             left: -10%;
             animation: icons-hover 0.7s 1;
         }
 
-        &:hover i {
+        &:hover i,
+        &:focus i {
             color: $accent-7;
             transform: scale(1.07, 1.07);
         }

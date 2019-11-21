@@ -48,7 +48,8 @@
         color: inherit;
         transition: color $transition-duration ease;
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: $accent-4;
         }
     }

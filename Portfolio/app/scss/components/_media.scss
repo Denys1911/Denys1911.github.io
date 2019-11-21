@@ -1,4 +1,4 @@
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
     html {
         font-size: 90%;
     }
@@ -41,7 +41,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     html {
         font-size: 85%;
     }
@@ -55,7 +55,7 @@
     }
 }
 
-@media (max-width: 650px) {
+@media screen and (max-width: 650px) {
     .header {
         &__inner {
             justify-content: center;
@@ -102,13 +102,13 @@
         }
 
         &__nav-list-item {
-            &:nth-child(1) {
-                color: $accent-1;
-                background-image: linear-gradient($accent-7);
-            }
-
             a {
                 font-size: 2rem;
+            }
+
+            &:nth-child(1) a {
+                color: $accent-1;
+                background-image: linear-gradient($accent-7);
             }
         }
 
@@ -144,14 +144,16 @@
     }
 }
 
-@media (max-width: 565px) {
+@media screen and (max-width: 565px) {
     html {
         font-size: 80%;
     }
 }
 
-@media (max-width: 450px) {
+@media screen and (max-width: 450px) {
     .header {
+        min-height: 95vh;
+
         &__inner-greeting {
             font-size: 4rem;
         }
@@ -178,7 +180,7 @@
     }
 }
 
-@media (min-width: 993px) {
+@media screen and (min-width: 993px) {
     .works__list-item {
         &:nth-of-type(odd) {
             margin-right: 2%;

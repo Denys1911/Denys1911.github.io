@@ -15,6 +15,14 @@ ul {
 
 a {
     text-decoration: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+button:focus {
+    outline: none;
 }
 
 main,
