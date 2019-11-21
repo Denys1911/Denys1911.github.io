@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Lesson 16</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="text-center main-header">CRUD App</h1>
+        <ul class="header-buttons-list">
+            <li>
+                <button class="btn btn-outline-info people-btn">Show people-list</button>
+            </li>
+            <li>
+                <button class="btn btn-outline-info companies-btn">Show companies-list</button>
+            </li>
+            <li>
+                <button class="btn btn-outline-info cars-btn">Show cars-list</button>
+            </li>
+        </ul>
+    </header>
+
+    <main class="main">
+        <div class="people hide">
+            <h2 class="text-center">People list</h2>
+            <ul class="people-list"></ul>
+            <div class="text-center col-md-5 col-sm-8 new-person-section">
+                <h2>Add new person</h2>
+                <button class="btn btn-outline-primary show-form-btn">Add</button>
+                <div class="new-person-form-wrapper hide"></div>
+            </div>
+        </div>
+
+        <div class="companies hide">
+            <h2 class="text-center">Companies list</h2>
+            <ul class="companies-list"></ul>
+            <div class="text-center col-md-5 col-sm-8 new-company-section">
+                <h2>Add new company</h2>
+                <button class="btn btn-outline-primary show-form-btn">Add</button>
+                <div class="new-company-form-wrapper hide"></div>
+            </div>
+        </div>
+
+        <div class="cars hide">
+            <h2 class="text-center">Cars list(available to buy)</h2>
+            <ul class="cars-list"></ul>
+            <div class="text-center col-md-5 col-sm-8 new-car-section">
+                <h2>Add new car</h2>
+                <button class="btn btn-outline-primary show-form-btn">Add</button>
+                <div class="new-car-form-wrapper hide"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./js/main.min.js"></script>
+</body>
+</html>
