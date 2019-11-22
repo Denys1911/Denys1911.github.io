@@ -98,3 +98,40 @@ function hidePreloader() {
         const fadeEffect = setInterval(changeOpacityOrDisplayPropertyValue, 70);
     }
 }
+
+function controlShowingOfWorks() {
+    const allWorks = document.querySelectorAll('.works__list-item');
+    const worksButtonsList = document.querySelector('.works__header-buttons');
+
+    worksButtonsList.addEventListener('click', handleClickOnWorksButtonsList);
+
+    function handleClickOnWorksButtonsList(e) {
+        const targetedElement = e.target;
+
+        if (!targetedElement.classList.contains('works__header-button')) {
+            return;
+        }
+
+        if (targetedElement.id === 'all-works-btn') {
+            removeClassForElements('works__list-item--hide', ...allWorks);
+            return;
+        }
+
+        addClassForElements('works__list-item--hide', ...allWorks);
+
+        if (targetedElement.id === 'react-works-btn') {
+            const allReactWorks = document.querySelectorAll('.works__list-item[data-type="react"]');
+            removeClassForElements('works__list-item--hide', ...allReactWorks);
+        }
+
+        if (targetedElement.id === 'js-works-btn') {
+            const allJsWorks = document.querySelectorAll('.works__list-item[data-type="js"]');
+            removeClassForElements('works__list-item--hide', ...allJsWorks);
+        }
+
+        if (targetedElement.id === 'websites-works-btn') {
+            const allWebsites = document.querySelectorAll('.works__list-item[data-type="websites"]');
+            removeClassForElements('works__list-item--hide', ...allWebsites);
+        }
+    }
+}

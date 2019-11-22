@@ -14,7 +14,7 @@
         @include font($font-family-1, 1.3rem, 400);
 
         display: inline-block;
-        padding: .5rem 1rem;
+        padding: 1rem 1.5rem;
         color: inherit;
         cursor: pointer;
         background: none;
@@ -24,7 +24,7 @@
     &__list {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         color: $accent-1;
     }
 
@@ -76,8 +76,8 @@
 
     &__list-item {
         position: relative;
-        flex-basis: 49%;
-        margin-top: 2%;
+        flex-basis: 48%;
+        margin: 1% auto;
         overflow: hidden;
         border: 1px solid $accent-1;
         border-radius: 1.5rem;
@@ -90,6 +90,10 @@
 
         &:hover .works__list-item-img {
             transform: scale(1.1, 1.1);
+        }
+
+        &--hide {
+            display: none;
         }
     }
 }

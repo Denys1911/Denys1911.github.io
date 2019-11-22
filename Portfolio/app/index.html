@@ -101,7 +101,7 @@
                         </a>
                     </li>
                 </ul>
-                <a href="#" class="about__inner-details-cv">
+                <a href="./files/Goloborodko_Front-End.pdf" class="about__inner-details-cv" target="_blank">
                     Download CV
                 </a>
             </div>
@@ -149,29 +149,29 @@
             <h2 class="section-title">My works</h2>
             <ul class="works__header-buttons">
                 <li>
-                    <button class="works__header-button">
+                    <button class="works__header-button" id="all-works-btn">
                         All
                     </button>
                 </li>
                 <li>
-                    <button class="works__header-button">
+                    <button class="works__header-button" id="react-works-btn">
                         React Projects
                     </button>
                 </li>
                 <li>
-                    <button class="works__header-button">
+                    <button class="works__header-button" id="js-works-btn">
                         JS Projects
                     </button>
                 </li>
                 <li>
-                    <button class="works__header-button">
+                    <button class="works__header-button" id="websites-works-btn">
                         WebSites
                     </button>
                 </li>
             </ul>
         </div>
         <ul class="works__list">
-            <li class="works__list-item">
+            <li class="works__list-item" data-type="react">
                 <img src="./images/react-todo-app.png" alt="" class="works__list-item-img">
                 <div class="works__list-item-hover">
                     <h3>Todo List</h3>
@@ -188,7 +188,157 @@
                     </div>
                 </div>
             </li>
-            <li class="works__list-item">
+            <li class="works__list-item" data-type="js">
+                <img src="./images/crud.png" alt="" class="works__list-item-img">
+                <div class="works__list-item-hover">
+                    <h3>CRUD List</h3>
+                    <p>
+                        In this app I have worked with LocalStorage, constructor functions, prototypes and regular
+                        expressions.
+                    </p>
+                    <div class="works__list-item-hover-buttons">
+                        <a href="https://denys1911.github.io/JS_projects/Hillel/lesson_16/app/" target="_blank">View</a>
+                        <a href="https://github.com/Denys1911/Denys1911.github.io/tree/master/JS_projects/Hillel/lesson_16"
+                           target="_blank">
+                            Code
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="works__list-item" data-type="js">
+                <img src="./images/slider.png" alt="" class="works__list-item-img">
+                <div class="works__list-item-hover">
+                    <h3>Slider</h3>
+                    <p>
+                        Loop auto-slider which i created using setInterval.
+                    </p>
+                    <div class="works__list-item-hover-buttons">
+                        <a href="https://denys1911.github.io/JS_projects/Hillel/lesson_15-1/" target="_blank">View</a>
+                        <a href="https://github.com/Denys1911/Denys1911.github.io/tree/master/JS_projects/Hillel/lesson_15-1"
+                           target="_blank">
+                            Code
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="works__list-item" data-type="js">
+                <img src="./images/clock.png" alt="" class="works__list-item-img">
+                <div class="works__list-item-hover">
+                    <h3>Clock</h3>
+                    <p>
+                        One of my homeworks from Hillel. Here I have practised with setInterval and Date object.
+                    </p>
+                    <div class="works__list-item-hover-buttons">
+                        <a href="https://denys1911.github.io/JS_projects/Hillel/lesson_15-2/" target="_blank">View</a>
+                        <a href="https://github.com/Denys1911/Denys1911.github.io/tree/master/JS_projects/Hillel/lesson_15-2"
+                           target="_blank">
+                            Code
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="works__list-item" data-type="js">
+                <img src="./images/hardware-store.png" alt="" class="works__list-item-img">
+                <div class="works__list-item-hover">
+                    <h3>Hardware store</h3>
+                    <p>
+                        In this project I have practised to manipulate with DOM (add elements, remove elements,
+                        move elements around etc).
+                    </p>
+                    <div class="works__list-item-hover-buttons">
+                        <a href="https://denys1911.github.io/JS_projects/Hillel/lesson_11/homework/"
+                           target="_blank">View</a>
+                        <a href="https://github.com/Denys1911/Denys1911.github.io/tree/master/JS_projects/Hillel/lesson_11/homework"
+                           target="_blank">
+                            Code
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="works__list-item" data-type="js">
+                <img src="./images/calculator.png" alt="" class="works__list-item-img">
+                <div class="works__list-item-hover">
+                    <h3>Calculator</h3>
+                    <p>
+                        Created simple calculator using math.js library.
+                    </p>
+                    <div class="works__list-item-hover-buttons">
+                        <a href="https://denys1911.github.io/JS_projects/Calculator/" target="_blank">View</a>
+                        <a href="https://github.com/Denys1911/Denys1911.github.io/tree/master/JS_projects/Calculator"
+                           target="_blank">
+                            Code
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="works__list-item" data-type="js">
+                <img src="./images/knight-moves.png" alt="" class="works__list-item-img">
+                <div class="works__list-item-hover">
+                    <h3>Knight moves</h3>
+                    <p>
+                        This app will help to figure out what moves can the knight make in chess.
+                    </p>
+                    <div class="works__list-item-hover-buttons">
+                        <a href="https://denys1911.github.io/JS_projects/Knight-moves/" target="_blank">View</a>
+                        <a href="https://github.com/Denys1911/Denys1911.github.io/tree/master/JS_projects/Knight-moves"
+                           target="_blank">
+                            Code
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="works__list-item" data-type="js">
+                <img src="./images/film-searcher.png" alt="" class="works__list-item-img">
+                <div class="works__list-item-hover">
+                    <h3>Movies searcher</h3>
+                    <p>
+                        At this site, I have realized the searching for movies (Kinopoisk analog). Here I have been
+                        worked with AJAX, XMLHttpRequest, API.
+                    </p>
+                    <div class="works__list-item-hover-buttons">
+                        <a href="https://denys1911.github.io/JS_projects/Movies-searcher/" target="_blank">View</a>
+                        <a href="https://github.com/Denys1911/Denys1911.github.io/tree/master/JS_projects/Movies-searcher"
+                           target="_blank">
+                            Code
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="works__list-item" data-type="js">
+                <img src="./images/ozone-store.png" alt="" class="works__list-item-img">
+                <div class="works__list-item-hover">
+                    <h3>Online store(Ozone analog)</h3>
+                    <p>
+                        In this store you can: add/remove goods from the basket, search of goods by input, filter
+                        goods by price, stock, category. Technologies used: ES6, DOM API, JSON, Fetch API, Webpack.
+                    </p>
+                    <div class="works__list-item-hover-buttons">
+                        <a href="https://denys1911.github.io/JS_projects/Ozone/app/" target="_blank">View</a>
+                        <a href="https://github.com/Denys1911/Denys1911.github.io/tree/master/JS_projects/Ozone"
+                           target="_blank">
+                            Code
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="works__list-item" data-type="js">
+                <img src="./images/user-registration-app.png" alt="" class="works__list-item-img">
+                <div class="works__list-item-hover">
+                    <h3>User registration and login</h3>
+                    <p>
+                        In this project, I realized user registration, login into the user’s own cabinet and the ability
+                        to change user data in his cabinet. I have been worked with AJAX, XMLHttpRequest, Cookie.
+                    </p>
+                    <div class="works__list-item-hover-buttons">
+                        <a href="https://denys1911.000webhostapp.com/" target="_blank">View</a>
+                        <a href="https://github.com/Denys1911/Denys1911.github.io/tree/master/JS_projects/Practise_js_course/User_registration_login(final%20project)/app"
+                           target="_blank">
+                            Code
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="works__list-item" data-type="websites">
                 <img src="./images/site-7.png" alt="" class="works__list-item-img">
                 <div class="works__list-item-hover">
                     <h3>Site#7</h3>
@@ -208,7 +358,7 @@
                     </div>
                 </div>
             </li>
-            <li class="works__list-item">
+            <li class="works__list-item" data-type="websites">
                 <img src="./images/site-6.png" alt="" class="works__list-item-img">
                 <div class="works__list-item-hover">
                     <h3>Site#6</h3>
@@ -227,7 +377,7 @@
                     </div>
                 </div>
             </li>
-            <li class="works__list-item">
+            <li class="works__list-item" data-type="websites">
                 <img src="./images/site-5.png" alt="" class="works__list-item-img">
                 <div class="works__list-item-hover">
                     <h3>Site#5</h3>
@@ -245,7 +395,7 @@
                     </div>
                 </div>
             </li>
-            <li class="works__list-item">
+            <li class="works__list-item" data-type="websites">
                 <img src="./images/animation-project.png" alt="" class="works__list-item-img">
                 <div class="works__list-item-hover">
                     <h3>CSS animation</h3>
@@ -263,7 +413,7 @@
                     </div>
                 </div>
             </li>
-            <li class="works__list-item">
+            <li class="works__list-item" data-type="websites">
                 <img src="./images/site-4.png" alt="" class="works__list-item-img">
                 <div class="works__list-item-hover">
                     <h3>Site#4</h3>
@@ -282,7 +432,7 @@
                     </div>
                 </div>
             </li>
-            <li class="works__list-item">
+            <li class="works__list-item" data-type="websites">
                 <img src="./images/site-3.png" alt="" class="works__list-item-img">
                 <div class="works__list-item-hover">
                     <h3>Site#3</h3>
@@ -300,7 +450,7 @@
                     </div>
                 </div>
             </li>
-            <li class="works__list-item">
+            <li class="works__list-item" data-type="websites">
                 <img src="./images/site-2.png" alt="" class="works__list-item-img">
                 <div class="works__list-item-hover">
                     <h3>Site#2</h3>
@@ -319,7 +469,7 @@
                     </div>
                 </div>
             </li>
-            <li class="works__list-item">
+            <li class="works__list-item" data-type="websites">
                 <img src="./images/site-1.png" alt="" class="works__list-item-img">
                 <div class="works__list-item-hover">
                     <h3>Site#1</h3>
@@ -397,7 +547,6 @@
 
     <button class="scroll-to-top-btn" title="Go up"></button>
 
-    <script src="./js/functions.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/main.min.js"></script>
 </body>
 </html>
