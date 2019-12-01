@@ -123,7 +123,7 @@ function controlClicksOnMainBlock() {
             const select = targetedElement.parent().find(selectClassName);
 
             if (!select[0].value) {
-                showErrorMessage(select.next());
+                showErrorMessage(select.next(), 'Please, select car/car\'s first');
                 return;
             }
 
