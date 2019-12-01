@@ -35,7 +35,7 @@ function prepareData() {
         
         function setPrototypeForOwnerAvailableCars(owner) {
             if (owner.cars && owner.cars.length) {
-                owner.cars = owner.cars.map(car => Object.assign(new Car(), car))
+                owner.cars = owner.cars.map(car => Object.assign(new Car(), car));
             }
         }
     }

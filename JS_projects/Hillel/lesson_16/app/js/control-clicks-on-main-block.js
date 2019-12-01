@@ -64,41 +64,40 @@ function controlClicksOnMainBlock() {
 
         function handleClickOnConfirmFormBtn() {
             const form = targetedElement.parentNode;
+            const itemIndex = getItemIndex(itemDataArr, itemId);
+
+            hideAllErrorMessages(form);
 
             if (targetedElement.closest('[class*="list"]')) {
+                if (!validateForm(form, itemDataArr[itemIndex].regExpObject)) {
+                    return;
+                }
+
                 updateItem();
             } else {
+                const newItemObj = createItemAccordingToCondition(className);
+
+                if (!validateForm(form, newItemObj.regExpObject)) {
+                    return;
+                }
+
                 createNewItem();
             }
 
+            updateItemListAndLocalStorage(itemDataArr, itemList, className, storageName);
+            clearPersonAndCompanyInfoBlocksAccordingToCondition();
+
             function updateItem() {
-                const itemIndex = getItemIndex(itemDataArr, itemId);
-
-                if (!validateForm(form, itemDataArr[itemIndex].regExpArr)) {
-                    return;
-                }
-
                 const formData = getFormValues(form);
                 itemDataArr[itemIndex] = createItemAccordingToCondition(className, itemId, ...formData);
-                updateItemListAndLocalStorage(itemDataArr, itemList, className, storageName);
-                clearPersonAndCompanyInfoBlocksAccordingToCondition();
             }
 
             function createNewItem() {
-                const newItemObj = createItemAccordingToCondition(className);
-
-                if (!validateForm(form, newItemObj.regExpArr)) {
-                    return;
-                }
-
                 const formData = getFormValues(form);
                 const newItemId = getNewItemId(itemDataArr);
                 const newItem = createItemAccordingToCondition(className, newItemId, ...formData);
                 addItem(itemDataArr, newItem);
-                hideAllErrorMessages(form);
                 clearAllFormFields(form);
-                updateItemListAndLocalStorage(itemDataArr, itemList, className, storageName);
-                clearPersonAndCompanyInfoBlocksAccordingToCondition();
             }
         }
 
@@ -125,71 +124,45 @@ function controlClicksOnMainBlock() {
             const select = form.querySelector(selectClassName);
 
             if (!select.value) {
-                showErrorMessage(select.nextElementSibling);
+                showErrorMessage(select.nextElementSibling, 'Please, select car/car\'s first');
                 return;
             }
 
-            if (identifier === 'buy') {
-                performBuyingCar();
-            } else {
-                performSellingCar();
-            }
+            const arrOfSelectedOptionsValues = getArrOfSelectedOptionsValues(select);
 
-            function performBuyingCar() {
-                if (getTotalOrderValue() > itemData.balance) {
+            if (identifier === 'buy') {
+                const totalOrderValue = arrOfSelectedOptionsValues.reduce(getTotalOrderValue, 0);
+                const ownerBalance = itemData.balance;
+
+                if (totalOrderValue > ownerBalance) {
                     showErrorMessage(select.nextElementSibling, 'Not enough money for this order(');
                     return;
                 }
 
-                for (let i = 0; i < select.options.length; i++) {
-                    const option = select.options[i];
-
-                    if (option.selected) {
-                        const [selectedCarIndex, selectedCarArr] =
-                            getAdditionalInformationAccordingToSelectedOptionValue(option.value, carsDataArr);
-                        itemData.changeBalance(-selectedCarArr.cost);
-                        itemData.setCar(selectedCarArr);
-                        deleteItem(carsDataArr, selectedCarIndex);
-                    }
-                }
-
-                updateItemListAndLocalStorage(carsDataArr, carsList, 'car', CARS_STORAGE_NAME);
-                updateItemListAndLocalStorage(itemDataArr, itemList, className, storageName);
-
-                function getTotalOrderValue() {
-                    let totalOrderValue = 0;
-
-                    for (let i = 0; i < select.options.length; i++) {
-                        const option = select.options[i];
-
-                        if (option.selected) {
-                            const [ , selectedCarArr] =
-                                getAdditionalInformationAccordingToSelectedOptionValue(option.value, carsDataArr);
-                            totalOrderValue += selectedCarArr.cost;
-                        }
-                    }
-
-                    return totalOrderValue;
-                }
+                arrOfSelectedOptionsValues.forEach(performBuyingCar);
+            } else {
+                arrOfSelectedOptionsValues.forEach(performSellingCar);
             }
 
-            function performSellingCar() {
-                for (let i = 0; i < select.options.length; i++) {
-                    const option = select.options[i];
+            updateItemListAndLocalStorage(carsDataArr, carsList, 'car', CARS_STORAGE_NAME);
+            updateItemListAndLocalStorage(itemDataArr, itemList, className, storageName);
 
+            function getArrOfSelectedOptionsValues(select) {
+                let arrOfSelectedOptionsValues = [];
+
+                for (let option of select.options) {
                     if (option.selected) {
-                        const [selectedCarIndex, selectedCarArr] =
-                            getAdditionalInformationAccordingToSelectedOptionValue(option.value, itemData.cars);
-                        selectedCarArr.id = getNewItemId(carsDataArr);
-                        const sellingPrice = selectedCarArr.cost * CARS_RESIDUAL_VALUE_INDEX;
-                        itemData.changeBalance(sellingPrice);
-                        itemData.deleteCar(selectedCarIndex);
-                        addItem(carsDataArr, selectedCarArr);
+                        arrOfSelectedOptionsValues.push(option.value);
                     }
                 }
 
-                updateItemListAndLocalStorage(carsDataArr, carsList, 'car', CARS_STORAGE_NAME);
-                updateItemListAndLocalStorage(itemDataArr, itemList, className, storageName);
+                return arrOfSelectedOptionsValues;
+            }
+
+            function getTotalOrderValue(accumulator, selectedOptionValue) {
+                const [, selectedCarArr] =
+                    getAdditionalInformationAccordingToSelectedOptionValue(selectedOptionValue, carsDataArr);
+                return accumulator + selectedCarArr.cost;
             }
 
             function getAdditionalInformationAccordingToSelectedOptionValue(selectedOptionValue, carsArr) {
@@ -198,6 +171,24 @@ function controlClicksOnMainBlock() {
                 const selectedCarArr = getItemData(carsArr, selectedOptionValue);
 
                 return [selectedCarIndex, selectedCarArr];
+            }
+
+            function performBuyingCar(selectedOptionValue) {
+                const [selectedCarIndex, selectedCarArr] =
+                    getAdditionalInformationAccordingToSelectedOptionValue(selectedOptionValue, carsDataArr);
+                itemData.changeBalance(-selectedCarArr.cost);
+                itemData.setCar(selectedCarArr);
+                deleteItem(carsDataArr, selectedCarIndex);
+            }
+
+            function performSellingCar(selectedOptionValue) {
+                const [selectedCarIndex, selectedCarArr] =
+                    getAdditionalInformationAccordingToSelectedOptionValue(selectedOptionValue, itemData.cars);
+                selectedCarArr.id = getNewItemId(carsDataArr);
+                const sellingPrice = selectedCarArr.cost * CARS_RESIDUAL_VALUE_INDEX;
+                itemData.changeBalance(sellingPrice);
+                itemData.deleteCar(selectedCarIndex);
+                addItem(carsDataArr, selectedCarArr);
             }
         }
 
@@ -277,17 +268,15 @@ function controlClicksOnMainBlock() {
             createItemsList(itemList, itemName, itemDataArr);
         }
 
-        function validateForm(form, regExpArr) {
-            hideAllErrorMessages(form);
-
+        function validateForm(form, regExpObject) {
             function isValid(regEx, str) {
                 return regEx.test(str);
             }
 
-            for (let key in regExpArr) {
+            for (let key in regExpObject) {
                 const formElement = form.elements[key];
 
-                if (!isValid(regExpArr[key], formElement.value)) {
+                if (!isValid(regExpObject[key], formElement.value)) {
                     showErrorMessage(formElement.nextElementSibling);
                     return false;
                 }
@@ -305,23 +294,19 @@ function controlClicksOnMainBlock() {
         }
 
         function hideAllErrorMessages(form) {
-            for (let i = 0; i < form.elements.length; i++) {
-                const element = form.elements[i];
-
-                if (element.type === 'button') {
+            for (let formElement of form.elements) {
+                if (formElement.type === 'button') {
                     continue;
                 }
 
-                element.nextElementSibling.classList.add('hide')
+                formElement.nextElementSibling.classList.add('hide')
             }
         }
 
         function getFormValues(form) {
             let formData = [];
 
-            for (let i = 0; i < form.elements.length; i++) {
-                const formElement = form.elements[i];
-
+            for (let formElement of form.elements) {
                 if (formElement.type === 'button') {
                     continue;
                 }
@@ -348,9 +333,7 @@ function controlClicksOnMainBlock() {
         }
 
         function clearAllFormFields(form) {
-            for (let i = 0; i < form.elements.length; i++) {
-                const formElement = form.elements[i];
-
+            for (let formElement of form.elements) {
                 if (formElement.type === 'button') {
                     continue;
                 }

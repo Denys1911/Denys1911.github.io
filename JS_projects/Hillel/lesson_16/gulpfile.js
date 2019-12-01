@@ -3,6 +3,7 @@ const browserSync = require('browser-sync');
 const concat = require('gulp-concat');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
+const cleanCSS = require('gulp-clean-css');
 
 gulp.task('browser-sync', () => {
     browserSync.init({
@@ -17,12 +18,18 @@ gulp.task('html', () => {
         .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('css', () => {
-    return gulp.src('app/css/*.css')
+gulp.task('concat-and-minify-css', () => {
+    return gulp.src([
+        'node_modules/bootstrap/dist/css/bootstrap.min.css',
+        'app/css/style.css',
+    ])
+        .pipe(concat('main.min.css'))
+        .pipe(cleanCSS())
+        .pipe(gulp.dest('app/css'))
         .pipe(browserSync.reload({stream: true}))
 });
 
-gulp.task('concat-js', () => {
+gulp.task('concat-and-minify-js', () => {
     return gulp.src([
         'app/js/Owner.js',
         'app/js/Car.js',
@@ -47,8 +54,8 @@ gulp.task('concat-js', () => {
 
 gulp.task('watch', () => {
     gulp.watch('app/*.html', gulp.parallel('html'));
-    gulp.watch('app/css/*.css', gulp.parallel('css'));
-    gulp.watch(['app/js/*.js', '!app/js/main.min.js'], gulp.parallel('concat-js'));
+    gulp.watch(['app/css/*.css', '!app/css/main.min.css'], gulp.parallel('concat-and-minify-css'));
+    gulp.watch(['app/js/*.js', '!app/js/main.min.js'], gulp.parallel('concat-and-minify-js'));
 });
 
-gulp.task('default', gulp.parallel('concat-js', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('concat-and-minify-css', 'concat-and-minify-js', 'browser-sync', 'watch'));

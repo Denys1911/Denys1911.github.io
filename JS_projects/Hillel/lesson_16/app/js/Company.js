@@ -49,7 +49,7 @@ Company.prototype.createAdditionalInfo = function(wrapper) {
     `;
 };
 
-Company.prototype.regExpArr = {
+Company.prototype.regExpObject = {
     name: /^(?:[A-Z][a-z]+ )*[A-Z][a-z]+$/,
     employeesAmount: /^(?:[2-9]|[1-9]\d+)$/,
     location: /^(?:[A-Z][a-z]+ )*[A-Z][a-z]+$/,

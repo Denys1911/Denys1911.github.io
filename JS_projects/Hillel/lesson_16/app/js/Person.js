@@ -49,7 +49,7 @@ Person.prototype.createAdditionalInfo = function(wrapper) {
     `;
 };
 
-Person.prototype.regExpArr = {
+Person.prototype.regExpObject = {
     name: /^[A-Z][a-z]+$/,
     age: /^(?:\d|[1-9]\d|1\d\d)$/,
     location: /^(?:[A-Z][a-z]+ )*[A-Z][a-z]+$/,

@@ -41,7 +41,7 @@ Car.prototype.createAdditionalInfo = function(wrapper) {
     `;
 };
 
-Car.prototype.regExpArr = {
+Car.prototype.regExpObject = {
     name: /^[A-Z][a-z]+$/,
     yearOfConstruction: /^(18(8[5-9]|9[0-9])|19[0-9]{2}|20[01][0-9])$/,
     model: /^[A-Z][\w ]+$/,
