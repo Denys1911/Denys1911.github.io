@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson 19</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="jumbotron d-flex justify-content-around">
+        <button class="btn btn-primary" data-toggle="modal" data-tooltip="tooltip" data-target="#exampleModal"
+                data-placement="bottom" title="Click to open modal window">
+            Show Modal
+        </button>
+        <button class="btn btn-primary show-alert-btn" data-tooltip="tooltip" data-placement="bottom"
+                title="Click to toggle alert">
+            Show Alert
+        </button>
+    </div>
+
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Well done!</h4>
+        <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit
+            longer so that you can see how spacing within an alert works with this kind of content.
+        </p>
+        <hr>
+        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+    </div>
+
+    <div class="text-center birthday-date">
+        <b>My date of birth: </b>
+    </div>
+
+    <div class="text-center date-converter-block">
+        <h4>Date converter</h4>
+        <label class="d-flex justify-content-around align-items-center">
+            Enter your date of birth:
+            <input type="date" class="form-control convert-date-input">
+        </label>
+        <div class="d-flex justify-content-around align-items-center">
+            <button class="btn btn-success convert-date-btn" data-tooltip="tooltip" data-placement="bottom"
+                    title="Click to complete converting">
+                Convert
+            </button>
+            <div class="convert-date-output"></div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Bootstrap modal window</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Some important information...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/moment/moment.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

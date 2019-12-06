@@ -1,0 +1,156 @@
+body {
+    margin: 1rem;
+    background-color: rgba(222, 255, 246, 0.69);
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+.person-form select,
+.company-form select {
+    padding: 0;
+}
+
+option:nth-child(1) {
+    text-align: center;
+}
+
+option {
+    padding: .5rem;
+    width: 100%;
+    border-bottom: 1px solid rgba(79, 81, 83, 0.64);
+    transition: background-color .5s ease;
+}
+
+[class*="col"] {
+    padding: 0;
+}
+
+.main-header {
+    margin-bottom: 2rem;
+}
+
+.header-buttons-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.companies-btn {
+    margin: 0 .5rem;
+}
+
+.people-list,
+.companies-list,
+.cars-list {
+    max-width: 980px;
+    margin: 1rem auto;
+}
+
+.new-person-section,
+.new-company-section,
+.new-car-section {
+    padding: 1rem;
+    margin: 1rem auto;
+    border: 2px solid #6f97ff;
+    border-radius: 15px;
+}
+
+.person,
+.company,
+.car {
+    margin-bottom: 1rem;
+}
+
+.person-view-panel,
+.company-view-panel,
+.car-view-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 2px solid #00ffb1;
+    border-radius: 1rem;
+    transition: all .5s ease;
+}
+
+.person-view-panel:hover,
+.company-view-panel:hover,
+.car-view-panel:hover {
+    background-color: #beffd3;
+    transform: scale(1.02, 1.02);
+}
+
+.person-view-panel span,
+.company-view-panel span,
+.car-view-panel span{
+    word-wrap: break-word;
+}
+
+.person-info,
+.company-info,
+.car-info {
+    background-color: #b5fffc;
+    border-radius: 1rem;
+}
+
+.person-additional-info,
+.company-additional-info,
+.car-additional-info,
+.person-form,
+.company-form,
+.car-form,
+.confirm-deletion-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .7rem;
+}
+
+.confirm-form-btn,
+.buy-car-btn,
+.sell-car-btn{
+    margin: .7rem 0;
+}
+
+.form-group {
+    margin: 0;
+}
+
+.form-control {
+    margin: .5rem 0;
+    width: 18rem;
+}
+
+.hide {
+    display: none;
+}
+
+.error-message {
+    margin-top: .5rem;
+    font-size: .9rem;
+    color: #ff433f;
+}
+
+.important {
+    color: #ff9e2a;
+}
+
+@media (max-width: 992px) {
+    html {
+        font-size: 90%
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 85%
+    }
+}
+
+@media (max-width: 565px) {
+    html {
+        font-size: 80%
+    }
+}
