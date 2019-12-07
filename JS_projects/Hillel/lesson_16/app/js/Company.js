@@ -1,10 +1,10 @@
-function Company(id, name, employeesAmount, location, officialSite) {
+function Company(id, name, employeesAmount, location, officialSite, balance = 1000000) {
     this.id = id;
     this.name = name;
     this.location = location;
     this.officialSite = officialSite;
     this.employeesAmount = employeesAmount;
-    this.balance = 1000000;
+    this.balance = balance;
 }
 
 Company.prototype = new Owner();

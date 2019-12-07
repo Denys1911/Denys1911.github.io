@@ -1,10 +1,10 @@
-function Person(id, name, age, location, email) {
+function Person(id, name, age, location, email, balance = 100000) {
     this.id = id;
     this.name = name;
     this.location = location;
     this.email = email;
     this.age = age;
-    this.balance = 100000;
+    this.balance = balance;
 }
 
 Person.prototype = new Owner();

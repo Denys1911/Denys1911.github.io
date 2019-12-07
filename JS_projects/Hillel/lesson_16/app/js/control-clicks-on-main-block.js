@@ -89,7 +89,10 @@ function controlClicksOnMainBlock() {
 
             function updateItem() {
                 const formData = getFormValues(form);
-                itemDataArr[itemIndex] = createItemAccordingToCondition(className, itemId, ...formData);
+                const itemBalance = itemDataArr[itemIndex].balance || null;
+                const newItemObj = createItemAccordingToCondition(className, itemId, ...formData,
+                    itemBalance);
+                itemDataArr[itemIndex] = Object.assign(itemDataArr[itemIndex], newItemObj);
             }
 
             function createNewItem() {
