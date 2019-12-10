@@ -1,7 +1,7 @@
-function controlTasks() {
+async function controlTasks() {
     const todoList = document.querySelector('.todo-list');
 
-    tasksArr = prepareData(TASKS_STORAGE_NAME);
+    tasksArr = await prepareData(TASKS_STORAGE_NAME);
     todoList.innerHTML = createAllTasksHTML(tasksArr);
     todoList.addEventListener('click', handleClickOnTodoList);
 }

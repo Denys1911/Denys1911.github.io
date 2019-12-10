@@ -1,8 +1,9 @@
-function prepareData(storageName) {
+/*function prepareData(storageName) {
     const storageData = localStorage.getItem(storageName);
 
     if (storageData) {
-        return JSON.parse(storageData);
+        tasksArr =  JSON.parse(storageData);
+        return;
     }
 
     let myRequest = new XMLHttpRequest();
@@ -13,19 +14,19 @@ function prepareData(storageName) {
     if (myRequest.status === 200) {
         console.log(myRequest.status + ': ' + myRequest.statusText);
     } else {
-        return JSON.parse(myRequest.responseText);
+        tasksArr = JSON.parse(myRequest.responseText);
     }
-}
+}*/
 
-/*function prepareData(storageName) {
+function prepareData(storageName) {
     const storageData = localStorage.getItem(storageName);
 
     if (storageData) {
         return JSON.parse(storageData);
     }
 
-    return fetch('../../data/data.json')
+    return fetch('data/data.json')
         .then(response => response.json())
         .then(result => result);
-}*/
+}
 
