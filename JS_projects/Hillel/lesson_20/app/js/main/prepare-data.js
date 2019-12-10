@@ -1,9 +1,8 @@
-/*function prepareData(storageName) {
+function prepareData(storageName) {
     const storageData = localStorage.getItem(storageName);
 
     if (storageData) {
-        tasksArr =  JSON.parse(storageData);
-        return;
+        return JSON.parse(storageData);
     }
 
     let myRequest = new XMLHttpRequest();
@@ -14,11 +13,11 @@
     if (myRequest.status === 200) {
         console.log(myRequest.status + ': ' + myRequest.statusText);
     } else {
-        tasksArr = JSON.parse(myRequest.responseText);
+        return JSON.parse(myRequest.responseText);
     }
-}*/
+}
 
-function prepareData(storageName) {
+/*function prepareData(storageName) {
     const storageData = localStorage.getItem(storageName);
 
     if (storageData) {
@@ -28,5 +27,5 @@ function prepareData(storageName) {
     return fetch('../../data/data.json')
         .then(response => response.json())
         .then(result => result);
-}
+}*/
 
