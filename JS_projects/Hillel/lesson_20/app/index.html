@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson 20</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="modal-wrapper">
+        <div class="modal">
+            <button class="close-btn">+</button>
+            <form class="modal-form">
+                <label>
+                    Task name:
+                    <input type="text" class="task-name-input" placeholder="Name...">
+                </label>
+                <div class="error-message hide">Please, fill this field first</div>
+                <label>
+                    Task priority:
+                    <select class="task-priority-select">
+                        <option value="">Select priority</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </label>
+                <div class="error-message hide">Please, fill this field first</div>
+                <input type="button" class="submit-form-btn" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <main class="todo-wrapper">
+        <h1 class="todo-title">Todo list</h1>
+        <ul class="todo-list"></ul>
+        <button class="add-btn" title="Add new task"></button>
+    </main>
+
+    <script src="js/dist/main.min.js"></script>
+</body>
+</html>

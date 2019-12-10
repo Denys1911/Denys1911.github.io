@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Do homework",
+    "priority": "high",
+    "status": "open"
+  },
+  {
+    "id": 2,
+    "name": "Make coffee",
+    "priority": "low",
+    "status": "open"
+  },
+  {
+    "id":3,
+    "name": "Go to the gym",
+    "priority": "medium",
+    "status": "open"
+  },
+  {
+    "id": 4,
+    "name": "Walk with the dog",
+    "priority": "low",
+    "status": "open"
+  },
+  {
+    "id": 5,
+    "name": "Watch movie",
+    "priority": "low",
+    "status": "open"
+  }
+]

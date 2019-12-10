@@ -1,0 +1,390 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", serif;
+    background-color: #f4f4f4;
+}
+
+button,
+input {
+    padding: .7rem 1.4rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: .4rem;
+    transition: all .25s ease;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+}
+
+select {
+    padding: .5rem 0;
+    border-radius: .4rem;
+}
+
+select:focus,
+input[type="text"]:focus {
+    outline: none;
+    border-color: transparent;
+    box-shadow: 0 0 4px 2px #72bbff;
+}
+
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    display: none;
+    background-color: rgba(150, 156, 143, 0.3);
+}
+
+.show-modal-wrapper {
+    display: flex;
+}
+
+.show-modal-wrapper ~ * {
+    filter: blur(2px);
+}
+
+.modal {
+    position: relative;
+    padding: 4rem;
+    margin: auto;
+    background-color: #fff;
+    border: 2px solid #4f99de;
+    border-radius: 1rem;
+}
+
+.modal-form {
+    text-align: center;
+}
+
+.modal-form label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: "Roboto Light", serif;
+    font-size: 2.5rem;
+    background-color: transparent;
+    transform: rotate(45deg);
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    opacity: .7;
+}
+
+.task-name-input,
+.task-priority-select {
+    width: 12rem;
+    margin: .5rem 0 .5rem 1rem;
+}
+
+.task-name-input {
+    border: 1px solid #cacaca;
+}
+
+.task-name-input {
+    padding: .5rem 1rem;
+}
+
+.todo-wrapper {
+    text-align: center;
+}
+
+.todo-title {
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #ffb527;
+}
+
+.todo-list {
+    display: inline-flex;
+    flex-direction: column;
+    width: 57%;
+    padding: 2rem;
+}
+
+.todo-list-item {
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 10px 5px #e0e0e0;;
+}
+
+.todo-list-item + .todo-list-item {
+    margin-top: 1rem;
+}
+
+.todo-list-item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.todo-list-item-bottom div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-list-item-bottom div > button,
+.todo-list-item-bottom div > select,
+.todo-list-item-bottom div > span {
+    flex-basis: 30%;
+}
+
+.todo-list-item-bottom div > select {
+    margin: 1rem 0;
+}
+
+.todo-list-item-bottom div > span {
+    font-size: 1.1rem;
+}
+
+.todo-list-item-bottom div > span > i {
+    font-size: initial;
+    color: initial;
+    text-decoration: underline;
+}
+
+.task-name {
+    font-size: 1.5rem;
+}
+
+.add-btn {
+    position: fixed;
+    z-index: 3;
+    bottom: 3%;
+    left: 50%;
+    display: block;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0 auto;
+    color: #fff;
+    background-color: #5fa3f5;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.add-btn:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '+';
+    font-family: "Roboto Light", serif;
+    font-size: 2.5rem;
+    color: inherit;
+    transform: translate(-50%, -50%);
+}
+
+.add-btn:hover {
+    background-color: #368ae4;
+}
+
+.add-btn:focus {
+    color: #5fa3f5;
+    background-color: transparent;
+    border-color: #5fa3f5;
+}
+
+.edit-btn,
+.delete-btn {
+    width: 7rem;
+}
+
+.edit-btn {
+    margin-right: .5rem;
+}
+
+.edit-btn,
+.submit-form-btn,
+.confirm-name-changing-btn,
+.confirm-deletion-btn {
+    background-color: #8fff8f;
+    border: 2px solid transparent;
+}
+
+.edit-btn:hover,
+.submit-form-btn:hover,
+.confirm-name-changing-btn:hover,
+.confirm-deletion-btn:hover {
+    background-color: #6ef56e;
+}
+
+.edit-btn:focus,
+.submit-form-btn:focus,
+.confirm-name-changing-btn:focus,
+.confirm-deletion-btn:focus {
+    background-color: transparent;
+    border-color: #8fff8f;
+}
+
+.submit-form-btn {
+    margin-top: 1rem;
+}
+
+.delete-btn,
+.cancel-deletion-btn {
+    background-color: #ff7e5f;
+    border: 2px solid transparent;
+}
+
+.delete-btn:hover,
+.cancel-deletion-btn:hover {
+    background-color: #f55840;
+}
+
+.delete-btn:focus,
+.cancel-deletion-btn:focus {
+    background-color: transparent;
+    border-color: #ff7e5f;
+}
+
+.change-status-btn,
+.change-priority-btn {
+    background-color: #fff380;
+    border: 2px solid transparent;
+}
+
+.change-status-btn:hover,
+.change-priority-btn:hover {
+    background-color: #f5e965;
+}
+
+.change-status-btn:focus,
+.change-priority-btn:focus {
+    background-color: transparent;
+    border-color: #f5e965;
+}
+
+.high {
+    color: #f5422e;
+}
+
+.medium {
+    color: #f5ac0e;
+}
+
+.low {
+    color: #f5eb28;
+}
+
+.error-message {
+    color: #f5422e;
+}
+
+.hide {
+    display: none;
+}
+
+.change-task-name-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-list-item-info {
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 1070px) {
+    .todo-list {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    html {
+        font-size: 90%
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .todo-list {
+        width: 75%;
+    }
+
+    .modal-form label {
+        flex-direction: column;
+
+    }
+
+    .task-priority-select,
+    .task-name-input {
+        margin: 1rem 0;
+    }
+
+    .modal {
+        width: 50%;
+        padding: 3rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 85%
+    }
+
+    .todo-list {
+        width: 100%;
+    }
+
+    .modal {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 565px) {
+    .todo-list {
+        padding: 1.5rem;
+    }
+
+    .todo-list-item-bottom {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .todo-list-item-bottom div {
+        flex-direction: column;
+    }
+
+    .modal {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .todo-list-item-top {
+        flex-direction: column;
+    }
+
+    .todo-list-item-bottom {
+        flex-direction: column;
+    }
+
+    .todo-list-item-bottom div:nth-child(1) {
+        margin-bottom: 1rem;
+    }
+
+    .modal {
+        width: 90%;
+    }
+}
