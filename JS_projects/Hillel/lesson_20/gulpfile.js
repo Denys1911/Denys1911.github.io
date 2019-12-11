@@ -1,8 +1,8 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const concat = require('gulp-concat');
-const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
+const webpackStream = require('webpack-stream');
 
 gulp.task('browser-sync', () => {
     browserSync.init({
@@ -35,9 +35,26 @@ gulp.task('concat-and-minify-js', () => {
         'app/js/main/app.js',
     ])
         .pipe(concat('main.min.js'))
-        .pipe(babel({
-            presets: ['@babel/env'],
-            plugins: ['@babel/transform-runtime']
+        .pipe(gulp.dest('app/js/dist'))
+        .pipe(webpackStream({
+            output: {
+                filename: 'main.min.js',
+            },
+            module: {
+                rules: [
+                    {
+                        test: /\.m?js$/,
+                        exclude: /(node_modules)/,
+                        use: {
+                            loader: 'babel-loader',
+                            options: {
+                                presets: ['@babel/preset-env'],
+                                plugins: ['@babel/plugin-transform-runtime']
+                            }
+                        }
+                    }
+                ]
+            }
         }))
         .pipe(uglify())
         .pipe((gulp.dest('app/js/dist')))
