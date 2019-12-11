@@ -1,4 +1,4 @@
-function createTaskHTML(task) {
+const createTaskHTML = task => {
     const {id, name, status, priority} = task;
 
     return `
@@ -35,8 +35,8 @@ function createTaskHTML(task) {
             <div class="todo-list-item-info"></div>
         </li>
     `;
-}
+};
 
-function createAllTasksHTML(tasksArr) {
+const createAllTasksHTML = tasksArr => {
     return tasksArr.map(createTaskHTML).join('');
-}
+};

@@ -26,19 +26,20 @@ gulp.task('concat-and-minify-js', () => {
     return gulp.src([
         'app/js/constructors/Task.js',
         'app/js/main/prepare-data.js',
-        'app/js/main/control-tasks.js',
+        'app/js/additional/additional-functions.js',
         'app/js/main/create-tasks.js',
+        'app/js/main/control-tasks.js',
         'app/js/main/control-modal-window-action.js',
         'app/js/main/control-modal-form-confirmation.js',
         'app/js/main/handle-click-on-todo-list.js',
-        'app/js/additional/additional-functions.js',
         'app/js/main/app.js',
     ])
         .pipe(concat('main.min.js'))
- /*       .pipe(babel({
-            presets: ['@babel/env']
+        .pipe(babel({
+            presets: ['@babel/env'],
+            plugins: ['@babel/transform-runtime']
         }))
-        .pipe(uglify())*/
+        .pipe(uglify())
         .pipe((gulp.dest('app/js/dist')))
         .pipe(browserSync.reload({stream: true}))
 });

@@ -72,21 +72,6 @@ input[type="text"]:focus {
     justify-content: space-between;
 }
 
-.close-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-family: "Roboto Light", serif;
-    font-size: 2.5rem;
-    background-color: transparent;
-    transform: rotate(45deg);
-}
-
-.close-btn:hover,
-.close-btn:focus {
-    opacity: .7;
-}
-
 .task-name-input,
 .task-priority-select {
     width: 12rem;
@@ -165,6 +150,21 @@ input[type="text"]:focus {
 
 .task-name {
     font-size: 1.5rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: "Roboto Light", serif;
+    font-size: 2.5rem;
+    background-color: transparent;
+    transform: rotate(45deg);
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    opacity: .7;
 }
 
 .add-btn {
@@ -371,11 +371,17 @@ input[type="text"]:focus {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .todo-list-item-top {
         flex-direction: column;
     }
 
+    .task-name {
+        margin-bottom: .5rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
     .todo-list-item-bottom {
         flex-direction: column;
     }

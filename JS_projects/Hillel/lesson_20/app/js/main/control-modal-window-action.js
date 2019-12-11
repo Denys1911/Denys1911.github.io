@@ -1,34 +1,34 @@
-function controlModalWindowAction() {
+const controlModalWindowAction = () => {
     const modalWindowWrapper = document.querySelector('.modal-wrapper');
     const modalWrapperClassName = 'show-modal-wrapper';
     const addTaskBtn = document.querySelector('.add-btn');
     const closeModalWindowBtn = document.querySelector('.close-btn');
 
-    controlOpeningOfModalWindow();
-    controlClosingOfModalWindow();
-
-    function controlOpeningOfModalWindow() {
-        addTaskBtn.addEventListener('click', handleClickOnAddTaskBtn);
-
-        function handleClickOnAddTaskBtn() {
+    const controlOpeningOfModalWindow = () => {
+        const handleClickOnAddTaskBtn = () => {
             addClassForElements(modalWrapperClassName, modalWindowWrapper);
             document.addEventListener('keydown', handleKeyDownOnDocument);
-        }
-    }
+        };
 
-    function controlClosingOfModalWindow() {
-        closeModalWindowBtn.addEventListener('click', handleClickOnCloseModalWindowBtn);
+        addTaskBtn.addEventListener('click', handleClickOnAddTaskBtn);
+    };
 
-        function handleClickOnCloseModalWindowBtn() {
+    const controlClosingOfModalWindow = () => {
+        const handleClickOnCloseModalWindowBtn = () => {
             removeClassFromElements(modalWrapperClassName, modalWindowWrapper);
             document.removeEventListener('keydown', handleKeyDownOnDocument);
-        }
-    }
+        };
 
-    function handleKeyDownOnDocument(e) {
+        closeModalWindowBtn.addEventListener('click', handleClickOnCloseModalWindowBtn);
+    };
+
+    const handleKeyDownOnDocument = e => {
         if (e.key === 'Escape') {
             removeClassFromElements(modalWrapperClassName, modalWindowWrapper);
             document.removeEventListener('keydown', handleKeyDownOnDocument);
         }
-    }
-}
+    };
+
+    controlOpeningOfModalWindow();
+    controlClosingOfModalWindow();
+};

@@ -1,12 +1,10 @@
-function controlModalFormConfirmation() {
+const controlModalFormConfirmation = () => {
     const submitFormBtn = document.querySelector('.submit-form-btn');
     const form = document.querySelector('.modal-form');
     const modalWindowWrapper = document.querySelector('.modal-wrapper');
     const todoList = document.querySelector('.todo-list');
 
-    submitFormBtn.addEventListener('click', handleClickOnSubmitFormBtn);
-
-    function handleClickOnSubmitFormBtn() {
+    const handleClickOnSubmitFormBtn = () => {
         hideAllErrorMessages(form);
 
         if (!validateFormOrShowErrorMessage(form)) {
@@ -20,5 +18,7 @@ function controlModalFormConfirmation() {
         updateTasksListAndLocalStorage(tasksArr, todoList, TASKS_STORAGE_NAME);
         removeClassFromElements('show-modal-wrapper', modalWindowWrapper);
         clearAllFormFields(form);
-    }
-}
+    };
+
+    submitFormBtn.addEventListener('click', handleClickOnSubmitFormBtn);
+};

@@ -1,12 +1,12 @@
-function addClassForElements(className, ...elements) {
+const addClassForElements = (className, ...elements) => {
     elements.forEach(element => element.classList.add(className));
-}
+};
 
-function removeClassFromElements(className, ...elements) {
+const removeClassFromElements = (className, ...elements) => {
     elements.forEach(element => element.classList.remove(className));
-}
+};
 
-function validateFormOrShowErrorMessage(form) {
+const validateFormOrShowErrorMessage = form => {
     for (let formElement of form) {
         if (!formElement.value) {
             showErrorMessage(formElement.parentNode);
@@ -15,18 +15,18 @@ function validateFormOrShowErrorMessage(form) {
     }
 
     return true;
-}
+};
 
-function showErrorMessage(element) {
+const showErrorMessage = element => {
     removeClassFromElements('hide', element.nextElementSibling);
-}
+};
 
-function hideAllErrorMessages(wrapper) {
+const hideAllErrorMessages = wrapper => {
     const errorMessages = wrapper.querySelectorAll('.error-message');
     addClassForElements('hide', ...errorMessages);
-}
+};
 
-function clearAllFormFields(form) {
+const clearAllFormFields = form => {
     for (let formElement of form) {
         if (formElement.type === 'button') {
             continue;
@@ -34,9 +34,9 @@ function clearAllFormFields(form) {
 
         formElement.value = '';
     }
-}
+};
 
-function getFormData(form) {
+const getFormData = form => {
     let formData = [];
 
     for (let formElement of form) {
@@ -48,9 +48,9 @@ function getFormData(form) {
     }
 
     return formData;
-}
+};
 
-function getIdForNewTask(tasksArr) {
+const getIdForNewTask = tasksArr => {
     if (!tasksArr.length) {
         return 1;
     }
@@ -59,22 +59,22 @@ function getIdForNewTask(tasksArr) {
     const idOfLastTaskInArr = tasksArr[indexOfLastTaskInArr].id;
 
     return idOfLastTaskInArr + 1;
-}
+};
 
-function updateTasksListAndLocalStorage(tasksArr, tasksList, storageName) {
+const updateTasksListAndLocalStorage = (tasksArr, tasksList, storageName) => {
     tasksList.innerHTML = createAllTasksHTML(tasksArr);
     localStorage.setItem(storageName, JSON.stringify(tasksArr));
-}
+};
 
-function getTaskData(tasksArr, taskId) {
+const getTaskData = (tasksArr, taskId) => {
     return tasksArr.find(task => task.id === taskId);
-}
+};
 
-function getTaskIndex(tasksArr, taskId) {
+const getTaskIndex = (tasksArr, taskId) => {
     return tasksArr.findIndex(task => task.id === taskId);
-}
+};
 
-function createConfirmDeletionBlock() {
+const createConfirmDeletionBlock = () => {
     return `
         <div class="confirm-deletion-block">
             <span>Are you sure?</span>
@@ -84,9 +84,9 @@ function createConfirmDeletionBlock() {
             </div>
         </div>
     `;
-}
+};
 
-function createTaskNameChangingForm() {
+const createTaskNameChangingForm = () => {
     return `
         <form class="change-task-name-form">
             <label>
@@ -97,8 +97,8 @@ function createTaskNameChangingForm() {
             <input type="button" class="confirm-name-changing-btn" value="Submit">
         </form>
     `;
-}
+};
 
-function createErrorMessage(errorText) {
+const createErrorMessage = errorText => {
     return `<div class="error-message">${errorText}</div>`;
-}
+};
