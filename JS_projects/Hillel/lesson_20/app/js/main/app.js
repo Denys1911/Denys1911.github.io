@@ -4,4 +4,3 @@ let tasksArr;
 controlTasks();
 controlModalWindowAction();
 controlModalFormConfirmation();
-

@@ -37,6 +37,4 @@ const createTaskHTML = task => {
     `;
 };
 
-const createAllTasksHTML = tasksArr => {
-    return tasksArr.map(createTaskHTML).join('');
-};
+const createAllTasksHTML = tasksArr => tasksArr.map(createTaskHTML).join('');

@@ -1,10 +1,8 @@
-const addClassForElements = (className, ...elements) => {
-    elements.forEach(element => element.classList.add(className));
-};
+const addClassForElements =
+    (className, ...elements) => elements.forEach(element => element.classList.add(className));
 
-const removeClassFromElements = (className, ...elements) => {
-    elements.forEach(element => element.classList.remove(className));
-};
+const removeClassFromElements =
+    (className, ...elements) => elements.forEach(element => element.classList.remove(className));
 
 const validateFormOrShowErrorMessage = form => {
     for (let formElement of form) {
@@ -17,9 +15,7 @@ const validateFormOrShowErrorMessage = form => {
     return true;
 };
 
-const showErrorMessage = element => {
-    removeClassFromElements('hide', element.nextElementSibling);
-};
+const showErrorMessage = element => removeClassFromElements('hide', element.nextElementSibling);
 
 const hideAllErrorMessages = wrapper => {
     const errorMessages = wrapper.querySelectorAll('.error-message');
@@ -66,13 +62,9 @@ const updateTasksListAndLocalStorage = (tasksArr, tasksList, storageName) => {
     localStorage.setItem(storageName, JSON.stringify(tasksArr));
 };
 
-const getTaskData = (tasksArr, taskId) => {
-    return tasksArr.find(task => task.id === taskId);
-};
+const getTaskData = (tasksArr, taskId) => tasksArr.find(task => task.id === taskId);
 
-const getTaskIndex = (tasksArr, taskId) => {
-    return tasksArr.findIndex(task => task.id === taskId);
-};
+const getTaskIndex = (tasksArr, taskId) => tasksArr.findIndex(task => task.id === taskId);
 
 const createConfirmDeletionBlock = () => {
     return `
@@ -99,6 +91,4 @@ const createTaskNameChangingForm = () => {
     `;
 };
 
-const createErrorMessage = errorText => {
-    return `<div class="error-message">${errorText}</div>`;
-};
+const createErrorMessage = errorText => `<div class="error-message">${errorText}</div>`;

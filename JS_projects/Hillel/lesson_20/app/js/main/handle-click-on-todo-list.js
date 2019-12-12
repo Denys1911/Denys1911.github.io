@@ -1,6 +1,7 @@
 const handleClickOnTodoList = e => {
     const todoList = document.querySelector('.todo-list');
     const targetedElement = e.target;
+
     const handleClickOnEditBtn = () => {
         const [, infoBlock] = getTargetedElementWrapperAndInfoBlock();
 
@@ -29,7 +30,7 @@ const handleClickOnTodoList = e => {
         infoBlock.innerHTML = createConfirmDeletionBlock(infoBlock);
     };
 
-    const handleClickOnConfirmDeletionBtn =  () => {
+    const handleClickOnConfirmDeletionBtn = () => {
         const [targetedElementWrapper] = getTargetedElementWrapperAndInfoBlock();
         const taskId = getTaskIdFromAttribute(targetedElementWrapper);
         const taskIndex = getTaskIndex(tasksArr, taskId);

@@ -6,7 +6,17 @@ const prepareData = storageName => {
     }
 
     return fetch('data/data.json')
-        .then(response => response.json())
-        .then(result => result);
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error(response.status);
+            }
+        })
+        .then(result => result)
+        .catch(err => {
+            console.error(err);
+            return [];
+        })
 };
 
