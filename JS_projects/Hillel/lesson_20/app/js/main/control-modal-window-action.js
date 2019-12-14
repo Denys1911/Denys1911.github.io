@@ -4,31 +4,22 @@ const controlModalWindowAction = () => {
     const addTaskBtn = document.querySelector('.add-btn');
     const closeModalWindowBtn = document.querySelector('.close-btn');
 
-    const controlOpeningOfModalWindow = () => {
-        const handleClickOnAddTaskBtn = () => {
-            addClassForElements(modalWrapperClassName, modalWindowWrapper);
-            document.addEventListener('keydown', handleKeyDownOnDocument);
-        };
-
-        addTaskBtn.addEventListener('click', handleClickOnAddTaskBtn);
-    };
-
-    const controlClosingOfModalWindow = () => {
-        const handleClickOnCloseModalWindowBtn = () => {
-            removeClassFromElements(modalWrapperClassName, modalWindowWrapper);
-            document.removeEventListener('keydown', handleKeyDownOnDocument);
-        };
-
-        closeModalWindowBtn.addEventListener('click', handleClickOnCloseModalWindowBtn);
-    };
-
     const handleKeyDownOnDocument = e => {
         if (e.key === 'Escape') {
-            removeClassFromElements(modalWrapperClassName, modalWindowWrapper);
-            document.removeEventListener('keydown', handleKeyDownOnDocument);
+            handleClickOnCloseModalWindowBtn();
         }
     };
 
-    controlOpeningOfModalWindow();
-    controlClosingOfModalWindow();
+    const handleClickOnAddTaskBtn = () => {
+        addClassForElements(modalWrapperClassName, modalWindowWrapper);
+        document.addEventListener('keydown', handleKeyDownOnDocument);
+    };
+
+    const handleClickOnCloseModalWindowBtn = () => {
+        removeClassFromElements(modalWrapperClassName, modalWindowWrapper);
+        document.removeEventListener('keydown', handleKeyDownOnDocument);
+    };
+
+    addTaskBtn.addEventListener('click', handleClickOnAddTaskBtn);
+    closeModalWindowBtn.addEventListener('click', handleClickOnCloseModalWindowBtn);
 };
