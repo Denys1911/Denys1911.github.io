@@ -1,153 +1,209 @@
-function addClassForElements(className, ...elements) {
+const addClassForElements = (className, ...elements) => {
     elements.forEach(element => element.classList.add(className));
-}
+};
 
-function removeClassForElements(className, ...elements) {
+const removeClassForElements = (className, ...elements) => {
     elements.forEach(element => element.classList.remove(className));
-}
+};
 
-function getElementPosition(element) {
+const getElementPosition = element => {
     const elementYCoordinate = element.getBoundingClientRect().top;
-    const scrollYValue = pageYOffset;
-    return elementYCoordinate + scrollYValue;
-}
 
-function handleLoadOnWindow() {
-    const fadeTarget = document.querySelector('.preloader-wrapper');
-    let opacityValue = fadeTarget.style.opacity;
-    opacityValue = 1;
+    return elementYCoordinate + pageYOffset;
+};
 
-    function changeOpacityOrDisplayPropertyValue() {
-        if (opacityValue > 0) {
-            opacityValue -= 0.1;
-        } else {
-            clearInterval(fadeEffect);
-            fadeTarget.style.display = 'none';
-        }
-    }
+const controlPreloader = () => {
+    const hidePreloader = () => {
+        const fadeTarget = document.querySelector('.preloader-wrapper');
+        let opacityValue = 1;
 
-    const fadeEffect = setInterval(changeOpacityOrDisplayPropertyValue, 70);
-}
+        const changeOpacityOrDisplayPropertyValue = () => {
+            if (opacityValue > 0) {
+                opacityValue -= 0.1;
+                fadeTarget.style.opacity = String(opacityValue);
+            } else {
+                clearInterval(fadeEffect);
+                fadeTarget.style.display = 'none';
+            }
+        };
 
-function createImagesInWorkSection(imagesAmount, hiddenImagesAmount, wrapper) {
+        const fadeEffect = setInterval(changeOpacityOrDisplayPropertyValue, 70);
+    };
+
+    window.addEventListener('load', hidePreloader);
+};
+
+const createImagesInWorkSection = (imagesAmount, hiddenImagesAmount) => {
+    const workSectionImagesWrapper = document.querySelector('.section-works__grid');
+
     for (let i = 1; i <= imagesAmount; i++) {
         const indexOfLastVisibleImage = imagesAmount - hiddenImagesAmount;
         const className = 'section-works__grid-image';
         const classList = (i > indexOfLastVisibleImage) ? `${className} ${className}--hidden` : className;
 
-        wrapper.innerHTML += `
-<a href="#">
-    <img src="./images/work-section-images/grid-${i}.jpg" class="${classList}" alt="our works">
-</a>
-`;
+        workSectionImagesWrapper.innerHTML += `
+            <a href="#">
+                <img src="./images/work-section-images/grid-${i}.jpg" class="${classList}" alt="our works">
+            </a>
+        `;
     }
-}
+};
 
-function scrollToAnchors(element) {
-    element.addEventListener('click', handleClickOnNavigationList);
-}
+const makeSlider = (className, type) => {
+    const slider = new Glide(className, {type});
+    slider.mount();
+};
 
-function handleClickOnNavigationList(e) {
-    e.preventDefault();
-    const clickedElement = e.target;
+const controlShowingOfNavigationList = () => {
+    const navigationList = document.querySelector('.header-inner__nav-list');
+    const openNavigationListBtn = document.querySelector('.nav-btn');
+    const closeNavigationListBtn = document.querySelector('.nav-btn-close');
 
-    if (!clickedElement.classList.contains('header-inner__nav-link')) {
-        return;
-    }
-
-    const anchorId = clickedElement.getAttribute('href');
-    const anchor = document.querySelector(`${anchorId}`);
-    const anchorPosition = getElementPosition(anchor);
-
-    window.scrollTo({
-        top: anchorPosition,
-        behavior: 'smooth'
+    openNavigationListBtn.addEventListener('click', () => {
+        addClassForElements('flex', navigationList, closeNavigationListBtn);
     });
-}
 
-function makeParallaxEffect() {
-    const item1 = document.querySelector('.header');
-    const item2 = document.querySelector('.section-video');
-    const item3 = document.querySelector('.section-team');
-    const item4 = document.querySelector('.section-quotes');
-    const itemsList = [item1, item2, item3, item4];
-
-    itemsList.map(item => {
-        const elementPosition = getElementPosition(item);
-        const scrollYValue = pageYOffset;
-        const value = scrollYValue - elementPosition;
-        item.style.backgroundPosition = `center ${value * 0.35}px`;
+    closeNavigationListBtn.addEventListener('click', () => {
+        removeClassForElements('flex', navigationList, closeNavigationListBtn);
     });
-}
+};
 
-function handleScrollOnWindow() {
-    const modifierClassName = 'scroll-to-top-btn--shift';
+const performScrollingToAnchors = () => {
+    const navigationList = document.querySelector('.header-inner__nav-list');
 
-    if(pageYOffset > window.innerHeight) {
-        addClassForElements(modifierClassName, scrollToTopBtn);
-    } else {
-        removeClassForElements(modifierClassName, scrollToTopBtn);
-    }
-}
+    const handleClickOnNavigationList = e => {
+        e.preventDefault();
+        const clickedElement = e.target;
 
-function handleClickOnScrollToTopBtn() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-}
+        if (!clickedElement.classList.contains('header-inner__nav-link')) {
+            return;
+        }
 
-function handleClickOnShowAllWorksBtn() {
+        const anchorId = clickedElement.getAttribute('href');
+        const anchor = document.querySelector(`${anchorId}`);
+        const anchorPosition = getElementPosition(anchor);
+
+        window.scrollTo({
+            top: anchorPosition,
+            behavior: 'smooth'
+        });
+    };
+
+    navigationList.addEventListener('click', handleClickOnNavigationList);
+};
+
+const performParallaxEffect = parallaxMultiplier => {
+    const getArrOfBackgroundImagesByClassNames = (...classNames) => {
+        return classNames.map(className => document.querySelector(className));
+    };
+
+    const arrOfBackgroundImages = getArrOfBackgroundImagesByClassNames('.header', '.section-video',
+        '.section-team', '.section-quotes');
+
+    const handleScrollOnWindow = () => {
+        arrOfBackgroundImages.forEach(item => {
+            const elementPosition = getElementPosition(item);
+            const value = (pageYOffset - elementPosition) * parallaxMultiplier;
+            item.style.backgroundPosition = `center ${value}px`;
+        });
+    };
+
+    window.addEventListener('scroll', handleScrollOnWindow);
+};
+
+const controlAppearingAndClicksOnScrollToTopBtn = () => {
+    const scrollToTopBtn = document.querySelector('.scroll-to-top-btn');
+
+    const handleScrollOnWindow = () => {
+        const modifierClassName = 'scroll-to-top-btn--shift';
+
+        if(pageYOffset > window.innerHeight) {
+            addClassForElements(modifierClassName, scrollToTopBtn);
+        } else {
+            removeClassForElements(modifierClassName, scrollToTopBtn);
+        }
+    };
+
+    const handleClickOnScrollToTopBtn = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
+    window.addEventListener('scroll', handleScrollOnWindow);
+    scrollToTopBtn.addEventListener('click', handleClickOnScrollToTopBtn);
+};
+
+const controlShowingOfModalWindow = () => {
+    const modalWrapper = document.querySelector('.modal-wrapper');
+    const openModalBtn = document.getElementById('open-modal-btn');
+    const closeModalBtn = document.querySelector('.modal-form__close-btn');
+
+    const handleKeydownOnDocument = e => {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    };
+
+    const showModal = () => {
+        addClassForElements('modal-wrapper--flex', modalWrapper);
+        document.addEventListener('keydown', handleKeydownOnDocument);
+    };
+
+    const closeModal = () => {
+        removeClassForElements('modal-wrapper--flex', modalWrapper);
+        document.removeEventListener('keydown', handleKeydownOnDocument);
+    };
+
+    openModalBtn.addEventListener('click', showModal);
+    closeModalBtn.addEventListener('click', closeModal);
+};
+
+const controlShowingOfAllWorks = () => {
+    const showAllWorksBtn = document.querySelector('#btn-show-all-works');
     const hiddenImagesClassName = 'section-works__grid-image--hidden';
     const imagesCollection = document.querySelectorAll('.section-works__grid-image');
 
-    imagesCollection.forEach(image => {
-        if (image.classList.contains(hiddenImagesClassName)) {
-            removeClassForElements(hiddenImagesClassName, image);
-        }
-    });
+    const handleClickOnShowAllWorksBtn = () => {
+        imagesCollection.forEach(image => {
+            if (image.classList.contains(hiddenImagesClassName)) {
+                removeClassForElements(hiddenImagesClassName, image);
+            }
+        });
 
-    showAllWorksBtn.style.display = 'none';
-}
+        showAllWorksBtn.style.display = 'none';
+    };
 
-function showModal() {
-    addClassForElements('modal-wrapper--flex', modalWrapper);
-    document.addEventListener('keydown', handleKeydownOnDocument);
-}
+    showAllWorksBtn.addEventListener('click', handleClickOnShowAllWorksBtn);
+};
 
-function closeModal() {
-    removeClassForElements('modal-wrapper--flex', modalWrapper);
-    document.removeEventListener('keydown', handleKeydownOnDocument);
-}
-
-function handleKeydownOnDocument(e) {
-    if (e.key === 'Escape') {
-        closeModal();
-    }
-}
-
-function handleClickOnSubscribeBtn(e) {
-    e.preventDefault();
-
+const controlUserSubscription = () => {
+    const subscribeBtn = document.querySelector('.footer-inner__social-input-button');
     const subscribeInput = document.querySelector('.footer-inner__social-input');
     const successMessageSpan = document.querySelector('.footer-inner__social-success');
-    const emailRegExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
-    const emailValue = subscribeInput.value;
+    const emailRegExp = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/g;
 
-    function showSubscribeMessage(message, className) {
-        successMessageSpan.textContent = message;
+    const handleClickOnSubscribeBtn = e => {
+        e.preventDefault();
 
-        addClassForElements(className, successMessageSpan);
-        setTimeout(removeClassForElements, 1500,
-            className, successMessageSpan
-        );
-    }
+        const emailValue = subscribeInput.value;
 
-    if (emailRegExp.test(emailValue)) {
-        showSubscribeMessage('Subscribed successfully!',
-            'footer-inner__social-success--approved');
-    } else {
-        showSubscribeMessage('Please, enter a valid email',
-            'footer-inner__social-success--rejected');
-    }
-}
+        const showSubscribeMessage = (message, className) => {
+            successMessageSpan.textContent = message;
+
+            addClassForElements(className, successMessageSpan);
+            setTimeout(removeClassForElements, 1500,
+                className, successMessageSpan
+            );
+        };
+
+        if (emailRegExp.test(emailValue)) {
+            showSubscribeMessage('Subscribed successfully!', 'footer-inner__social-success--approved');
+        } else {
+            showSubscribeMessage('Please, enter a valid email', 'footer-inner__social-success--rejected');
+        }
+    };
+
+    subscribeBtn.addEventListener('click', handleClickOnSubscribeBtn);
+};
