@@ -1,39 +1,42 @@
-function addClassForElements(className, ...elements) {
+const addClassForElements = (className, ...elements) => {
     elements.forEach(element => element.classList.add(className));
-}
+};
 
-function removeClassForElements(className, ...elements) {
+const removeClassForElements = (className, ...elements) => {
     elements.forEach(element => element.classList.remove(className));
-}
+};
 
-function getNavBtnAndList() {
+const getNavBtnAndList = () => {
     const navBtn = document.querySelector('.header__nav-btn');
     const navList = document.querySelector('.header__nav-list');
     return [navBtn, navList];
-}
+};
 
-function controlMenuAndBtn() {
+const controlNavMenuAndBtn = () => {
     const [navBtn, navList] = getNavBtnAndList();
 
     navBtn.addEventListener('click', () => {
         navBtn.classList.toggle('header__nav-btn--active');
         navList.classList.toggle('header__nav-list--active');
     });
-}
+};
 
-function scrollToAnchors() {
+const scrollToAnchors = () => {
     const [navBtn, navList] = getNavBtnAndList();
 
-    navList.addEventListener('click', handleClickOnNavigationList);
-
-    function handleClickOnNavigationList(e) {
+    const handleClickOnNavigationList = e => {
         e.preventDefault();
         const clickedElement = e.target;
-        
+
+        const getElementPosition = element => {
+            const elementYCoordinate = element.getBoundingClientRect().top;
+            return elementYCoordinate + pageYOffset;
+        };
+
         if (clickedElement.tagName !== 'A') {
             return;
         }
-    
+
         const anchorClass = clickedElement.getAttribute('href');
         const anchor = document.querySelector(`.${anchorClass}`);
         const anchorPosition = getElementPosition(anchor);
@@ -45,47 +48,41 @@ function scrollToAnchors() {
             top: anchorPosition,
             behavior: 'smooth'
         });
+    };
 
-        function getElementPosition(element) {
-            const elementYCoordinate = element.getBoundingClientRect().top;
-            const scrollYValue = pageYOffset;
-            return elementYCoordinate + scrollYValue;
-        }
-    }
-}
+    navList.addEventListener('click', handleClickOnNavigationList);
+};
 
-function controlScrollToTopBtn() {
+const controlScrollToTopBtn = () => {
     const scrollToTopBtn = document.querySelector('.scroll-to-top-btn');
 
-    scrollToTopBtn.addEventListener('click', handleClickOnScrollToTopBtn);
-    window.addEventListener('scroll', handleScrollOnWindow);
-
-    function handleClickOnScrollToTopBtn() {
+    const handleClickOnScrollToTopBtn = () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         });
-    }
+    };
 
-    function handleScrollOnWindow() {
+    const handleScrollOnWindow = () => {
         const modifierClassName = 'scroll-to-top-btn--shift';
-    
+
         if(pageYOffset > window.innerHeight) {
             addClassForElements(modifierClassName, scrollToTopBtn);
         } else {
             removeClassForElements(modifierClassName, scrollToTopBtn);
         }
-    }
-}
+    };
 
-function hidePreloader() {
-    window.addEventListener('load', handleLoadOnWindow);
+    scrollToTopBtn.addEventListener('click', handleClickOnScrollToTopBtn);
+    window.addEventListener('scroll', handleScrollOnWindow);
+};
 
-    function handleLoadOnWindow() {
+const hidePreloader = () => {
+    const handleLoadOnWindow = () => {
         const fadeTarget = document.querySelector('.preloader-wrapper');
         let opacityValue = 1;
 
-        function changeOpacityOrDisplayPropertyValue() {
+        const changeOpacityOrDisplayPropertyValue = () => {
             if (opacityValue > 0) {
                 opacityValue -= 0.1;
                 fadeTarget.style.opacity = opacityValue;
@@ -93,19 +90,19 @@ function hidePreloader() {
                 clearInterval(fadeEffect);
                 fadeTarget.style.display = 'none';
             }
-        }
+        };
 
         const fadeEffect = setInterval(changeOpacityOrDisplayPropertyValue, 70);
-    }
-}
+    };
 
-function controlShowingOfWorks() {
+    window.addEventListener('load', handleLoadOnWindow);
+};
+
+const controlShowingOfWorks = () => {
     const allWorks = document.querySelectorAll('.works__list-item');
     const worksButtonsList = document.querySelector('.works__header-buttons');
 
-    worksButtonsList.addEventListener('click', handleClickOnWorksButtonsList);
-
-    function handleClickOnWorksButtonsList(e) {
+    const handleClickOnWorksButtonsList = e => {
         const targetedElement = e.target;
 
         if (!targetedElement.classList.contains('works__header-button')) {
@@ -133,5 +130,7 @@ function controlShowingOfWorks() {
             const allWebsites = document.querySelectorAll('.works__list-item[data-type="websites"]');
             removeClassForElements('works__list-item--hide', ...allWebsites);
         }
-    }
-}
+    };
+
+    worksButtonsList.addEventListener('click', handleClickOnWorksButtonsList);
+};

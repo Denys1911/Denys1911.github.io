@@ -1,5 +1,5 @@
 hidePreloader();
-controlMenuAndBtn();
+controlNavMenuAndBtn();
 scrollToAnchors();
 controlScrollToTopBtn();
 controlShowingOfWorks();
