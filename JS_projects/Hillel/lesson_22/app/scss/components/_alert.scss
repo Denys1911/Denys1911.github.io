@@ -1,0 +1,15 @@
+.alert {
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    z-index: 5;
+    padding: 1rem 2rem;
+    color: #fff;
+    background-color: rgb(87, 213, 255);
+    border-radius: .3rem;
+    transform: translateX(-50%);
+
+    &--hide {
+        display: none;
+    }
+}
