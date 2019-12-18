@@ -89,7 +89,7 @@ const searchMovies = () => {
         e.preventDefault();
 
         if (!input.value) {
-            moviesContainer.innerHTML = createErrorMessageHTML('Input search text first');
+            moviesContainer.innerHTML = createErrorMessageHTML('Input searching text first');
             return;
         }
 
