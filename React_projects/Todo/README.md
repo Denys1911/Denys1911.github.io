@@ -1,7 +1,6 @@
 Todo application
 ------------------------------
 This is my first React app. In this Todo app you can:
-
   •	Add/delete tasks in your to-do list
   •	Mark tasks as important/completed
   •	Sort tasks by categories “all”, “active” and “done”
