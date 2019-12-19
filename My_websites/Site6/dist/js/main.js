@@ -21,7 +21,7 @@ $(document).ready(() => {
     const initializeServicesCarousel = () => {
         const servicesCarousel = $('.services-carousel');
 
-        const setCarouselWidth = () => {
+        const setCarouselHeight = () => {
             $('.services-carousel__item').each(function() {
                 const item = $(this);
                 const itemContentHeight = item.find('.services-carousel__item-content').innerHeight();
@@ -30,7 +30,7 @@ $(document).ready(() => {
         };
 
         servicesCarousel.on('initialized.owl.carousel', () => {
-            setTimeout(setCarouselWidth, 100);
+            setTimeout(setCarouselHeight, 100);
         });
 
         servicesCarousel.owlCarousel({
