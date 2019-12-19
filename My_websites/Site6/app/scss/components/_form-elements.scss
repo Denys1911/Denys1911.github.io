@@ -1,0 +1,28 @@
+.selectize-input {
+    z-index: 0;
+}
+
+.selectize-dropdown-content {
+    max-height: 600px;
+}
+
+input,
+select,
+.selectize-input.items.has-options.full.has-items {
+    @include font($monserat, 1rem, 500);
+
+    width: 100%;
+    padding: .9rem 1.5rem;
+    color: $white;
+    background-color: transparent;
+    border: 1px solid rgb(129, 129, 129);
+    outline: none;
+
+    &::placeholder {
+        color: $white;
+    }
+}
+
+.item {
+    font-size: 1rem;
+}

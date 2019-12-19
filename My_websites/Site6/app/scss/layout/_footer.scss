@@ -1,0 +1,90 @@
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 6rem 5% 2rem 5%;
+    color: $white;
+    background-color: #242424;
+
+    &__social-links,
+    &__services-menu,
+    &__contacts {
+        padding: 0;
+        list-style: none;
+    }
+
+    &__social,
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+    }
+
+    &__social {
+        max-width: 200px;
+
+        &-text {
+            @include font($monserat, .875rem, 500);
+
+            color: #666;
+        }
+
+        &-links {
+            display: flex;
+
+            li > .instagram {
+                margin: 0 .7rem;
+            }
+        }
+    }
+
+    &__services {
+        max-width: 200px;
+        margin-right: 3rem;
+        margin-bottom: 3rem;
+
+        &-item {
+            margin: .7rem 0;
+
+            &::before {
+                margin-right: 5px;
+                font-family: 'icomoon';
+                font-size: .875rem;
+                content: "\f219";
+                transition: color .5s ease;
+            }
+
+            &:hover,
+            &:focus {
+                color: $accent;
+            }
+
+            a {
+                @include font($monserat, 1rem, 500);
+
+                color: #979797;
+                white-space: nowrap;
+                transition: color .5s ease;
+
+                &:hover,
+                &:focus {
+                    color: $accent;
+                }
+            }
+        }
+    }
+
+    &__contacts {
+        max-width: 360px;
+    }
+
+    &__map {
+        opacity: .7;
+        transition: opacity .5s ease;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

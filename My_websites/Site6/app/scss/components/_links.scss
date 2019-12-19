@@ -1,0 +1,38 @@
+.address {
+    &::before {
+        content: "\f2c6";
+    }
+}
+
+.tel {
+    &::before {
+        content: "\f10b";
+    }
+}
+
+.time {
+    &::before {
+        content: "\f017";
+    }
+}
+
+.address,
+.tel,
+.time {
+    @include font($monserat, 1rem, 500);
+
+    color: $white;
+    text-decoration: none;
+    outline: none;
+
+    &::before {
+        margin-right: 3px;
+        font-family: 'icomoon';
+        color: lighten($grey, 20%);
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}

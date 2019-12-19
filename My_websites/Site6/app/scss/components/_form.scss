@@ -1,0 +1,58 @@
+.form {
+    color: $white;
+
+    &__success {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        display: none;
+
+        span {
+            @include font($monserat, 1.5rem, 700);
+
+            margin: auto;
+            text-transform: uppercase;
+        }
+
+        & ~ * {
+            transition: all 1s ease;
+        }
+
+        &.active {
+            & ~ * {
+                filter: blur(3px);
+            }
+        }
+    }
+
+    &__title {
+        @include font($monserat, 1.875rem, 800);
+    }
+
+    &__text {
+        @include font($monserat, 1rem, 500);
+    }
+
+    input {
+        margin-bottom: 1.5rem;
+    }
+
+    .option {
+        @include font($monserat, 1rem, 500);
+
+        padding: .9rem 1.5rem 0.9rem 1.5rem;
+        font-size: 1rem;
+        color: #333;
+
+        &:hover {
+            background-color: lighten($accent, 20%);
+        }
+    }
+
+    button {
+        margin-top: 3rem;
+    }
+}

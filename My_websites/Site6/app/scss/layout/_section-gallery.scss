@@ -1,0 +1,13 @@
+.section-gallery {
+    &__inner {
+        display: flex;
+    }
+
+    &__description {
+        flex-basis: 80%;
+
+        &-text {
+            @include font($monserat, 1rem, 500);
+        }
+    }
+}

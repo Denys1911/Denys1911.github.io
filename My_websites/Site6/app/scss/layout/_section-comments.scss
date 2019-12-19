@@ -1,0 +1,65 @@
+.section-comments__inner {
+    .section-title {
+        text-align: center;
+    }
+}
+
+.comments-carousel {
+    width: 80%;
+    margin-top: 4rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    &::before,
+    &::after {
+        position: absolute;
+        display: block;
+        font-size: 4rem;
+        color: $accent;
+        content: ',,';
+    }
+
+    &::before {
+        top: 38%;
+        left: -10%;
+        transform: rotate(180deg);
+    }
+
+    &::after {
+        top: 25%;
+        right: -10%;
+    }
+
+    &__item {
+        text-align: center;
+
+        &-author {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.875rem;
+            font-weight: 700;
+        }
+
+        &-date {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.125rem;
+            color: #a78f8f;
+        }
+
+        &-mark {
+            margin: .7rem 0 1rem 0;
+            color: $accent;
+
+            i {
+                &:not(:last-child) {
+                    margin-right: 4px;
+                }
+            }
+        }
+
+        &-text {
+            @include font($monserat, 1rem, 500);
+
+            color: #a3a3a3;
+        }
+    }
+}

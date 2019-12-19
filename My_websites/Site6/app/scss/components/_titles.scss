@@ -1,0 +1,10 @@
+.section-title {
+    @include font($monserat, 1.875rem, 800);
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    span {
+        color: $accent;
+    }
+}

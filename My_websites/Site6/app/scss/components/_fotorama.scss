@@ -1,0 +1,45 @@
+.section-gallery__photos {
+    .fotorama__img {
+        border: 5px solid white !important;
+    }
+
+    .fotorama__thumb-border {
+        border-color: $accent;
+    }
+
+    .fotorama__nav-wrap {
+        position: absolute;
+        right: 1rem;
+        bottom: .3rem;
+        left: 1rem;
+    }
+
+    .fotorama__arr {
+        top: 42%;
+    }
+
+    .fotorama__arr--prev,
+    .fotorama__arr--next {
+        &::before {
+            font-family: 'icomoon';
+            font-size: 3rem;
+            color: $white;
+        }
+    }
+
+    .fotorama__arr--prev {
+        left: 3rem;
+
+        &::before {
+            content: "\f104";
+        }
+    }
+
+    .fotorama__arr--next {
+        right: 2rem;
+
+        &::before {
+            content: "\f105";
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.services-carousel {
+    position: relative;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+
+        &-content {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            color: $white;
+            text-align: center;
+
+            &-title {
+                @include font($monserat, 1.75rem, 800);
+
+                margin: 0;
+                text-transform: uppercase;
+            }
+
+            &-subtitle {
+                @include font($monserat, 1.125rem, 300);
+
+                display: block;
+                margin-bottom: 40px;
+                text-transform: uppercase;
+            }
+
+            &-prices {
+                @include font($monserat, 1.125rem, 300);
+
+                padding: 0 40px;
+                line-height: 60px;
+
+                strong {
+                    @include font($monserat, 1.125rem, 700);
+
+                    color: #4a4a4a;
+                }
+            }
+        }
+
+        &-image {
+            display: flex;
+            opacity: .7;
+            transition: opacity .5s ease;
+        }
+
+        &:hover .services-carousel__item-image {
+            opacity: 1;
+        }
+    }
+}

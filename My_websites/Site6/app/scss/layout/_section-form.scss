@@ -1,0 +1,15 @@
+.section-form {
+    display: flex;
+    justify-content: flex-end;
+    min-height: 81vh;
+    background-size: contain;
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        flex-basis: 50%;
+        align-items: center;
+        padding: 3rem 4rem;
+        background-color: rgba($accent, .9);
+    }
+}

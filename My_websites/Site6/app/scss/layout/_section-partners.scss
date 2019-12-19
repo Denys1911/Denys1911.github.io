@@ -1,0 +1,49 @@
+.section-partners__inner {
+    padding: 6rem 5%;
+    text-align: center;
+    background-color: rgba($white, .85);
+}
+
+.partners-carousel {
+    width: 90%;
+    margin: 4rem auto 0;
+
+    .owl-item {
+        display: flex;
+
+        img {
+            width: auto;
+            max-width: 100%;
+            margin: auto;
+        }
+    }
+
+    .owl-prev {
+        position: absolute;
+        top: -20%;
+        left: -1rem;
+    }
+
+    .owl-next {
+        position: absolute;
+        top: -20%;
+        right: -1rem;
+    }
+
+    .owl-prev,
+    .owl-next {
+        outline: none;
+        transition: opacity .5s ease;
+
+        &:hover {
+            opacity: .7;
+        }
+
+        .icon-angle-left,
+        .icon-angle-right {
+            padding: 0 1rem;
+            font-size: 2.5rem;
+            color: rgb(92, 92, 92);
+        }
+    }
+}

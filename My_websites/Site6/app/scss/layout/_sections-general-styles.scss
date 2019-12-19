@@ -1,0 +1,9 @@
+.section-gallery,
+.section-comments {
+    color: $white;
+
+    &__inner {
+        padding: 6rem 5%;
+        background-color: $background;
+    }
+}

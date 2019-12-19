@@ -1,0 +1,23 @@
+.mm-listitem {
+    transition: all .5s ease;
+
+    &:hover {
+        color: $accent;
+    }
+
+    &__text {
+        padding-left: 14%;
+
+        &::before {
+            margin-right: 0.5rem;
+            font-family: 'icomoon';
+            font-size: 0.8rem;
+            content: "\f219";
+        }
+    }
+}
+
+.mm-navbar__title {
+    padding: 3rem 0 1rem 0;
+    text-align: center;
+}
