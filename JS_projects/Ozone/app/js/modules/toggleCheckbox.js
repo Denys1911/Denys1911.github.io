@@ -1,8 +1,8 @@
 export default function toggleCheckbox() {
-    const checkbox = document.querySelectorAll('.filter-check_checkbox');
+    const checkboxes = document.querySelectorAll('.filter-check_checkbox');
 
-    checkbox.forEach((element) => {
-        element.addEventListener('change', function () {
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function () {
             if (this.checked) {
                 this.nextElementSibling.classList.add('checked');
             } else {
