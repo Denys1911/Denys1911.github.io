@@ -8,5 +8,5 @@
   
   In section "Gulp" I published one of my basic gulp template.
 
-  For comfortable orientation in my projects, you can use this link: https://denys1911.github.io/Portfolio/dist/. This is my portfolio site. In section "works" you can find links on projects and links on their code at Github.
+  For comfortable orientation in my projects, you can use this link: https://denys1911.github.io/Portfolio/dist/. This is my portfolio site. In section "My works" you can find links on projects and links on their code at Github.
  
