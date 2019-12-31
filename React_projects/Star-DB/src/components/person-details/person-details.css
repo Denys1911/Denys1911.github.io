@@ -1,0 +1,58 @@
+.person-details-image {
+    width: 10.5rem;
+    height: 14rem;
+    border-radius: .7rem;
+}
+
+.person-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    flex-basis: 47%;
+    padding: 1rem;
+}
+
+.person-details-card h2 {
+    font-size: 1.4rem;
+}
+
+.person-details-card ul {
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+    .person-details-image {
+        width: 9.5rem;
+        height: 12rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .person-details-image {
+        width: 8.5rem;
+        height: 11rem;
+    }
+
+    .person-details {
+        padding: 0 0 0 1.2rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .person-details {
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .person-details {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .person-details-image {
+        margin-top: 1rem;
+    }
+}

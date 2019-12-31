@@ -1,0 +1,13 @@
+.items-list {
+    flex-basis: 47%;
+}
+
+.items-list li:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .items-list {
+        text-align: center;
+    }
+}

@@ -1,0 +1,53 @@
+.header {
+    margin: .7rem 0 0 1rem;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.header-title a {
+    color: #fff;
+}
+
+.header-title a,
+.header-list-item-link {
+    transition: all .25s ease;
+}
+
+.header-title:hover a {
+    color: #43bc9e;
+}
+
+.header-list {
+    margin: 0;
+    list-style: none;
+}
+
+.header-list-item-link {
+    padding: .7rem 1.5rem;
+    color: #43bc9e;
+    border-radius: .5rem;
+}
+
+.header-list-item-link:hover {
+    cursor: pointer;
+    background-color: #4f4f4f;
+}
+
+@media screen and (max-width: 575px) {
+    .header-title {
+        text-align: center;
+    }
+
+    .header-list {
+        margin-top: 1rem;
+        padding: 0;
+        justify-content: center;
+    }
+}
