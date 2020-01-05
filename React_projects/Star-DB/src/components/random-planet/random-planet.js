@@ -1,33 +1,49 @@
 import React, {Component} from "react";
 
-import SwapiService from "../../services/swapi-service";
 import Spinner from "../spinner";
 import ErrorIndicator from "../error-indicator";
 
+import {withSwapiService} from '../hoc-helpers';
+import PropTypes from "prop-types";
+
 import './random-planet.css';
 
-export default class RandomPlanet extends Component {
-    swapiService = new SwapiService();
+class RandomPlanet extends Component {
+    static defaultProps = {
+        intervalValue: 8000
+    };
+
+    static propTypes = {
+        intervalValue: PropTypes.number
+    };
 
     state = {
         planetData: null,
+        imageUrl: null,
         loaded: false,
         error: false
     };
 
     componentDidMount() {
-        this.updatePlanet();
-        this.interval = setInterval(this.updatePlanet, 3000);
+        this.setRandomPlanetShowing();
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.getPlanet !== prevProps.getPlanet) {
+            clearInterval(this.interval);
+            this.setRandomPlanetShowing();
+        }
     }
 
     componentWillUnmount() {
         clearInterval(this.interval);
     }
 
-    onPlanetLoaded = planetData => {
+    onPlanetLoaded = (planetData, planetId) => {
         this.setState({
             planetData,
-            loaded: true
+            loaded: true,
+            imageUrl: this.props.getPlanetImageUrl(planetId)
         });
     };
 
@@ -43,18 +59,25 @@ export default class RandomPlanet extends Component {
         return Math.round(randomNumber);
     }
 
-    updatePlanet = () => {
+    updatePlanetData = () => {
         const randomId = this.getRandomNumber(2, 19);
 
-        this.swapiService.getPlanet(randomId)
-            .then(this.onPlanetLoaded)
+        this.setState({loaded: false, error: false});
+
+        this.props.getPlanet(randomId)
+            .then(planetData => this.onPlanetLoaded(planetData, randomId))
             .catch(this.onError)
     };
 
+    setRandomPlanetShowing = () => {
+        this.updatePlanetData();
+        this.interval = setInterval(this.updatePlanetData, this.props.intervalValue);
+    };
+
     render() {
-        const {planetData, loaded, error} = this.state;
+        const {planetData, imageUrl, loaded, error} = this.state;
         const spinner = !loaded ? <Spinner/> : null;
-        const content = (loaded && !error) ? <PlanetView planetData={planetData}/> : null;
+        const content = (loaded && !error) ? <PlanetView planetData={planetData} imageUrl={imageUrl}/> : null;
         const errorMessage = error ? <ErrorIndicator/> : null;
 
         return (
@@ -67,22 +90,37 @@ export default class RandomPlanet extends Component {
     }
 }
 
-const PlanetView = ({planetData}) => {
-    const {id, name, population, rotationPeriod, diameter} = planetData;
+const PlanetView = ({planetData, imageUrl}) => {
+    const {name, population, rotationPeriod, diameter} = planetData;
 
     return (
         <React.Fragment>
             <img className="random-planet-image"
-                 src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`}
+                 src={imageUrl}
                  alt="planet"/>
             <div className="random-planet-info">
                 <h2>{name}</h2>
                 <ul className="list-group list-group-flush">
-                    <li className="list-group-item">Population: {population}</li>
-                    <li className="list-group-item">Rotation Period: {rotationPeriod}</li>
-                    <li className="list-group-item">Diameter: {diameter}</li>
+                    <li className="list-group-item">
+                        <span className="text-info">Population: </span> {population}
+                    </li>
+                    <li className="list-group-item">
+                        <span className="text-info">Rotation Period: </span> {rotationPeriod}
+                    </li>
+                    <li className="list-group-item">
+                        <span className="text-info">Diameter: </span> {diameter}
+                    </li>
                 </ul>
             </div>
         </React.Fragment>
     )
 };
+
+const mapMethodsToProps = swapiService => {
+    return {
+        getPlanet: swapiService.getPlanet,
+        getPlanetImageUrl: swapiService.getPlanetImageUrl
+    };
+};
+
+export default withSwapiService(mapMethodsToProps)(RandomPlanet);

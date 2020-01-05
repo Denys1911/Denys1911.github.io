@@ -1,5 +1,5 @@
 .header {
-    margin: .7rem 0 0 1rem;
+    margin-top: .7rem;
 }
 
 .header a {
@@ -16,12 +16,12 @@
 }
 
 .header-title a,
-.header-list-item-link {
+.header-list-item a {
     transition: all .25s ease;
 }
 
 .header-title:hover a {
-    color: #43bc9e;
+    color: #00bc8c;
 }
 
 .header-list {
@@ -29,18 +29,26 @@
     list-style: none;
 }
 
-.header-list-item-link {
+.header-list-item a {
     padding: .7rem 1.5rem;
-    color: #43bc9e;
-    border-radius: .5rem;
+    color: #00bc8c;
 }
 
-.header-list-item-link:hover {
+.header-list-item a:hover {
     cursor: pointer;
-    background-color: #4f4f4f;
+    color: #008e68;
 }
 
-@media screen and (max-width: 575px) {
+.active-page {
+    border-bottom: 2px solid;
+}
+
+@media screen and (max-width: 870px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .header-title {
         text-align: center;
     }
@@ -49,5 +57,33 @@
         margin-top: 1rem;
         padding: 0;
         justify-content: center;
+    }
+
+    .change-service-btn {
+        margin: 1.5rem 0 .5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header-list {
+        flex-wrap: wrap;
+    }
+
+    .header-list-item {
+        margin-bottom: 1.5rem;
+    }
+
+    .change-service-btn {
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 871px) {
+    .header {
+        margin-left: 1rem;
+    }
+
+    .change-service-btn {
+        margin-left: 1rem;
     }
 }

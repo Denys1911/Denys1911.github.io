@@ -1,64 +1,43 @@
-import React, {Component} from "react";
-
-import SwapiService from "../../services/swapi-service";
-import Spinner from "../spinner";
-import ErrorIndicator from "../error-indicator";
+import React from "react";
+import PropTypes from "prop-types";
 
 import './items-list.css';
 
-export default class ItemsList extends Component{
-    swapiService = new SwapiService();
+const ItemsList = ({onItemSelected, selectedItemId, children: renderItemLabel, data}) => {
+    const itemsListHTML =  data.map(item => {
+        const {id} = item;
+        const label = renderItemLabel(item);
+        let itemClassName = 'list-group-item list-group-item-action';
 
-    state = {
-        peopleList: null,
-        loaded: false,
-        error: false
-    };
-
-    componentDidMount() {
-        this.swapiService.getAllPeople()
-            .then(peopleList => this.setState({peopleList, loaded: true}))
-            .catch(() => this.setState({loaded: true, error: true}));
-    }
-
-    render() {
-        const {peopleList, loaded, error} = this.state;
-        const {onPersonSelected, selectedPersonId} = this.props;
-        const spinner = !loaded ? <Spinner/> : null;
-        const content = (loaded && !error) ? <ListView peopleList={peopleList} onPersonSelected={onPersonSelected}
-                                                       selectedPersonId={selectedPersonId}/> : null;
-        const errorMessage = error ? <ErrorIndicator/> : null;
-
-        return (
-            <div className="list-group items-list">
-                {spinner}
-                {content}
-                {errorMessage}
-            </div>
-        );
-    }
-}
-
-const ListView = ({peopleList, onPersonSelected, selectedPersonId}) => {
-    const peopleListHTML =  peopleList.map(({id, name}) => {
-        let personClassName = 'list-group-item list-group-item-action';
-
-        if (id === selectedPersonId) {
-            personClassName += ' active';
+        if (id === selectedItemId) {
+            itemClassName += ' active';
         }
 
         return (
-            <li className={personClassName}
+            <li className={itemClassName}
                 key={id}
-                onClick={() => onPersonSelected(id)}>
-                {name}
+                onClick={() => onItemSelected(id)}>
+                {label}
             </li>
         )
     });
 
     return (
         <ul className="list-group">
-            {peopleListHTML}
+            {itemsListHTML}
         </ul>
-    )
+    );
 };
+
+ItemsList.defaultProps = {
+    onItemSelected: () => {}
+};
+
+ItemsList.propTypes = {
+    onItemSelected: PropTypes.func,
+    selectedItemId: PropTypes.any,
+    data: PropTypes.arrayOf(PropTypes.object).isRequired,
+    children: PropTypes.func.isRequired
+};
+
+export default ItemsList;
