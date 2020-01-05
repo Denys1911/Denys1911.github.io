@@ -45,7 +45,7 @@ export default class App extends Component{
         return (
             <ErrorBoundary>
                 <SwapiServiceProvider value={swapiService}>
-                    <HashRouter basename="/React_projects/Star-DB/build">
+                    <HashRouter basename="/">
                         <div className="app">
                             <Header onServiceChange={this.onServiceChange}/>
                             {randomPlanet}
