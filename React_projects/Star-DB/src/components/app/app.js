@@ -9,7 +9,7 @@ import ErrorButton from "../error-button";
 import ErrorBoundary from "../error-boundary";
 import {SwapiService, DummySwapiService} from "../../services";
 import {SwapiServiceProvider} from "../swapi-service-context";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {HashRouter, Route, Switch} from "react-router-dom";
 
 import './app.css';
 
@@ -45,7 +45,7 @@ export default class App extends Component{
         return (
             <ErrorBoundary>
                 <SwapiServiceProvider value={swapiService}>
-                    <Router>
+                    <HashRouter basename="/React_projects/Star-DB/build">
                         <div className="app">
                             <Header onServiceChange={this.onServiceChange}/>
                             {randomPlanet}
@@ -74,7 +74,7 @@ export default class App extends Component{
                                 <Route render={() => <h2 className="text-center">Page not found</h2>}/>
                             </Switch>
                         </div>
-                    </Router>
+                    </HashRouter>
                 </SwapiServiceProvider>
             </ErrorBoundary>
         )
