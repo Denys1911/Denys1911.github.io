@@ -1,8 +1,6 @@
-Star DB App
----------------------------------
+# Star DB App
 
-  This project is based on https://swapi.co/ and https://starwars-visualguide.com (for images). Server interaction was 
-based on Fetch API usage.
+  This project is based on [SWAPI](https://swapi.co/) and [Starwars-visualguide](https://starwars-visualguide.com) (for images). Server interaction was based on Fetch API usage.
 
   For routing, I was using react-router-dom library.
 
@@ -10,10 +8,10 @@ based on Fetch API usage.
 library for runtime component's properties type checking.
 
   Star DB has several similar components, as a list, item-details, so I was refactoring my project to reuse
-these components for either people, planets, and starships. I've practiced with such techniques as render functions, hoc,
-composition.
+these components for either people, planets, and starships. I've practiced with such techniques as render functions, hoc, 
+currying, composition.
 
-    In this SPA we have 6 pages:
+### In this SPA we have 6 pages:
   1. Star DB page - main page.
   2. People page - there are a list of people, you can click on any person from the list and detail information about
      person will be shown on the right / below list (depends on window size).
@@ -24,7 +22,7 @@ composition.
      be handled on a server. If you will register, you will be redirected to the main page.
   6. Secret page - accessible only after a user is registered. If not, a user will be redirected to the login page.
  
-    What can you do at Star DB:
+### What can you do at Star DB:
    1. Toggle (show/hide) random planet.
    2. Throw error at the main components or the details of items. This is also just for training.
    3. Change service, just pressing the button at the header. All components will receive data from another service
