@@ -49,7 +49,7 @@ export default class App extends Component{
                         <div className="app">
                             <Header onServiceChange={this.onServiceChange}/>
                             {randomPlanet}
-                            <div className="d-flex btn-row">
+                            <div className="d-flex justify-content-center btn-row">
                                 <button className="btn btn-warning btn-lg toggle-planet-btn"
                                         onClick={this.onToggleRandomPlanet}>
                                     Toggle Random Planet
