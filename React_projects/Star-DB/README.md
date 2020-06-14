@@ -1,6 +1,7 @@
 # Star DB App
 
-  This project is based on [SWAPI](https://swapi.co/) and [Starwars-visualguide](https://starwars-visualguide.com) (for images). Server interaction was based on Fetch API usage.
+  This project is based on [SWAPI](https://swapi.dev/) and [Starwars-visualguide](https://starwars-visualguide.com
+  ) (for images). Server interaction was based on Fetch API usage.
 
   For routing, I was using react-router-dom library.
 

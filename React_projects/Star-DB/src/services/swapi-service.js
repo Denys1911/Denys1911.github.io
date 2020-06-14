@@ -1,5 +1,5 @@
 export default class SwapiService {
-    #apiBase = 'https://swapi.co/api';
+    #apiBase = 'https://swapi.dev/api';
     #imageBase = 'https://starwars-visualguide.com/assets/img';
 
     getResourses = async url => {
