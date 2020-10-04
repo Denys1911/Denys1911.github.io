@@ -17,7 +17,7 @@
                 transition: all $transition-duration ease-out;
 
                 &:hover,
-                &:focus {
+                &.active {
                     background-size: 100% 2px;
                 }
             }

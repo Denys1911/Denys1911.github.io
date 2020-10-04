@@ -9,6 +9,7 @@ const removeClassForElements = (className, ...elements) => {
 const getNavBtnAndList = () => {
     const navBtn = document.querySelector('.header__nav-btn');
     const navList = document.querySelector('.header__nav-list');
+
     return [navBtn, navList];
 };
 
@@ -66,7 +67,7 @@ const controlScrollToTopBtn = () => {
     const handleScrollOnWindow = () => {
         const modifierClassName = 'scroll-to-top-btn--shift';
 
-        if(pageYOffset > window.innerHeight) {
+        if (pageYOffset > window.innerHeight) {
             addClassForElements(modifierClassName, scrollToTopBtn);
         } else {
             removeClassForElements(modifierClassName, scrollToTopBtn);
@@ -100,37 +101,45 @@ const hidePreloader = () => {
 
 const controlShowingOfWorks = () => {
     const allWorks = document.querySelectorAll('.works__list-item');
-    const worksButtonsList = document.querySelector('.works__header-buttons');
+    const worksButtonsWrapper = document.querySelector('.works__header-buttons');
+    const worksButtonsCollection = worksButtonsWrapper.querySelectorAll('.works__header-button');
 
-    const handleClickOnWorksButtonsList = e => {
-        const targetedElement = e.target;
-
-        if (!targetedElement.classList.contains('works__header-button')) {
-            return;
-        }
-
-        if (targetedElement.id === 'all-works-btn') {
-            removeClassForElements('works__list-item--hide', ...allWorks);
+    const handleClickOnWorksButtonsList = ({ target }) => {
+        if (!target.classList.contains('works__header-button')) {
             return;
         }
 
         addClassForElements('works__list-item--hide', ...allWorks);
+        removeClassForElements('active', ...worksButtonsCollection);
+        target.classList.add('active');
 
-        if (targetedElement.id === 'react-works-btn') {
-            const allReactWorks = document.querySelectorAll('.works__list-item[data-type="react"]');
-            removeClassForElements('works__list-item--hide', ...allReactWorks);
-        }
+        switch (target.id) {
+            case 'all-works-btn':
+                removeClassForElements('works__list-item--hide', ...allWorks);
+                break;
+            case 'latest-works-btn':
+                const allLatestWorks = document.querySelectorAll('.works__list-item[data-latest]');
 
-        if (targetedElement.id === 'js-works-btn') {
-            const allJsWorks = document.querySelectorAll('.works__list-item[data-type="js"]');
-            removeClassForElements('works__list-item--hide', ...allJsWorks);
-        }
+                removeClassForElements('works__list-item--hide', ...allLatestWorks);
+                break;
+            case 'react-works-btn':
+                const allReactWorks = document.querySelectorAll('.works__list-item[data-type="react"]');
 
-        if (targetedElement.id === 'websites-works-btn') {
-            const allWebsites = document.querySelectorAll('.works__list-item[data-type="websites"]');
-            removeClassForElements('works__list-item--hide', ...allWebsites);
+                removeClassForElements('works__list-item--hide', ...allReactWorks);
+                break;
+            case 'js-works-btn':
+                const allJsWorks = document.querySelectorAll('.works__list-item[data-type="js"]');
+
+                removeClassForElements('works__list-item--hide', ...allJsWorks);
+                break;
+            case 'websites-works-btn':
+                const allWebsites = document.querySelectorAll('.works__list-item[data-type="websites"]');
+
+                removeClassForElements('works__list-item--hide', ...allWebsites);
         }
     };
 
-    worksButtonsList.addEventListener('click', handleClickOnWorksButtonsList);
+    worksButtonsWrapper.addEventListener('click', handleClickOnWorksButtonsList);
 };
+
+const selectLatestWorksInWorkSection = () => document.getElementById('latest-works-btn').click();

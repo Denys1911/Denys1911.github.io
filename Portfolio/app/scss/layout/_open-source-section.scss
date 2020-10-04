@@ -7,14 +7,14 @@
     }
 
     &__contributions-list > li + li {
-        border-top: 1px solid $orange;
+        border-top: 1px solid $accent-5;
     }
 
     &__contribution-item {
         padding-bottom: 2rem;
 
         h3 {
-            @include hover-underline($red);
+            @include hover-underline($accent-6);
             @include font($font-family-1, 1.5rem, 500);
 
             margin-bottom: 1rem;
@@ -27,11 +27,11 @@
         h4 {
             margin: .5rem 0;
             font-weight: 600;
-            color: $black;
+            color: $accent-2;
         }
 
         strong {
-            color: $orange;
+            color: $accent-5;
         }
 
         p {
@@ -58,11 +58,11 @@
 
         display: block;
         margin-top: .5rem;
-        color: $blue;
+        color: $accent-4;
         transition: color $transition-duration ease;
 
         &:hover {
-            color: darken($blue, 30%);
+            color: darken($accent-4, 30%);
         }
     }
 }
