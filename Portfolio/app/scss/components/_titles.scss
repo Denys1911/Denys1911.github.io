@@ -4,9 +4,10 @@
 }
 
 .section-title {
-    @include font($font-family-1, 1.8rem, 700);
+    @include font($font-family-1, 1.8rem, 600);
 
     margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 .section-subtitle {

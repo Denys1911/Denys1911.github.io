@@ -15,7 +15,7 @@
 
         h3 {
             @include hover-underline($red);
-            @include font($font-family-1, 1.5rem, 700);
+            @include font($font-family-1, 1.5rem, 500);
 
             margin-bottom: 1rem;
 
@@ -26,6 +26,7 @@
 
         h4 {
             margin: .5rem 0;
+            font-weight: 600;
             color: $black;
         }
 
