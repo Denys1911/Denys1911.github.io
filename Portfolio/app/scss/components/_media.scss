@@ -28,10 +28,6 @@
         }
     }
 
-    .skills__inner {
-        flex-direction: column;
-    }
-
     .works__list-item {
         flex-basis: 70%;
     }
@@ -55,7 +51,7 @@
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
     .header {
         &__inner {
             justify-content: center;
@@ -142,9 +138,15 @@
             }
         }
     }
+}
 
-    .skills__inner-list {
-        column-count: 1;
+@media screen and (max-width: 650px) {
+    .open-source {
+        text-align: center;
+
+        &__contribution-item ul {
+            text-align: left;
+        }
     }
 }
 

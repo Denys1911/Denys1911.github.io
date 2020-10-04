@@ -1,13 +1,14 @@
+@import "vendors/libs";
+
 @import "base/fonts";
 @import "base/vars";
 @import "base/mixins";
 @import "base/basic-styles";
 @import "base/keyframes";
 
-@import "vendors/libs";
-
 @import "layout/header";
 @import "layout/about-section";
+@import "layout/open-source-section";
 @import "layout/works-section";
 @import "layout/footer";
 

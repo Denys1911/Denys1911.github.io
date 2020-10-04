@@ -1,0 +1,67 @@
+.open-source {
+    padding: $gutter .9rem;
+    text-align: left;
+
+    h2.section-title {
+        text-align: center;
+    }
+
+    &__contributions-list > li + li {
+        border-top: 1px solid $orange;
+    }
+
+    &__contribution-item {
+        padding-bottom: 2rem;
+
+        h3 {
+            @include hover-underline($red);
+            @include font($font-family-1, 1.5rem, 700);
+
+            margin-bottom: 1rem;
+
+            a {
+                padding: .3rem .6rem;
+            }
+        }
+
+        h4 {
+            margin: .5rem 0;
+            color: $black;
+        }
+
+        strong {
+            color: $orange;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        ul {
+            margin-left: $gutter;
+            list-style: initial;
+        }
+
+        .library-name {
+            font-family: monospace, monospace;
+            font-size: 1em;
+        }
+    }
+
+    &__contribution-item-content-wrapper {
+        padding: 0 .6rem;
+    }
+
+    &__contribution-item-link {
+        @include font($font-family-1, 1rem, 400);
+
+        display: block;
+        margin-top: .5rem;
+        color: $blue;
+        transition: color $transition-duration ease;
+
+        &:hover {
+            color: darken($blue, 30%);
+        }
+    }
+}

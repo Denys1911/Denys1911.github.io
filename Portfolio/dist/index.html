@@ -28,6 +28,9 @@
                     <a href="about">About</a>
                 </li>
                 <li class="header__nav-list-item">
+                    <a href="open-source">Open source</a>
+                </li>
+                <li class="header__nav-list-item">
                     <a href="works">My works</a>
                 </li>
                 <li class="header__nav-list-item">
@@ -104,6 +107,78 @@
             </div>
         </div>
     </main>
+    <section class="open-source">
+        <h2 class="section-title">My open source experience</h2>
+        <ul class="open-source__contributions-list">
+            <li class="open-source__contribution-item">
+                <h3>
+                    <a href="https://github.com/retarsis/redux-pending-effects" target="_blank">
+                        Redux-pending-effects
+                    </a>
+                </h3>
+                <div class="open-source__contribution-item-content-wrapper">
+                    <p>
+                        <strong>Briefly about the library itself:</strong> it's a redux toolkit that tracks your
+                        asynchronous redux actions (effects) and informs you of the pending state using the selector
+                        function. You can use this library together with <span class="library-name">redux-saga</span>,
+                        <span class="library-name">redux-toolkit</span>, and
+                        <span class="library-name">redux-promise-middleware</span>.
+                    </p>
+                    <h4>
+                        My contribution to the project:
+                    </h4>
+                    <ul>
+                        <li>
+                            Developed a playground app to show and test redux-pending-effects integration with each
+                            of the libraries, mentioned above
+                        </li>
+                        <li>
+                            Increased test coverage - add tests for library selector
+                        </li>
+                        <li>
+                            Added the ability to ignore specific action types
+                        </li>
+                        <li>
+                            Added middleware to track saga effects
+                        </li>
+                        <li>
+                            Updated docs according to new features
+                        </li>
+                    </ul>
+                    <a class="open-source__contribution-item-link"
+                       href="https://github.com/retarsis/redux-pending-effects" target="_blank">
+                        Link on the library
+                    </a>
+                </div>
+            </li>
+            <li class="open-source__contribution-item">
+                <h3>
+                    <a href="https://github.com/grommet/grommet" target="_blank">
+                        Grommet
+                    </a>
+                </h3>
+                <div class="open-source__contribution-item-content-wrapper">
+                    <p>
+                        <strong>Briefly about the grommet:</strong> it's a react-based library of components,
+                        that provides accessibility, modularity, responsiveness, and theming in a tidy package
+                    </p>
+                    <h4>
+                        My contribution to the project:
+                    </h4>
+                    <ul>
+                        <li>
+                            Developed new functionality - the ability to set different icons for a menu the component
+                            according to it's opened/closed state
+                        </li>
+                    </ul>
+                    <a class="open-source__contribution-item-link"
+                       href="https://github.com/grommet/grommet/pull/4261" target="_blank">
+                        Link on the PR
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </section>
     <section class="works">
         <div class="works__header">
             <h2 class="section-title">My works</h2>
