@@ -59,7 +59,6 @@ gulp.task('fix', () => {
         .pipe(gulp.dest('app/scss')); // Destination of your fixed file. If you need to override old, just point
     // destination in the same folder
 });
-/// *** STYLELINT AUTOFIX TASK *** ///
 
 gulp.task('js', () => {
     return gulp.src('app/js/**/*.js')
