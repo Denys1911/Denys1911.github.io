@@ -4,3 +4,4 @@ scrollToAnchors();
 controlScrollToTopBtn();
 controlShowingOfWorks();
 selectLatestWorksInWorkSection();
+setCopyrights();

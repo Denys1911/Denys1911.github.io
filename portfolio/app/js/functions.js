@@ -104,7 +104,7 @@ const controlShowingOfWorks = () => {
     const worksButtonsWrapper = document.querySelector('.works__header-buttons');
     const worksButtonsCollection = worksButtonsWrapper.querySelectorAll('.works__header-button');
 
-    const handleClickOnWorksButtonsList = ({ target }) => {
+    const handleClickOnWorksButtonsList = ({target}) => {
         if (!target.classList.contains('works__header-button')) {
             return;
         }
@@ -143,3 +143,10 @@ const controlShowingOfWorks = () => {
 };
 
 const selectLatestWorksInWorkSection = () => document.getElementById('latest-works-btn').click();
+
+const setCopyrights = () => {
+    const copyrightsBlock = document.querySelector('.footer__copyright');
+    const copyrightsText = `@ Denys Goloborodko ${new Date().getFullYear()}`;
+    
+    copyrightsBlock.innerText = copyrightsText;
+};
