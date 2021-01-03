@@ -116,10 +116,10 @@ const controlShowingOfWorks = () => {
             return;
         }
 
-        currentWorksFilter = newWorksFilter;
-        worksList.innerHTML = createWorkCards(filterWorksDataByType(worksData, newWorksFilter));
         removeClassForElements(worksButtonActiveClassName, ...worksButtonsCollection);
         target.classList.add(worksButtonActiveClassName);
+        currentWorksFilter = newWorksFilter;
+        worksList.innerHTML = createWorkCards(filterWorksDataByType(worksData, newWorksFilter));
     };
 
     worksButtonsWrapper.addEventListener('click', handleClickOnWorksButtonsList);
@@ -141,11 +141,11 @@ const filterWorksDataByType = (worksData, filtrationType) => {
 
 const createWorkCards = worksData => worksData.map(({isLatest, projectType, ...rest}) => createWorkCard(rest)).join('');
 
-const createWorkCard = ({imgSrc, headerText, bodyText, linkOnCode, linkOnApp}) => `
+const createWorkCard = ({imgSrc, title, bodyText, linkOnCode, linkOnApp}) => `
     <li class="works__list-item">
-        <img class="works__list-item-img" src=${imgSrc} alt="" loading="lazy">
+        <img class="works__list-item-img" src=${imgSrc} alt='${title}' loading="lazy">
         <div class="works__list-item-hover">
-            <h3>${headerText}</h3>
+            <h3>${title}</h3>
             <p>${bodyText}</p>
             <div class="works__list-item-hover-buttons">
                 ${linkOnApp ? `<a href=${linkOnApp} target="_blank">View</a>` : ''}
