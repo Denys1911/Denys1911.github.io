@@ -96,6 +96,13 @@
             transform: scale(1.1, 1.1);
         }
 
+        &::before {
+            display: block;
+            float: left;
+            padding-top: 50%;
+            content: "";
+        }
+
         &--hide {
             display: none;
         }
