@@ -51,6 +51,7 @@ gulp.task('css-libs', () => {
 
 gulp.task('concat-js', () => {
     return gulp.src([
+        'app/js/worksData.js',
         'app/js/functions.js',
         'app/js/main.js',
     ])

@@ -100,49 +100,60 @@ const hidePreloader = () => {
 };
 
 const controlShowingOfWorks = () => {
-    const allWorks = document.querySelectorAll('.works__list-item');
+    const DEFAULT_FILTER_TYPE = 'latest';
+    const worksButtonClassName = 'works__header-button';
+    const worksButtonActiveClassName = 'active';
+    const worksList = document.querySelector('.works__list');
     const worksButtonsWrapper = document.querySelector('.works__header-buttons');
-    const worksButtonsCollection = worksButtonsWrapper.querySelectorAll('.works__header-button');
+    const worksButtonsCollection = worksButtonsWrapper.querySelectorAll('.' + worksButtonClassName);
+    const worksData = getWorksData();
+    let currentWorksFilter = '';
 
     const handleClickOnWorksButtonsList = ({target}) => {
-        if (!target.classList.contains('works__header-button')) {
+        const newWorksFilter = target.dataset.type;
+
+        if (!target.classList.contains(worksButtonClassName) || currentWorksFilter === newWorksFilter) {
             return;
         }
 
-        addClassForElements('works__list-item--hide', ...allWorks);
-        removeClassForElements('active', ...worksButtonsCollection);
-        target.classList.add('active');
-
-        switch (target.id) {
-            case 'all-works-btn':
-                removeClassForElements('works__list-item--hide', ...allWorks);
-                break;
-            case 'latest-works-btn':
-                const allLatestWorks = document.querySelectorAll('.works__list-item[data-latest]');
-
-                removeClassForElements('works__list-item--hide', ...allLatestWorks);
-                break;
-            case 'react-works-btn':
-                const allReactWorks = document.querySelectorAll('.works__list-item[data-type="react"]');
-
-                removeClassForElements('works__list-item--hide', ...allReactWorks);
-                break;
-            case 'js-works-btn':
-                const allJsWorks = document.querySelectorAll('.works__list-item[data-type="js"]');
-
-                removeClassForElements('works__list-item--hide', ...allJsWorks);
-                break;
-            case 'websites-works-btn':
-                const allWebsites = document.querySelectorAll('.works__list-item[data-type="websites"]');
-
-                removeClassForElements('works__list-item--hide', ...allWebsites);
-        }
+        currentWorksFilter = newWorksFilter;
+        worksList.innerHTML = createWorkCards(filterWorksDataByType(worksData, newWorksFilter));
+        removeClassForElements(worksButtonActiveClassName, ...worksButtonsCollection);
+        target.classList.add(worksButtonActiveClassName);
     };
 
     worksButtonsWrapper.addEventListener('click', handleClickOnWorksButtonsList);
+    document.querySelector(`.${worksButtonClassName}[data-type=${DEFAULT_FILTER_TYPE}]`).click();
 };
 
-const selectLatestWorksInWorkSection = () => document.getElementById('latest-works-btn').click();
+const filterWorksDataByType = (worksData, filtrationType) => {
+    switch (filtrationType) {
+        case 'latest':
+            return worksData.filter(({isLatest}) => isLatest);
+        case 'react':
+        case 'js':
+        case 'websites':
+            return worksData.filter(({projectType}) => projectType === filtrationType);
+        default:
+            return worksData;
+    }
+};
+
+const createWorkCards = worksData => worksData.map(({isLatest, projectType, ...rest}) => createWorkCard(rest)).join('');
+
+const createWorkCard = ({imgSrc, headerText, bodyText, linkOnCode, linkOnApp}) => `
+    <li class="works__list-item">
+        <img class="works__list-item-img" src=${imgSrc} alt="" loading="lazy">
+        <div class="works__list-item-hover">
+            <h3>${headerText}</h3>
+            <p>${bodyText}</p>
+            <div class="works__list-item-hover-buttons">
+                ${linkOnApp ? `<a href=${linkOnApp} target="_blank">View</a>` : ''}
+                <a href=${linkOnCode} target="_blank">Code</a>
+            </div>
+        </div>
+    </li>
+`;
 
 const setCopyrights = () => {
     const copyrightsBlock = document.querySelector('.footer__copyright');
