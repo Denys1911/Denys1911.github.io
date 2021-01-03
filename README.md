@@ -1,6 +1,6 @@
 # This is the repository for my works.
 
-  For comfortable orientation in my projects, you can use [link](https://dengoloborodko.github.io/Portfolio/Portfolio/dist/) on my
+  For comfortable orientation in my projects, you can use [link](https://dengoloborodko.github.io/beginning-projects/portfolio/dist/) on my
    portfolio site. In section "My works" you can find links on projects and links on their code at Github and also short description of the projects and used technologies.
   
 ## The repository has several main sections:
