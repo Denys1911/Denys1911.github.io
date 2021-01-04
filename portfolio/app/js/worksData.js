@@ -162,8 +162,7 @@ const getWorksData = () => [
         imgSrc: './images/works/user-registration-app.png',
         title: 'User registration and login',
         bodyText: `In this project, I realized user registration, login into the user’s own cabinet and the ability to change user data in his cabinet. I have been worked with AJAX, XMLHttpRequest, Cookie.`,
-        linkOnCode: 'https://github.com/dengoloborodko/beginning-projects/tree/master/js-projects/practise-js-course/16_user-registration-and-login/app',
-        linkOnApp: 'https://denys1911.000webhostapp.com'
+        linkOnCode: 'https://github.com/dengoloborodko/beginning-projects/tree/master/js-projects/practise-js-course/16_user-registration-and-login/app'
     },
     {
         isLatest: false,
